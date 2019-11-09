@@ -8,6 +8,7 @@ connection:
   user: root
   pass:
   type: sql
+  port:
 # caminhos desprotegidos definidos por expressões regulares
 paths_unprotected:
   - /login/
