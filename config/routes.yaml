@@ -1,2 +1,4 @@
 #Configuração de rotas
 /login: LoginController
+/Pagina-inicial: PaginaInicialController
+/logout:  LogoutController

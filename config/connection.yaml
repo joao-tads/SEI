@@ -4,7 +4,7 @@ path_default:
 # configurações de conexão ao banco de dados
 connection:
   host: localhost
-  name: ..\tads.db
+  name: ..\database\Projeto.sql
   user: root
   pass:
   type: sql
