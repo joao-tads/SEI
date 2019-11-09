@@ -4,10 +4,10 @@ path_default:
 # configurações de conexão ao banco de dados
 connection:
   host: localhost
-  name: ..\database\Projeto.sql
+  name: Projeto
   user: root
   pass:
-  type: sql
+  type: mysql
   port:
 # caminhos desprotegidos definidos por expressões regulares
 paths_unprotected:

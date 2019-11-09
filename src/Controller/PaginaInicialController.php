@@ -5,7 +5,7 @@ use Ifnc\Tads\Entity\Produto;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
-class ListarProdutosController implements IController
+class PaginaInicialController implements IController
 {
     public function request(): void
     {
@@ -17,7 +17,6 @@ class ListarProdutosController implements IController
                 "rodape.php"
             ],
             [
-                "produtos" => Produto::all(),
                 "titulo"=> "Pagina Inicial"
             ]
         );
