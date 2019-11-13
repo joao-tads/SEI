@@ -4,7 +4,7 @@ create database Projeto;
 use Projeto;
 
 create table Funcionario (
-	Matricula int primary key not null auto_increment,
+	matricula int primary key not null auto_increment,
     nome varchar(100) not null,
     idade int not null,
     cpf varchar(14) not null,

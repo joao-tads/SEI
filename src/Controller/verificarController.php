@@ -12,12 +12,12 @@ class verificarController implements IController
 
     public function request(): void
     {
-        $matricula = filter_input(INPUT_POST,
-            'matricula',
+        $id = filter_input(INPUT_POST,
+            'id',
             FILTER_DEFAULT
         );
 
-        if (is_null($matricula) || $matricula === false) {
+        if (is_null($id) || $id === false) {
             header('Location: /form-verificar');
             exit();
         }
@@ -27,14 +27,40 @@ class verificarController implements IController
             FILTER_DEFAULT
         );
 
-        Transaction::open();
-        $usuario = Funcionario::findByCondition("matricula='{$_POST['matricula']}'");
-        if (!$usuario || !$usuario->verificar($cpf)) {
-            var_dump($usuario);
-            header('Location: /verificar-form');
+        if (is_null($cpf) || $cpf === false) {
+            header('Location: /form-verificar');
             exit();
         }
-        header('Location: /cadastro-form');
+
+        $usuario = filter_input(INPUT_POST,
+            'usuario',
+            FILTER_DEFAULT
+        );
+
+        if (is_null($usuario) || $usuario === false) {
+            header('Location: /login-form');
+            exit();
+        }
+
+        $senha = filter_input(INPUT_POST,
+            'senha',
+            FILTER_SANITIZE_STRING);
+
+        Transaction::open();
+        $usuario = Funcionario::findByCondition("id='{$_POST['id']}'");
+        if ($usuario->verificar($cpf)) {
+            var_dump($usuario);
+            $funcionario = new Funcionario();
+            $funcionario->usuario = $_POST['usuario'];
+            $funcionario->senha = password_hash($_POST['senha'], PASSWORD_ARGON2I);
+
+            Transaction::open();
+            $funcionario->store();
+            Transaction::close();
+            header('Location: /login-form', true, 302);
+        exit();
+        }
+        header('Location: /verificar-form');
         exit();
     }
 }
