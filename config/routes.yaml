@@ -5,4 +5,7 @@
 /Pagina-inicial: PaginaInicialController
 /logout:  LogoutController
 /404found:  path404Controller
+/form-cadastro: cadastroFormController
 /cadastrar: loginCadastrarController
+/form-verificar: verificarFormController
+/verificar: verificarCadastroController
