@@ -1,0 +1,5 @@
+class Messege 
+{
+    public $title;
+    
+}

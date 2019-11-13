@@ -5,3 +5,4 @@
 /Pagina-inicial: PaginaInicialController
 /logout:  LogoutController
 /404found:  path404Controller
+/cadastrar: loginCadastrarController

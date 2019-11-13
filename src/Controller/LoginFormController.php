@@ -18,7 +18,8 @@ class LoginFormController implements IController
                 "rodape.php"
             ],
             [
-                "titulo"=>"Login"
+                "titulo"=>"Escola"
             ]);
+            
     }
 }

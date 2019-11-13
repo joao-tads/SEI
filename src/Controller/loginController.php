@@ -4,7 +4,7 @@
 namespace Ifnc\Tads\Controller;
 
 
-use Ifnc\Tads\Entity\Usuario;
+use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Transaction;
 
 class LoginController implements IController
@@ -12,12 +12,12 @@ class LoginController implements IController
 
     public function request(): void
     {
-        $email = filter_input(INPUT_POST,
-            'email',
-            FILTER_VALIDATE_EMAIL
+        $usuario = filter_input(INPUT_POST,
+            'usuario',
+            FILTER_DEFAULT
         );
 
-        if (is_null($email) || $email === false) {
+        if (is_null($usuario) || $usuario === false) {
             header('Location: /login-form');
             exit();
         }
@@ -27,9 +27,10 @@ class LoginController implements IController
             FILTER_SANITIZE_STRING);
 
         Transaction::open();
-        $usuario = Usuario::findByCondition("email='{$_POST['email']}'");
-        if (is_null($usuario) || !$usuario->valide($senha)) {
-            header('Location: /login-form');
+        $usuario = Funcionario::findByCondition("usuario='{$_POST['usuario']}'");
+        if (!$usuario || !$usuario->valide($senha)) {
+            var_dump($usuario);
+            //header('Location: /login-form');
             exit();
         }
         $_SESSION["usuario"]=$usuario;

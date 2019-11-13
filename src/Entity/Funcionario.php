@@ -6,10 +6,10 @@ namespace Ifnc\Tads\Entity;
 
 use Ifnc\Tads\Helper\Record;
 
-class Usuario extends Record
+class Funcionario extends Record
 {
-    public $id;
-    public $email;
+    public $matricula;
+    public $usuario;
     public $senha;
 
     public function valide($senha){
