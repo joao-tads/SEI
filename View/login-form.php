@@ -10,6 +10,6 @@
         </div>
         <button type="submit" class="btn btn-dark">Entrar</button>
         <button type="reset" class="btn btn-dark">Limpar</button>
-        <p>Ainda não é inscrito? <a href="/form-verificar">Cadastre-se!</a>
+        <p>Ainda não é inscrito? <a href="/verificar-form">Cadastre-se!</a>
     </div>
 </form>

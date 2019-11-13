@@ -1,3 +1,9 @@
+<?php
+
+
+namespace Ifnc\Tads\Helper;
+
+
 trait Flash
 {
     function create(Message $message)
@@ -5,19 +11,24 @@ trait Flash
         $_SESSION[$message->title] = $message;
     }
 
-    function use($title)
-    {
-        if(isset())
+    function use($title){
+        if(isset($_SESSION[$title])) {
+            $message = $_SESSION[$title];
+            unset($_SESSION[$title]);
+            return $message;
+        }else{
+            return NULL;
+        }
     }
 
-    function useAll()
-    {
+    function useAll(){
         $messages = [];
-        foreach ($_SESSION as $key => $item) {
-            if(get_class($item) == Message::class) {
+        foreach ($_SESSION as $key => $item){
+            if(get_class($item) == Message::class){
                 $messages[] = $item;
-                unset
+                unset($_SESSION[$key]);
             }
         }
+        return $messages;
     }
 }

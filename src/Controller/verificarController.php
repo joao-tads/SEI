@@ -18,24 +18,23 @@ class verificarController implements IController
         );
 
         if (is_null($matricula) || $matricula === false) {
-            header('Location: /login-form');
+            header('Location: /form-verificar');
             exit();
         }
 
-        $senha = filter_input(INPUT_POST,
+        $cpf = filter_input(INPUT_POST,
             'cpf',
             FILTER_DEFAULT
         );
 
         Transaction::open();
-        $usuario = Funcionario::findByCondition("usuario='{$_POST['usuario']}'");
-        if (!$usuario || !$usuario->valide($senha)) {
+        $usuario = Funcionario::findByCondition("matricula='{$_POST['matricula']}'");
+        if (!$usuario || !$usuario->verificar($cpf)) {
             var_dump($usuario);
-            header('Location: /login-form');
+            header('Location: /verificar-form');
             exit();
         }
-        $_SESSION["usuario"]=$usuario;
-        header('Location: /Pagina-inicial');
+        header('Location: /cadastro-form');
         exit();
     }
 }

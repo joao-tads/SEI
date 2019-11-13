@@ -30,7 +30,7 @@ class LoginController implements IController
         $usuario = Funcionario::findByCondition("usuario='{$_POST['usuario']}'");
         if (!$usuario || !$usuario->valide($senha)) {
             var_dump($usuario);
-            //header('Location: /login-form');
+            header('Location: /login-form');
             exit();
         }
         $_SESSION["usuario"]=$usuario;
