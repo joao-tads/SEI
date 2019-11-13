@@ -7,5 +7,5 @@
 /404found:  path404Controller
 /form-cadastro: cadastroFormController
 /cadastrar: loginCadastrarController
-/form-verificar: verificarFormController
-/verificar: verificarCadastroController
+/verificar-form: verificarFormController
+/verificar: verificarController

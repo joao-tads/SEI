@@ -13,6 +13,8 @@ connection:
 paths_unprotected:
   - /login/
   - /404found/
+  - /verificar/
+  
 # caminho seguido quando é acessado um sem permissão
 path_unprotected_default:
   /login-form
