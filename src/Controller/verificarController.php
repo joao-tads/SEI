@@ -51,6 +51,7 @@ class verificarController implements IController
         if ($usuario->verificar($cpf)) {
             var_dump($usuario);
             $funcionario = new Funcionario();
+            $funcionario->id = $_POST['id'];
             $funcionario->usuario = $_POST['usuario'];
             $funcionario->senha = password_hash($_POST['senha'], PASSWORD_ARGON2I);
 
