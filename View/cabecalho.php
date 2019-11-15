@@ -15,11 +15,11 @@
 
 <body class="bg-light" id="main">
     <header class="container">
-        <?php if (isset($_SESSION['usuario'])) { ?>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <?php if (isset($usuario)) { ?>
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
                 <a class="navbar-brand" href="#">
                     <img src="Design/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Bootstrap
+                    <?=$usuario->nome?>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>

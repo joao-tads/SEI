@@ -1,8 +1,9 @@
 <?php
 
 namespace Ifnc\Tads\Controller;
-use Ifnc\Tads\Entity\Produto;
+
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Transaction;
 
 class PaginaInicialController implements IController
@@ -17,7 +18,7 @@ class PaginaInicialController implements IController
                 "rodape.php"
             ],
             [
-                "titulo"=> "Pagina Inicial"
+                "usuario" => $_SESSION["usuario"]
             ]
         );
     }
