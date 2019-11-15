@@ -9,35 +9,33 @@
     <!-- meu CSS -->
     <link rel="stylesheet" href="/Design/css/menuLateral.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body class="bg-light" id="main">
     <header class="container">
         <?php if (isset($usuario)) { ?>
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="Design/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                    <?=$usuario->nome?>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Alterna navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">Marca escondida</a>
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Desativado</a>
-                        </li>
+            <img src="Design/img/logo.png" width="15%" height="15%" class="d-inline-block align-top" alt="" style="display: block; margin-left: auto; margin-right: auto">
+            <br>
+            <br>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"><span class="glyphicon glyphicon-menu-hamburger" onclick="closeOpenNav()"></span></a></li>
                     </ul>
-                    <a href="\logout" class="navbar-brand">Sair</a>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#"><?= $usuario->nome ?></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Sair</a></li>
+                    </ul>
                 </div>
             </nav>
         <?php } else { ?>
