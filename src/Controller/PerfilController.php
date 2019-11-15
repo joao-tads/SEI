@@ -5,7 +5,7 @@ namespace Ifnc\Tads\Controller;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
-class PaginaInicialController implements IController
+class PerfilController implements IController
 {
     public function request(): void
     {
@@ -14,7 +14,7 @@ class PaginaInicialController implements IController
             [
                 "cabecalho.php",
                 "menu.php",
-                "pagina-inicial.php",
+                "perfil.php",
                 "rodape.php"
             ],
             [

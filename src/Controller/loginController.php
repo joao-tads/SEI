@@ -3,7 +3,7 @@
 
 namespace Ifnc\Tads\Controller;
 
-
+use Ifnc\Tads\Entity\Aluno;
 use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Transaction;
 
@@ -29,9 +29,12 @@ class LoginController implements IController
         Transaction::open();
         $usuario = Funcionario::findByCondition("usuario='{$_POST['usuario']}'");
         if (!$usuario || !$usuario->valide($senha)) {
+            $usuario = Aluno::findByCondition("usuario='{$_POST['usuario']}'");
+            if (!$usuario || !$usuario->valide($senha)) {
             var_dump($usuario);
             header('Location: /login-form');
             exit();
+            }
         }
         $_SESSION["usuario"]=$usuario;
         header('Location: /Pagina-inicial');

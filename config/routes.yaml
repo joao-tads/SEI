@@ -7,3 +7,5 @@
 /404found:  path404Controller
 /verificar-form: verificarFormController
 /verificar: verificarController
+/boletim: boletimController
+/perfil: perfilController
