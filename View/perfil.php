@@ -1,34 +1,59 @@
 <div style="margin-top: 5%;">
     <div class="container">
-        <h2>Basic Table</h2>
-        <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+        <h2>Perfil</h2>
+        <p>Dados pessoais cadastrados:</p>
         <div class="w-auto p-3">
             <table class="table">
-                <thead>
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
+                        <th>Matrícula</th>
+                        <td><?= $usuario->id ?></td>
                     </tr>
                     <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
+                        <th>Nome</th>
+                        <td><?= $usuario->nome ?></td>
                     </tr>
                     <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
+                        <th>Data de Nascimento</th>
+                        <td><?= $usuario->dataNascimento ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nome da Mãe</th>
+                        <td><?= $usuario->nomeMae ?></td>
+                    </tr>
+                    <tr>
+                        <th>Nome do Pai</th>
+                        <td><?= $usuario->nomePai ?></td>
+                    </tr>
+                    <tr>
+                        <th>Registro Geral</th>
+                        <td><?= $usuario->rg ?></td>
+                    </tr>
+                    <tr>
+                        <th>Cadastro de Pessoa Física</th>
+                        <td><?= $usuario->cpf ?></td>
+                    </tr>
+                    <tr>
+                        <th>Naturalidade</th>
+                        <td><?= $usuario->naturalidade ?></td>
+                    </tr>
+                    <tr>
+                        <th>Endereço</th>
+                        <td><?= $usuario->endereco ?></td>
+                    </tr>
+                    <tr>
+                        <th>Telefone</th>
+                        <td><?= $usuario->telefone ?></td>
+                    </tr>
+                    <tr>
+                        <th>Sexo</th>
+                        <td><?= $usuario->sexo ?></td>
                     </tr>
                 </tbody>
             </table>
+            <form action="/update-aluno">
+                <button class="btn btn-primary">Atualizar dados</button>
+            </form>
         </div>
     </div>
 </div>

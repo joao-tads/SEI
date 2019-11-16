@@ -9,3 +9,4 @@
 /verificar: verificarController
 /boletim: boletimController
 /perfil: perfilController
+/update-aluno: updateAlunoController
