@@ -7,7 +7,7 @@ namespace Ifnc\Tads\Controller;
 use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Transaction;
 
-class verificarController implements IController
+class VerificarController implements IController
 {
 
     public function request(): void

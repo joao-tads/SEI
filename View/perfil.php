@@ -53,6 +53,7 @@
             </table>
             <form action="/update-aluno">
                 <button class="btn btn-primary">Atualizar dados</button>
+                <a href="/Pagina-inicial" class="btn btn-danger">Voltar</a>
             </form>
         </div>
     </div>

@@ -6,7 +6,7 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
 
-class updateAlunoController implements IController
+class UpdateAlunoController implements IController
 {
 
     public function request(): void

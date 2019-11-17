@@ -6,7 +6,7 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
 
-class verificarFormController implements IController
+class VerificarFormController implements IController
 {
 
     public function request(): void
