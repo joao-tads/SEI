@@ -13,9 +13,9 @@ connection:
 paths_unprotected:
   - /login/
   - /404found/
-  - /verificar/
-  - /verificar-form/
-  - /cadastro-form/
+  - /recuperar/
+  - /recuperar-senha/
+  - /primeiro-login/
   
 # caminho seguido quando é acessado um sem permissão
 path_unprotected_default:

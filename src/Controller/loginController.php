@@ -12,31 +12,39 @@ class LoginController implements IController
 
     public function request(): void
     {
-        $usuario = filter_input(INPUT_POST,
+        $cpf = filter_input(
+            INPUT_POST,
             'cpf',
             FILTER_DEFAULT
         );
 
-        if (is_null($usuario) || $usuario === false) {
+        if (is_null($cpf) || $cpf == false) {
             header('Location: /login-form');
             exit();
         }
 
-        $senha = filter_input(INPUT_POST,
+        $senha = filter_input(
+            INPUT_POST,
             'senha',
-            FILTER_SANITIZE_STRING);
+            FILTER_SANITIZE_STRING
+        );
 
         Transaction::open();
-        $usuario = Funcionario::findByCondition("usuario='{$_POST['cpf']}'");
+        $usuario = Funcionario::findByCondition("cpf='{$_POST['cpf']}'");
         if (!$usuario || !$usuario->valide($senha)) {
-            $usuario = Aluno::findByCondition("usuario='{$_POST['cpf']}'");
+            $usuario = Aluno::findByCondition("cpf='{$_POST['cpf']}'");
             if (!$usuario || !$usuario->valide($senha)) {
-            var_dump($usuario);
-            header('Location: /login-form');
-            exit();
+                var_dump($usuario);
+                header('Location: /login-form');
+                exit();
             }
         }
-        $_SESSION["usuario"]=$usuario;
+        if ($usuario->nlogin == 0) {
+            $_SESSION["usuario"] = $usuario;
+            header('Location: /primeiro-login');
+            exit();
+        }
+        $_SESSION["usuario"] = $usuario;
         header('Location: /Pagina-inicial');
         exit();
     }

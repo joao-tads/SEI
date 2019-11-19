@@ -68,12 +68,6 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-4">Usuario:</label>
-                <div class="col-sm-5">
-                    <input type="text" class="form-control" value="<?= $usuario->usuario ?>" name="usuario">
-                </div>
-            </div>
             <input type="hidden" name="id" value="<?= $usuario->id ?>">
             <input type="hidden" name="senha" value="<?= $usuario->senha ?>">
             <div class="form-group">

@@ -16,8 +16,8 @@
             <label for="exampleInputConfirmPassword1">Confirmar nova Senha</label>
             <input type="password" name="confirmeSenha" class="form-control" id="exampleInputPassword1" placeholder="Confirme sua nova Senha">
         </div>
-        <button type="submit" class="btn btn-dark">Verificar</button>
+        <button type="submit" class="btn btn-dark">Redefinir</button>
         <button type="reset" class="btn btn-dark">Limpar</button>
-        <a href="/login-form" class="btn btn-dark">Voltar</a>
+        <a href="/login-form" class="btn btn-primary" role="button">Voltar</a>
     </div>
 </form>

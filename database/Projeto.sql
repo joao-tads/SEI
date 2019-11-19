@@ -39,6 +39,7 @@ create table Funcionario (
     cpf varchar(14) not null,
     email varchar(50) not null,
     telefone varchar(15) not null,
+    cargo varchar(15) not null,
     senha varchar(100),
     nlogin int
 );
@@ -77,8 +78,8 @@ create table Turma (
     anoSerie varchar(10) not null
 );
 
-insert into Funcionario (nome, idade, cpf, email, telefone, senha, nlogin) 
-	values('Joao Guedes', 24, '111.222.333-44', 'joo_guedes@live.com', '(84)99421-3471',
+insert into Funcionario (nome, idade, cpf, email, telefone, cargo, senha, nlogin) 
+	values('Joao Guedes', 24, '111.222.333-44', 'joo_guedes@live.com', '(84)99421-3471', 'Professor', 
     '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw',
     0);
 insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade,

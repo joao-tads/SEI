@@ -11,3 +11,5 @@
 /perfil: PerfilController
 /update-aluno: UpdateAlunoController
 /update-perfil: UpdatePerfilController
+/primeiro-login: PrimeiroLoginFormController
+/primeroLogin: PrimeiroLoginController
