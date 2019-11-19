@@ -13,7 +13,7 @@ class LoginController implements IController
     public function request(): void
     {
         $usuario = filter_input(INPUT_POST,
-            'usuario',
+            'cpf',
             FILTER_DEFAULT
         );
 
@@ -27,9 +27,9 @@ class LoginController implements IController
             FILTER_SANITIZE_STRING);
 
         Transaction::open();
-        $usuario = Funcionario::findByCondition("usuario='{$_POST['usuario']}'");
+        $usuario = Funcionario::findByCondition("usuario='{$_POST['cpf']}'");
         if (!$usuario || !$usuario->valide($senha)) {
-            $usuario = Aluno::findByCondition("usuario='{$_POST['usuario']}'");
+            $usuario = Aluno::findByCondition("usuario='{$_POST['cpf']}'");
             if (!$usuario || !$usuario->valide($senha)) {
             var_dump($usuario);
             header('Location: /login-form');

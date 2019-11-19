@@ -6,7 +6,7 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
 
-class VerificarFormController implements IController
+class RecuperarSenharFormController implements IController
 {
 
     public function request(): void
@@ -14,11 +14,11 @@ class VerificarFormController implements IController
         echo Render::html(
             [
                 "cabecalho.php",
-                "form-verificar.php",
+                "RecuperarSenhaForm.php",
                 "rodape.php"
             ],
             [
-                "titulo"=>"Verificar"
+                "titulo"=>"Recuperar Senha"
             ]);
             
     }

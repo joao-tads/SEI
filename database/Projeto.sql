@@ -15,8 +15,8 @@ create table Aluno (
     endereco text not null,
     telefone varchar(25) not null,
     sexo varchar(10) not null,
-    usuario varchar(50) not null,
-    senha varchar(100) not null
+    senha varchar(100) not null,
+    nlogin int
 
 );
 
@@ -28,8 +28,8 @@ create table Responsavel (
     telefone varchar(25) not null,
     email varchar(50),
     nome varchar(50) not null,
-    usuario varchar(50) not null,
-    senha varchar(100) not null
+    senha varchar(100) not null,
+    nlogin int
 );
 
 create table Funcionario (
@@ -39,8 +39,8 @@ create table Funcionario (
     cpf varchar(14) not null,
     email varchar(50) not null,
     telefone varchar(15) not null,
-    usuario varchar(20),
-    senha varchar(100)
+    senha varchar(100),
+    nlogin int
 );
 
 create table Boletim (
@@ -48,7 +48,7 @@ create table Boletim (
     idAluno int not null,
     disciplinas varchar(10) not null,
     notas float,
-    fequencia float,
+    fequencia float
 );
 
 create table Proejto (
@@ -77,14 +77,15 @@ create table Turma (
     anoSerie varchar(10) not null
 );
 
-insert into Funcionario (nome, idade, cpf, email, telefone, usuario, senha) 
+insert into Funcionario (nome, idade, cpf, email, telefone, senha, nlogin) 
 	values('Joao Guedes', 24, '111.222.333-44', 'joo_guedes@live.com', '(84)99421-3471',
-    'jooGuedes', '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw');
+    '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw',
+    0);
 insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade,
-	endereco, telefone, sexo, usuario, senha) 
+	endereco, telefone, sexo, senha, nlogin) 
 	values('Joao Guedes de Moura Junior', '1995-05-12', 'Maria da Penha', 'João Guedes', '111.222.333',
-    '111.222.333-44', 'Natal', 'Sítio Cajazeiras', '(84) 9 9494-9494', 'Masculino', 'Junior',
-    '$argon2i$v=19$m=1024,t=2,p=2$ajg4OWdEb0pKYmVIb2FGUA$XyfOE0U5Is6WzVroGpcuRFfK1xGQspwsfG0KmqSMT9U');
+    '111.222.333-44', 'Natal', 'Sítio Cajazeiras', '(84) 9 9494-9494', 'Masculino',
+    '$argon2i$v=19$m=1024,t=2,p=2$ajg4OWdEb0pKYmVIb2FGUA$XyfOE0U5Is6WzVroGpcuRFfK1xGQspwsfG0KmqSMT9U', 0);
 
 select * from Funcionario;
 select * from Aluno;

@@ -5,8 +5,8 @@
 /Pagina-inicial: PaginaInicialController
 /logout:  LogoutController
 /404found:  path404Controller
-/verificar-form: VerificarFormController
-/verificar: VerificarController
+/recuperar-senha: RecuperarSenharFormController
+/recuperar: RecuperarSenhaController
 /boletim: BoletimController
 /perfil: PerfilController
 /update-aluno: UpdateAlunoController
