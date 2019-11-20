@@ -5,10 +5,13 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Aluno;
 use Ifnc\Tads\Entity\Funcionario;
+use Ifnc\Tads\Helper\Flash;
+use Ifnc\Tads\Helper\Message;
 use Ifnc\Tads\Helper\Transaction;
 
 class LoginController implements IController
 {
+    use Flash;
 
     public function request(): void
     {
@@ -19,6 +22,13 @@ class LoginController implements IController
         );
 
         if (is_null($cpf) || $cpf == false) {
+            $this->create(
+                new Message(
+                    "alert-login",
+                    "CPF vazio!",
+                    "danger"
+                )
+            );
             header('Location: /login-form');
             exit();
         }
@@ -31,13 +41,50 @@ class LoginController implements IController
 
         Transaction::open();
         $usuario = Funcionario::findByCondition("cpf='{$_POST['cpf']}'");
-        if (!$usuario || !$usuario->valide($senha)) {
+        if (!$usuario) {
             $usuario = Aluno::findByCondition("cpf='{$_POST['cpf']}'");
-            if (!$usuario || !$usuario->valide($senha)) {
+            if (!$usuario) {
+                $this->create(
+                    new Message(
+                        "alert-login",
+                        "CPF inválido!",
+                        "danger"
+                    )
+                );
+                var_dump($usuario);
+                header('Location: /login-form');
+                exit();
+            } else if (!$usuario->valide($senha)) {
+                $this->create(
+                    new Message(
+                        "alert-login",
+                        "Senha inválida!",
+                        "danger"
+                    )
+                );
                 var_dump($usuario);
                 header('Location: /login-form');
                 exit();
             }
+            $this->create(
+                new Message(
+                    "alert-login",
+                    "CPF inválida!",
+                    "danger"
+                )
+            );
+            header('Location: /login-form');
+            exit();
+        } else if (!$usuario->valide($senha)) {
+            $this->create(
+                new Message(
+                    "alert-login",
+                    "Senha inválida!",
+                    "danger"
+                )
+            );
+            header('Location: /login-form');
+            exit();
         }
         if ($usuario->nlogin == 0) {
             $_SESSION["usuario"] = $usuario;

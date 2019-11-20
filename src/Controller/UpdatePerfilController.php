@@ -29,7 +29,7 @@ class  UpdatePerfilController implements IController
         var_dump($aluno);
         Transaction::open();
         $aluno->store();
-        $usuario = Aluno::findByCondition("usuario='{$_POST['usuario']}'");
+        $usuario = Aluno::findByCondition("id='{$_POST['id']}'");
         Transaction::close();
 
         $_SESSION["usuario"] = $usuario;

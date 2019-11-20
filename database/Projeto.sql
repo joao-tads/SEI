@@ -79,7 +79,7 @@ create table Turma (
 );
 
 insert into Funcionario (nome, idade, cpf, email, telefone, cargo, senha, nlogin) 
-	values('Joao Guedes', 24, '111.222.333-44', 'joo_guedes@live.com', '(84)99421-3471', 'Professor', 
+	values('Joao Guedes', 24, '222.333.555-44', 'joo_guedes@live.com', '(84)99421-3471', 'Professor', 
     '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw',
     0);
 insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade,
