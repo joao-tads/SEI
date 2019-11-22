@@ -39,6 +39,18 @@ class LoginController implements IController
             FILTER_SANITIZE_STRING
         );
 
+        if (is_null($senha) || $senha == false) {
+            $this->create(
+                new Message(
+                    "alert-login",
+                    "Senha vazia!",
+                    "danger"
+                )
+            );
+            header('Location: /login-form');
+            exit();
+        }
+
         Transaction::open();
         $usuario = Funcionario::findByCondition("cpf='{$_POST['cpf']}'");
         if (!$usuario) {
@@ -65,16 +77,16 @@ class LoginController implements IController
                 var_dump($usuario);
                 header('Location: /login-form');
                 exit();
+            } else {
+                if ($usuario->nlogin == 0) {
+                    $_SESSION["usuario"] = $usuario;
+                    header('Location: /primeiro-login');
+                    exit();
+                }
+                $_SESSION["usuario"] = $usuario;
+                header('Location: /Pagina-inicial');
+                exit();
             }
-            $this->create(
-                new Message(
-                    "alert-login",
-                    "CPF inválida!",
-                    "danger"
-                )
-            );
-            header('Location: /login-form');
-            exit();
         } else if (!$usuario->valide($senha)) {
             $this->create(
                 new Message(
@@ -92,7 +104,7 @@ class LoginController implements IController
             exit();
         }
         $_SESSION["usuario"] = $usuario;
-        header('Location: /Pagina-inicial');
+        header('Location: /Painel-inicial');
         exit();
     }
 }

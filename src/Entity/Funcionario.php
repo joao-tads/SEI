@@ -14,7 +14,7 @@ class Funcionario extends Record
     public $cpf;
     public $email;
     public $telefone;
-    public $usuario;
+    public $cargo;
     public $senha;
 
     public function valide($senha){
