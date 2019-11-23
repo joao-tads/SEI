@@ -10,6 +10,7 @@
 /recuperar: RecuperarSenhaController
 /boletim: BoletimController
 /perfil: PerfilController
+/perfil-funcionario: PerfilFuncionarioController
 /update-aluno: UpdateAlunoController
 /update-perfil: UpdatePerfilController
 /primeiro-login: PrimeiroLoginFormController

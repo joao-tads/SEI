@@ -12,13 +12,16 @@ class  PrimeiroLoginController implements IController
 
     public function request(): void
     {
+        $i = "";
         $c = $_POST["cargo"];
-        if ($c=="Professor" || $c == "Coordenador" || $c == "Secretaria" || $c == "Direcao") {
+        if ($c=="Professor(a)" || $c == "Coordenador(a)" || $c == "Secretario(a)" || $c == "Diretor(a)") {
             $user = new Funcionario();
             $user->senha = password_hash($_POST['senha'], PASSWORD_ARGON2I);
+            $i = "Funcionario";
         } else {
             $user = new Aluno();
             $user->senha = password_hash($_POST['senha'], PASSWORD_ARGON2I);
+            $i = "Aluno";
         }
 
         $user->id = $_POST['id'];
@@ -28,7 +31,11 @@ class  PrimeiroLoginController implements IController
             Transaction::open();
             $user->store();
             Transaction::close();
-            header('Location: /Pagina-inicial');
+            if($i == "Aluno") {
+                header('Location: /Pagina-inicial');
+                exit();
+            }
+            header('Location: /Painel-inicial');
             exit();
         }
         header('Location: /primeiro-login', true, 302);
