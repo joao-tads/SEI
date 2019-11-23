@@ -40,7 +40,7 @@
                     <input type="password" name="confirmeSenha" class="form-control" id="exampleInputPassword1" placeholder="Confirme sua nova Senha">
                 </div>
                 <input type="hidden" name="id" value="<?= $usuario->id ?>">
-                <input type="hidden" name="cargo" value="<?= $usuario->cargo ?>">
+                <input type="hidden" name="type" value="<?= $type ?>">
                 <button type="submit" class="btn btn-dark">Redefinir</button>
                 <button type="reset" class="btn btn-dark">Limpar</button>
             </div>

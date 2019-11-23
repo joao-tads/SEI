@@ -36,7 +36,7 @@
                 </tbody>
             </table>
             <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Atualizar dados</button>
-            <a href="/Painel-inicial" class="btn btn-danger">Voltar</a>
+            <a href="/Pagina-inicial" class="btn btn-danger">Voltar</a>
         </div>
     </div>
 </div>
@@ -95,14 +95,14 @@
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <input type="hidden" name="id" value="<?= $usuario->id ?>">
-                            <button type="submit" class="btn btn-default">Atualizar</button>
-                            <button type="reset" class="btn btn-default">Limpar</button>
+                            <button type="submit" class="btn btn-success">Atualizar</button>
+                            <button type="reset" class="btn btn-warning">Limpar</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
 

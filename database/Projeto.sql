@@ -39,6 +39,7 @@ create table Funcionario (
     cpf varchar(14) not null,
     email varchar(50) not null,
     telefone varchar(15) not null,
+    dataNascimento varchar(10) not null,
     cargo varchar(15) not null,
     senha varchar(100),
     nlogin int
@@ -78,12 +79,12 @@ create table Turma (
     anoSerie varchar(10) not null
 );
 
-insert into Funcionario (nome, idade, cpf, email, telefone, cargo, senha, nlogin) 
-	values('Joao Guedes', 24, '222.333.555-44', 'joo_guedes@live.com', '(84)99421-3471', 'Professor(a)', 
+insert into Funcionario (nome, idade, cpf, email, telefone, dataNascimento, cargo, senha, nlogin) 
+	values('Joao Guedes', 24, '222.333.555-44', 'joo_guedes@live.com', '(84)99421-3471', '1995-05-12', 'Professor(a)', 
     '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw',
     0);
-    insert into Funcionario (nome, idade, cpf, email, telefone, cargo, senha, nlogin) 
-	values('Junior Guedes', 24, '000.000.000-00', 'juniorgmj2016@gmail.com', '(84)99421-3471', 'Secretario(a)', 
+    insert into Funcionario (nome, idade, cpf, email, telefone, dataNascimento, cargo, senha, nlogin) 
+	values('Junior Guedes', 24, '000.000.000-00', 'juniorgmj2016@gmail.com', '(84)99421-3471', '1995-05-12', 'Secretario(a)', 
     '$argon2i$v=19$m=1024,t=2,p=2$amJXMTVKZXBCUExCN0Z2RQ$vuy2Gbmoag71H5T6otHs66eY+tU+3AKDdGhdAkNuzCw',
     0);
 insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade,

@@ -17,6 +17,7 @@ class PrimeiroLoginFormController implements IController
                 "rodape.php"
             ],
             [
+                "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
                 "titulo"=>"Primeiro Login"
             ]);

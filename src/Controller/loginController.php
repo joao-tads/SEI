@@ -79,6 +79,7 @@ class LoginController implements IController
                 exit();
             } else {
                 if ($usuario->nlogin == 0) {
+                    $_SESSION["type"] = "Aluno";
                     $_SESSION["usuario"] = $usuario;
                     header('Location: /primeiro-login');
                     exit();
@@ -99,12 +100,13 @@ class LoginController implements IController
             exit();
         }
         if ($usuario->nlogin == 0) {
+            $_SESSION["type"] = "Funcionario";
             $_SESSION["usuario"] = $usuario;
             header('Location: /primeiro-login');
             exit();
         }
         $_SESSION["usuario"] = $usuario;
-        header('Location: /Painel-inicial');
+        header('Location: /Pagina-inicial');
         exit();
     }
 }

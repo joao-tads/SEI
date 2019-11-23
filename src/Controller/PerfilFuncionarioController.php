@@ -13,11 +13,12 @@ class PerfilFuncionarioController implements IController
         echo Render::html(
             [
                 "cabecalho.php",
-                "menuAdmin.php",
+                "menu.php",
                 "perfil-funcionario.php",
                 "rodape.php"
             ],
             [
+                "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"]
             ]
         );

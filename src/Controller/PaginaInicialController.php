@@ -18,6 +18,7 @@ class PaginaInicialController implements IController
                 "rodape.php"
             ],
             [
+                "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"]
             ]
         );

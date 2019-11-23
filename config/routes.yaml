@@ -3,7 +3,6 @@
 /login-form: LoginFormController
 /login: LoginController
 /Pagina-inicial: PaginaInicialController
-/Painel-inicial: PaginaFuncionarioController
 /logout:  LogoutController
 /404found:  path404Controller
 /recuperar-senha: RecuperarSenharFormController
@@ -17,3 +16,4 @@
 /primeroLogin: PrimeiroLoginController
 /cadastro-form: CadastroFormController
 /cadastrar: CadastroController
+/matricular: MatricularController

@@ -38,7 +38,7 @@ class  CadastroController implements IController
         }
         Transaction::close();
 
-        header('Location: /Painel-inicial', true, 302);
+        header('Location: /Pagina-inicial', true, 302);
         exit();
     }
 }
