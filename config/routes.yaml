@@ -17,3 +17,4 @@
 /cadastro-form: CadastroFormController
 /cadastrar: CadastroController
 /matricular: MatricularController
+/consultar: ConsultarController

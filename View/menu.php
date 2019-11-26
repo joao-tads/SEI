@@ -15,12 +15,12 @@
                 echo '<a href="#">Solicitação</a>';
                 echo '<a href="#">Frequências</a>';
                 echo '<a href="#">E-mail</a>';
-                echo '<a href="#">Consultas</a>';
+                echo '<a href="/consultar">Consultas</a>';
                 break;
             case "Secretario(a)":
                 echo '<a href="/perfil-funcionario">Perfil</a>';
                 echo '<a href="#" data-toggle="modal" data-target="#myModal2">Matriculas</a>';
-                echo '<a href="#">Consultas</a>';
+                echo '<a href="/consultar">Consultas</a>';
                 echo '<a href="#" data-toggle="modal" data-target="#myModal">Cadastro</a>';
                 echo '<a href="#">E-mail</a>';
                 break;
