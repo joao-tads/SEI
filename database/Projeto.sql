@@ -72,8 +72,6 @@ create table Solicitacao (
 
 create table Turma (
     id int primary key not null auto_increment,
-    idAluno int not null,
-    idProfessor int not null,
     nome varchar(10) not null,
     turno varchar(10) not null,
     anoSerie varchar(10) not null
@@ -95,3 +93,4 @@ insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade
 
 select * from Funcionario;
 select * from Aluno;
+select * from Turma;
