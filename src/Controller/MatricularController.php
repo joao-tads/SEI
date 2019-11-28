@@ -7,7 +7,7 @@ namespace Ifnc\Tads\Controller;
 use Ifnc\Tads\Entity\Aluno;
 use Ifnc\Tads\Helper\Transaction;
 
-class  UpdatePerfilController implements IController
+class  MatricularController implements IController
 {
 
     public function request(): void
