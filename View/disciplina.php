@@ -22,7 +22,7 @@
                         <?php } } ?>
                         <div class="btn-group">
                             <i title="Remover" http-url="#" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                            <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></a>
+                            <a title="Vincular alunos" href="/vincular-aluno" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></a>
                         </div>
                     </td>
                 </tr>

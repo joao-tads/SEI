@@ -61,21 +61,20 @@ create table Proejto (
     periodo date not null
 );
 
-
-create table Solicitacao (
-    id int primary key not null auto_increment,
-    dataPedido date not null,
-    solicitante varchar(50) not null,
-    descricao text not null,
-    situacao varchar(20)
-);
-
 create table Disciplina (
 	id int primary key not null auto_increment,
     nome varchar(20) not null,
     idProfessor int,
     idAluno int,
     foreign key (idProfessor) references Funcionario (id),
+    foreign key (idAluno) references Aluno (id)
+);
+
+create table DisciplinaAluno (
+	id int primary key not null auto_increment,
+    idDisciplina int not null,
+    idAluno int not null,
+    foreign key (idDisciplina) references Disciplina (id),
     foreign key (idAluno) references Aluno (id)
 );
 
@@ -119,7 +118,8 @@ insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade
 select * from Funcionario;
 select * from Aluno;
 select * from Turma;
-select * from Disciplina;
+select * from DisciplinaAluno;
 select * from Solicitacao;
+select * from Disciplina;
 
-insert into Solicitacao;
+delete from DisciplinaAluno where id = 2;

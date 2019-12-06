@@ -4,7 +4,7 @@
 namespace Ifnc\Tads\Controller;
 
 
-use Ifnc\Tads\Entity\Disciplina;
+use Ifnc\Tads\Entity\DisciplinaAluno;
 use Ifnc\Tads\Helper\Transaction;
 
 class  VincularAlunoController implements IController
@@ -12,33 +12,21 @@ class  VincularAlunoController implements IController
 
     public function request(): void
     {
-        $disciplina = new Disciplina();
-        if(!empty($_POST['id'])) {
-            $funcionario->id = $_POST['id'];
-        } else {
-            $funcionario->senha = password_hash($_POST['cpf'], PASSWORD_ARGON2I);
-            $funcionario->nlogin = 0;
+        $aluno = new DisciplinaAluno();
+        if(!empty($_POST['idDisciplina'])) {
+            $aluno->idDisciplina = $_POST['idDisciplina'];
         }
-        $funcionario->nome = $_POST['nome'];
-        $funcionario->idade = $_POST['idade'];
-        $funcionario->cpf = $_POST['cpf'];
-        $funcionario->email = $_POST['email'];
-        $funcionario->telefone = $_POST['telefone'];
-        $funcionario->cargo = $_POST['cargo'];
+        if(!empty($_POST['idAluno'])) {
+            $aluno->idAluno = $_POST['idAluno'];
+        }
         
-        
-        var_dump($funcionario);
+        var_dump($aluno);
         Transaction::open();
-        $funcionario->store();
-        if(!empty($_POST['id'])) {
-            header('Location: /perfil-funcionario', true, 302);
-            $_SESSION['usuario'] = Funcionario::findByCondition("id='{$_POST['id']}'");
-            Transaction::close();
-        exit();
-        }
+        $aluno->store();
         Transaction::close();
+        
 
-        header('Location: /Pagina-inicial', true, 302);
+        header('Location: /vincular-aluno?id='.$aluno->idDisciplina, true, 302);
         exit();
     }
 }
