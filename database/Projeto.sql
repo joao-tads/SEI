@@ -70,11 +70,26 @@ create table Solicitacao (
     situacao varchar(20)
 );
 
+create table Disciplina (
+	id int primary key not null auto_increment,
+    nome varchar(20) not null,
+    idProfessor int,
+    idAluno int,
+    foreign key (idProfessor) references Funcionario (id),
+    foreign key (idAluno) references Aluno (id)
+);
+
 create table Turma (
     id int primary key not null auto_increment,
     nome varchar(10) not null,
     turno varchar(10) not null,
-    anoSerie varchar(10) not null
+    anoSerie varchar(10) not null,
+    min int not null,
+    max int not null,
+    idAluno int,
+    idDisciplina int,
+    foreign key (idAluno) references Aluno (id),
+    foreign key (idDisciplina) references Disciplina (id)
 );
 
 insert into Funcionario (nome, idade, cpf, email, telefone, dataNascimento, cargo, senha, nlogin) 
@@ -94,3 +109,4 @@ insert into Aluno (nome, dataNascimento, nomeMae, nomePai, rg, cpf, naturalidade
 select * from Funcionario;
 select * from Aluno;
 select * from Turma;
+select * from Disciplina;

@@ -18,6 +18,8 @@ class  CadastroTurmaController implements IController
         }
 
         $turma->nome = $_POST['nome'];
+        $turma->min = $_POST['min'];
+        $turma->max = $_POST['max'];
         $turma->turno = $_POST['turno'];
         $turma->anoSerie = $_POST['anoSerie'];
         

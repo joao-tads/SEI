@@ -19,5 +19,9 @@
 /matricular: MatricularController
 /consultar: ConsultarController
 /turmas: TurmasController
+/disciplinas: DisciplinasController
+/disciplinas-aluno: DisciplinasAlunoController
 /cadastrar-turma: CadastroTurmaController
+/cadastrar-disciplina: CadastroDisciplinaController
 /email: EmailController
+/solicitacao: SolicitacaoController

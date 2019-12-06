@@ -48,6 +48,18 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="control-label col-sm-2" for="min">Quantidade Mínima:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="Quantidade Mínima de Alunos " name="min">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="nome">Quantidade Máxima:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="Quantidade Máxima de Alunos" name="max">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label col-sm-2" for="sel1">Turno:</label>
                         <div class="col-sm-10">
                             <select class="form-control" id="sel1" name="turno">

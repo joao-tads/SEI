@@ -6,12 +6,10 @@ namespace Ifnc\Tads\Entity;
 
 use Ifnc\Tads\Helper\Record;
 
-class Turma extends Record
+class Disciplina extends Record
 {
     public $id;
     public $nome;
-    public $min;
-    public $max;
-    public $turno;
-    public $anoSerie;
+    public $idProfessor;
+    public $idAluno;
 }

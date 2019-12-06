@@ -4,7 +4,8 @@
     if ($type == "Aluno") {
         echo '<a href="/perfil">Perfil</a>
         <a href="/boletim">Boletim</a>
-        <a href="#">Solicitação</a>
+        <a href="#">Declaração</a>
+        <a href="/disciplinas-aluno">Disciplinas</a>
         <a href="/email" target="_blank">E-mail</a>
         <a href="#">Turma</a>';
     } else {
@@ -23,6 +24,7 @@
                 echo '<a href="/consultar">Consultas</a>';
                 echo '<a href="#" data-toggle="modal" data-target="#myModal">Cadastro</a>';
                 echo '<a href="/turmas">Turmas</a>';
+                echo '<a href="/disciplinas">Disciplinas</a>';
                 echo '<a href="/email" target="_blank"">E-mail</a>';
                 break;
             case "Coordenador(a)":
