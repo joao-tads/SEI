@@ -24,6 +24,7 @@
                 echo '<a href="/consultar">Consultas</a>';
                 echo '<a href="#" data-toggle="modal" data-target="#myModal">Cadastro</a>';
                 echo '<a href="/turmas">Turmas</a>';
+                echo '<a href="/solicitacoes">Solicitações</a>';
                 echo '<a href="/disciplinas">Disciplinas</a>';
                 echo '<a href="/email" target="_blank"">E-mail</a>';
                 break;

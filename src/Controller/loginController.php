@@ -84,6 +84,7 @@ class LoginController implements IController
                     header('Location: /primeiro-login');
                     exit();
                 }
+                $_SESSION["type"] = "Aluno";
                 $_SESSION["usuario"] = $usuario;
                 header('Location: /Pagina-inicial');
                 exit();
@@ -105,6 +106,7 @@ class LoginController implements IController
             header('Location: /primeiro-login');
             exit();
         }
+        $_SESSION["type"] = "Funcionario";
         $_SESSION["usuario"] = $usuario;
         header('Location: /Pagina-inicial');
         exit();

@@ -91,6 +91,16 @@ create table Turma (
     foreign key (idAluno) references Aluno (id),
     foreign key (idDisciplina) references Disciplina (id)
 );
+ create table solicitacao (
+	id int primary key not null auto_increment,
+    tipo varchar(30) not null,
+    descricao text(300) not null,
+    resposta text(300),
+    idSecretario int,
+    idAluno int not null,
+    foreign key (idSecretario) references Funcionario (id),
+    foreign key (idAluno) references Aluno (id)
+);
 
 insert into Funcionario (nome, idade, cpf, email, telefone, dataNascimento, cargo, senha, nlogin) 
 	values('Joao Guedes', 24, '222.333.555-44', 'joo_guedes@live.com', '(84)99421-3471', '1995-05-12', 'Professor(a)', 
@@ -110,3 +120,6 @@ select * from Funcionario;
 select * from Aluno;
 select * from Turma;
 select * from Disciplina;
+select * from Solicitacao;
+
+insert into Solicitacao;

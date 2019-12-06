@@ -1,28 +1,28 @@
 <body style="margin-top: 5%;">
 
-    <h3>Disciplinas</h3>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
+    <h3>Solicitações</h3>
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Professor</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Solicitante</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($disciplina as $dis) { ?>
+            <?php foreach ($solicitacao as $soli) { ?>
                 <tr>
-                    <th scope="row"><?= $dis->id ?></th>
-                    <td><?= $dis->nome ?></td>
-                    <?php foreach ($funcionario as $func) { 
-                        if($func->id == $dis->idProfessor) { ?>
-                        <td><?= $func->nome ?></td>
+                    <th scope="row"><?= $soli->id ?></th>
+                    <td><?= $soli->tipo ?></td>
+                    <td><?= $soli->descricao ?></td>
+                    <?php foreach ($alunos as $a) { 
+                        if($a->id == $soli->idAluno) { ?>
+                        <td><?= $a->nome ?></td>
                     <td>
                         <?php } } ?>
                         <div class="btn-group">
-                            <i title="Remover" http-url="#" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                            <i title="Vincular alunos" http-url="/vincular-aluno" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
+                            <i title="Abrir" http-url="\abrir-solicitacao?id=<?= $soli->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-eye-open"></span></i>
                         </div>
                     </td>
                 </tr>

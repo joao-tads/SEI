@@ -15,7 +15,8 @@ class EmailController implements IController
                 "email.php"
             ],
             [
-                "usuario" => $_SESSION["usuario"]
+                "usuario" => $_SESSION["usuario"],
+                "type" => $_SESSION["type"]
             ]
         );
     }

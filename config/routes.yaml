@@ -25,3 +25,6 @@
 /cadastrar-disciplina: CadastroDisciplinaController
 /email: EmailController
 /solicitacao: SolicitacaoController
+/solicitacoes: SolicitacoesController
+/vincular-aluno: DisciplinaAlunoController
+/disciplina-alunos: VincularAlunoController
