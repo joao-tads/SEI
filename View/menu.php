@@ -15,6 +15,7 @@
                 echo '<a href="/Boletim">Notas</a>';
                 echo '<a href="#">Solicitação</a>';
                 echo '<a href="#">Frequências</a>';
+                echo '<a href="/disciplinas-professor">Disciplinas</a>';
                 echo '<a "/email" target="_blank">E-mail</a>';
                 echo '<a href="/consultar">Consultas</a>';
                 break;

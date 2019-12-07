@@ -28,3 +28,4 @@
 /solicitacoes: SolicitacoesController
 /vincular-aluno: DisciplinaAlunoController
 /disciplina-alunos: VincularAlunoController
+/disciplinas-professor: DisciplinasProfessorController

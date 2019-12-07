@@ -121,5 +121,3 @@ select * from Turma;
 select * from DisciplinaAluno;
 select * from Solicitacao;
 select * from Disciplina;
-
-delete from DisciplinaAluno where id = 2;

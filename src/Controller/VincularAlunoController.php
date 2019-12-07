@@ -3,7 +3,6 @@
 
 namespace Ifnc\Tads\Controller;
 
-
 use Ifnc\Tads\Entity\DisciplinaAluno;
 use Ifnc\Tads\Helper\Transaction;
 
@@ -12,6 +11,7 @@ class  VincularAlunoController implements IController
 
     public function request(): void
     {
+
         $aluno = new DisciplinaAluno();
         if(!empty($_POST['idDisciplina'])) {
             $aluno->idDisciplina = $_POST['idDisciplina'];
@@ -26,7 +26,7 @@ class  VincularAlunoController implements IController
         Transaction::close();
         
 
-        header('Location: /vincular-aluno?id='.$aluno->idDisciplina, true, 302);
+        header('Location: /disciplinas', true, 302);
         exit();
     }
 }

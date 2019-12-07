@@ -3,6 +3,7 @@
 namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Disciplina;
+use Ifnc\Tads\Entity\DisciplinaAluno;
 use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
@@ -23,7 +24,8 @@ class DisciplinasAlunoController implements IController
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
                 "funcionario" => Funcionario::all(),
-                "disciplina" => Disciplina::all()  
+                "disciplina" => Disciplina::all(),
+                "disciplinaAluno" => DisciplinaAluno::all()  
             ]
         );
     }
