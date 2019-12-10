@@ -1,0 +1,11 @@
+{
+    "require": {
+        "symfony/yaml": "^4.3",
+        "doctrine/annotations": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ifnc\\Tads\\": "src"
+        }
+    }
+}

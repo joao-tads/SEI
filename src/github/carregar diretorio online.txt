@@ -1,0 +1,24 @@
+Ou crie um novo repositório na linha de comando
+    
+echo "# SEI" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/joao-tads/SEI.git
+git push -u origin master
+
+
+Ou envie um repositório existente a partir da linha de comando
+
+git remote add origin https://github.com/joao-tads/SEI.git
+git push -u origin master
+
+
+usando clone;
+
+cd des          //tab
+git clone https://github.com/joao-tads/SEI.git
+//abra a pasta no vscode
+git add .
+git commit -m ""
+git push origin master

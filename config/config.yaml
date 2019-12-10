@@ -1,0 +1,28 @@
+#caminho padrão
+path_default:
+  /login-form
+# configurações de conexão ao banco de dados
+connection:
+  host: localhost
+  name: Projeto
+  user: root
+  pass:
+  type: mysql
+  port:
+# caminhos desprotegidos definidos por expressões regulares
+paths_unprotected:
+  - /login/
+  - /404found/
+  - /recuperar/
+  - /recuperar-senha/
+  - /primeiro-login/
+  
+# caminho seguido quando é acessado um sem permissão
+path_unprotected_default:
+  /login-form
+# caminho seguido quando é acessado um inexistente
+path_not_found:
+  /404found
+# namespace para controladores
+path_controller:
+  \Ifnc\Tads\Controller\
