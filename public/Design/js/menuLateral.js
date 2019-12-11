@@ -11,11 +11,26 @@ function closeOpenNav() {
         check--;
     }
 }
-function formatar(mascara, documento){
+
+function formatar(mascara, documento) {
     var i = documento.value.length;
-    var saida = mascara.substring(0,1);
+    var saida = mascara.substring(0, 1);
     var texto = mascara.substring(i)
-    if (texto.substring(0,1) != saida){
-        documento.value += texto.substring(0,1);
+    if (texto.substring(0, 1) != saida) {
+        documento.value += texto.substring(0, 1);
     }
+}
+
+function Mascara(objeto) {
+    if (objeto.value.length == 0)
+        objeto.value = '(' + objeto.value;
+
+    if (objeto.value.length == 3)
+        objeto.value = objeto.value + ')';
+
+    if (objeto.value.length == 4)
+        objeto.value = objeto.value + ' ';
+
+    if (objeto.value.length == 10)
+        objeto.value = objeto.value + '-';
 }

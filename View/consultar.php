@@ -25,13 +25,48 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
-                                        <i title="Enviar e-mail" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span></i>
-                                        <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
                                         <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
                                     </div>
                                 </td>
                             </tr>
+                            <div id="myModalA<?= $user->id ?>" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Dados Pessoais</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <Strong>Matrícula:</Strong><br>
+                                            <p><?= $user->id ?></p>
+                                            <Strong>Nome</Strong><br>
+                                            <p><?= $user->nome ?></p>
+                                            <Strong>Data de Nascimento</Strong><br>
+                                            <p><?= $user->dataNascimento ?></p>
+                                            <Strong>Nome da Mãe</Strong><br>
+                                            <p><?= $user->nomeMae ?></p>
+                                            <Strong>Nome do Pai</Strong><br>
+                                            <p><?= $user->nomePai ?></p>
+                                            <Strong>RG</Strong><br>
+                                            <p><?= $user->rg ?></p>
+                                            <Strong>CPF</Strong><br>
+                                            <p><?= $user->cpf ?></p>
+                                            <Strong>Naturalidade</Strong><br>
+                                            <p><?= $user->naturalidade ?></p>
+                                            <Strong>Endereço</Strong><br>
+                                            <p><?= $user->endereco ?></p>
+                                            <Strong>Telefone</Strong><br>
+                                            <p><?= $user->telefone ?></p>
+                                            <Strong>Sexo</Strong><br>
+                                            <p><?= $user->sexo ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -57,12 +92,43 @@
                                 <th scope="row"><?= $user->id ?></th>
                                 <td><?= $user->nome ?></td>
                                 <td>
-                                    <i title="Visualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
-                                    <i title="Enviar e-mail" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-envelope"></span></i>
-                                    <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                                    <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
+                                    <div class="btn-group">
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
+                                        <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
+                                        <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                                    </div>
                                 </td>
                             </tr>
+                            <div id="myModalF<?= $user->id ?>" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Dados Pessoais</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <Strong>Matrícula:</Strong><br>
+                                            <p><?= $user->id ?></p>
+                                            <Strong>Nome</Strong><br>
+                                            <p><?= $user->nome ?></p>
+                                            <Strong>Idade</Strong><br>
+                                            <p><?= $user->idade ?></p>
+                                            <Strong>CPF</Strong><br>
+                                            <p><?= $user->cpf ?></p>
+                                            <Strong>E-mail</Strong><br>
+                                            <p><?= $user->email ?></p>
+                                            <Strong>Telefone</Strong><br>
+                                            <p><?= $user->telefone ?></p>
+                                            <Strong>Data de Nascimento</Strong><br>
+                                            <p><?= $user->dataNascimento ?></p>
+                                            <Strong>Cargo</Strong><br>
+                                            <p><?= $user->cargo ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
                     </tbody>
                 </table>

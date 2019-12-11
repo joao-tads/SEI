@@ -35,12 +35,12 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Atualizar dados</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal20">Atualizar dados</button>
             <a href="/Pagina-inicial" class="btn btn-danger">Voltar</a>
         </div>
     </div>
 </div>
-<div id="myModal" class="modal fade" role="dialog">
+<div id="myModal20" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="cpd">CPF:</label>
+                        <label class="control-label col-sm-2" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" for="cpd">CPF:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" value="<?= $usuario->cpf ?>">
                         </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="telefone">Telefone:</label>
+                        <label class="control-label col-sm-2" onkeypress="Mascara(this);" maxlength="15" for="telefone">Telefone:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" placeholder="Número de contato ..." name="telefone" value="<?= $usuario->telefone ?>">
                         </div>
@@ -92,17 +92,16 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <input type="hidden" name="id" value="<?= $usuario->id ?>">
-                            <button type="submit" class="btn btn-success">Atualizar</button>
-                            <button type="reset" class="btn btn-warning">Limpar</button>
-                        </div>
-                    </div>
-                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input type="hidden" name="id" value="<?= $usuario->id ?>">
+                        <button type="submit" class="btn btn-success">Atualizar</button>
+                        <button type="reset" class="btn btn-warning">Limpar</button>
+                    </div>
+                </div>
+                </form>
             </div>
         </div>
 

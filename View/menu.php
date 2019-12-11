@@ -6,7 +6,6 @@
         <a href="/boletim">Boletim</a>
         <a href="#">Declaração</a>
         <a href="/disciplinas-aluno">Disciplinas</a>
-        <a href="/email" target="_blank">E-mail</a>
         <a href="#">Turma</a>';
     } else {
         switch ($usuario->cargo):
@@ -16,7 +15,6 @@
                 echo '<a href="#">Solicitação</a>';
                 echo '<a href="#">Frequências</a>';
                 echo '<a href="/disciplinas-professor">Disciplinas</a>';
-                echo '<a "/email" target="_blank">E-mail</a>';
                 echo '<a href="/consultar">Consultas</a>';
                 break;
             case "Secretario(a)":
@@ -27,20 +25,17 @@
                 echo '<a href="/turmas">Turmas</a>';
                 echo '<a href="/solicitacoes">Solicitações</a>';
                 echo '<a href="/disciplinas">Disciplinas</a>';
-                echo '<a href="/email" target="_blank"">E-mail</a>';
                 break;
             case "Coordenador(a)":
                 echo '<a href="/perfil-funcionario">Perfil</a>';
                 echo '<a href="/Boletim">Boletim</a>';
                 echo '<a href="#">Solicitação</a>';
-                echo '<a href="/email" target="_blank">E-mail</a>';
                 echo '<a href="/turmas">Turmas</a>';
                 break;
             case "Diretor(a)":
                 echo '<a href="/perfil-funcionario">Perfil</a>';
                 echo '<a href="/Boletim">Boletim</a>';
                 echo '<a href="#">Solicitação</a>';
-                echo '<a href="/email" target="_blank">E-mail</a>';
                 echo '<a href="/turmas">Turma</a>';
                 break;
             default:
@@ -76,7 +71,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="cpd">CPF:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf">
+                            <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf">
                         </div>
                     </div>
                     <div class="form-group">
@@ -88,7 +83,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="telefone">Telefone:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Número de contato ..." name="telefone">
+                            <input type="text" class="form-control" onkeypress="Mascara(this);" maxlength="15" placeholder="Número de contato ..." name="telefone">
                         </div>
                     </div>
                     <div class="form-group">
@@ -154,13 +149,13 @@
                     <div class="form-group">
                         <label class="control-label col-sm-4">RG:</label>
                         <div class="col-sm-5">
-                            <input id="rg" type="text" class="form-control" name="rg">
+                            <input id="rg" type="text" maxlength="11" OnKeyPress="formatar('###.###.###', this)" class="form-control" name="rg">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4">CPF:</label>
                         <div class="col-sm-5">
-                            <input type="text" class="form-control" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
+                            <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" name="cpf">
                         </div>
                     </div>
                     <div class="form-group">
@@ -178,7 +173,7 @@
                     <div class="form-group">
                         <label class="control-label col-sm-4">Telefone:</label>
                         <div class="col-sm-5">
-                            <input type="tel" class="form-control" name="telefone">
+                            <input type="text" onkeypress="Mascara(this);" maxlength="15" class="form-control" name="telefone">
                         </div>
                     </div>
                     <div class="form-group">
