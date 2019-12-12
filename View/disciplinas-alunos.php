@@ -13,7 +13,7 @@ foreach ($funcionario as $func) {
 }
 ?>
 
-<body style="margin-top: 5%;">
+<body>
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3">Vincular Alunos</button>
     <table class="table" style="border: solid 1px black;">
         <thead>
@@ -72,11 +72,10 @@ foreach ($funcionario as $func) {
                         <input type="hidden" name="idDisciplina" value="<?= $_GET['id'] ?>">
                         <div class="modal-footer">
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Vincular</button>
-                                </div>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Solicitar">
+                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
+                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>

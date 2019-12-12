@@ -1,4 +1,4 @@
-<body style="margin-top: 5%;">
+<body>
 
     <h3>Disciplinas</h3>
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
@@ -35,7 +35,6 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Cadastrar nova Disciplina</h4>
             </div>
             <div class="modal-body">
@@ -58,11 +57,11 @@
                             </select>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                <button type="reset" class="btn btn-default">Limpar</button>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Solicitar">
+                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
+                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                             </div>
                         </div>
                 </form>

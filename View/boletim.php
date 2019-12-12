@@ -1,44 +1,79 @@
-<div style="margin-top: 5%;">
-<h3>Boletim</ph3>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Default</td>
-        <td>Defaultson</td>
-        <td>def@somemail.com</td>
-      </tr>      
-      <tr class="success">
-        <td>Success</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr class="danger">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr class="info">
-        <td>Info</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-      <tr class="warning">
-        <td>Warning</td>
-        <td>Refs</td>
-        <td>bo@example.com</td>
-      </tr>
-      <tr class="active">
-        <td>Active</td>
-        <td>Activeson</td>
-        <td>act@example.com</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container">
+  <h3>Boletim</ph3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Disciplinas</th>
+          <th>1º B</th>
+          <th>2º B</th>
+          <th>3º B</th>
+          <th>4º B</th>
+          <th>Média</th>
+          <th>Frequência</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-success">
+          <td>Português</td>
+          <td>5.8</td>
+          <td>8.0</td>
+          <td>9.5</td>
+          <td>7.0</td>
+          <td>7.5</td>
+          <td>85%</td>
+          <td>Aprovado</td>
+        </tr>
+        <tr class="table-danger">
+          <td>Matemática</td>
+          <td>5.0</td>
+          <td>4.0</td>
+          <td>0.5</td>
+          <td>1.0</td>
+          <td>2.6</td>
+          <td>25%</td>
+          <td>Reprovado</td>
+        </tr>
+        <tr class="table-warning">
+          <td>Ciências</td>
+          <td>5.8</td>
+          <td>7.0</td>
+          <td>4.5</td>
+          <td>6.0</td>
+          <td>5.8</td>
+          <td>76%</td>
+          <td>Recuperação</td>
+        </tr>
+        <tr class="table-success">
+          <td>História</td>
+          <td>6.4</td>
+          <td>8.0</td>
+          <td>9.5</td>
+          <td>6.0</td>
+          <td>7.4</td>
+          <td>88%</td>
+          <td>Aprovado</td>
+        </tr>
+        <tr class="table-warning">
+          <td>Geografia</td>
+          <td>4.5</td>
+          <td>7.0</td>
+          <td>3.5</td>
+          <td>8.0</td>
+          <td>5.7</td>
+          <td>75%</td>
+          <td>Recuperação</td>
+        </tr>
+        <tr class="table-success">
+          <td>Educação Física</td>
+          <td>10.0</td>
+          <td>10.0</td>
+          <td>10.0</td>
+          <td>10.0</td>
+          <td>10.0</td>
+          <td>100%</td>
+          <td>Aprovado</td>
+        </tr>
+      </tbody>
+    </table>
 </div>

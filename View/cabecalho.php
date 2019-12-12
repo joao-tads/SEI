@@ -4,42 +4,42 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- meu CSS -->
     <link rel="stylesheet" href="/Design/css/menuLateral.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body class="bg-light" id="main">
-    <header class="container">
-        <?php if (isset($usuario)) { ?>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <ul class="nav navbar-nav">
-                        <li onclick="closeOpenNav()"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
-                    </ul>
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="/Pagina-inicial"><?= $usuario->nome ?></a>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/logout"><span class="glyphicon glyphicon-user"></span> Sair</a></li>
-                    </ul>
+    <?php if (isset($usuario)) { ?>
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <a href="#" style="color: #ffff;"><i onclick="closeOpenNav()" class="fas fa-bars"></i></a>
+                </ul>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/Pagina-inicial"><?= $usuario->nome ?></a>
                 </div>
-            </nav>
-        <?php } else { ?>
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#"><?= $titulo ?></a>
-                    </div>
-                </div>
-            </nav>
-        <?php } ?>
-    </header>
+                <ul class="nav navbar-nav navbar-right">
+                <a href="/logout" style="text-decoration: none; color: #ffff;"><h4 title="Sair"><li class="fas fa-sign-out-alt"></h4></li></a>
+                </ul>
+            </div>
+        </nav>
+    <?php } else { ?>
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><?= $titulo ?></a>
+                </li>
+            </ul>
+        </nav>
+    <?php } ?>
     <main class="container">
         <?php if (isset($alerts)) { ?>
             <?php foreach ($alerts as $alert) { ?>

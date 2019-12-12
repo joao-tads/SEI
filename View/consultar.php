@@ -1,15 +1,18 @@
 <body style="margin-top: 5%;">
-    <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Alunos</a></li>
-        <li><a data-toggle="tab" href="#menu1">Funcionários</a></li>
-    </ul>
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-            <h3>Alunos</h3>
-            <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <span class="d-block text-center mb-3">
-                    <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
-                </span>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Alunos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Funcionarios</a>
+        </li>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="home" class="container tab-pane active"><br>
+                <h3>Alunos</h3>
+                <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
                 <table class="table">
                     <thead>
                         <tr>
@@ -25,9 +28,9 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
-                                        <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
-                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i></i>
+                                        <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
                                     </div>
                                 </td>
                             </tr>
@@ -37,7 +40,6 @@
                                     <!-- Modal content-->
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Dados Pessoais</h4>
                                         </div>
                                         <div class="modal-body">
@@ -63,6 +65,7 @@
                                             <p><?= $user->telefone ?></p>
                                             <Strong>Sexo</Strong><br>
                                             <p><?= $user->sexo ?></p>
+                                            <b class="btn btn-info btn-md" data-dismiss="modal">Sair</b>
                                         </div>
                                     </div>
                                 </div>
@@ -71,13 +74,9 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-        <div id="menu1" class="tab-pane fade">
-            <h3>Funcionários</h3>
-            <div class="my-3 p-3 bg-white rounded shadow-sm">
-                <span class="d-block text-center mb-3">
-                    <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
-                </span>
+            <div id="menu1" class="container tab-pane fade"><br>
+                <h3>Funcionários</h3>
+                <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
                 <table class="table">
                     <thead>
                         <tr>
@@ -93,9 +92,9 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
-                                        <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
-                                        <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i>
+                                            <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
+                                                <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
                                     </div>
                                 </td>
                             </tr>
@@ -104,9 +103,8 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Dados Pessoais</h4>
+                                        <div class="modal-header>
+                                            <h4 class=" modal-title">Dados Pessoais</h4>
                                         </div>
                                         <div class="modal-body">
                                             <Strong>Matrícula:</Strong><br>
@@ -125,6 +123,7 @@
                                             <p><?= $user->dataNascimento ?></p>
                                             <Strong>Cargo</Strong><br>
                                             <p><?= $user->cargo ?></p>
+                                            <b class="btn btn-info btn-md" data-dismiss="modal">Sair</b>
                                         </div>
                                     </div>
                                 </div>
@@ -134,5 +133,4 @@
                 </table>
             </div>
         </div>
-    </div>
 </body>

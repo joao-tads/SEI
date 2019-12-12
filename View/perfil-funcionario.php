@@ -35,8 +35,8 @@
                     </tr>
                 </tbody>
             </table>
-            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal20">Atualizar dados</button>
-            <a href="/Pagina-inicial" class="btn btn-danger">Voltar</a>
+            <input type="submit" name="submit" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal20" value="Atualizar dados">
+            <a href="/Pagina-inicial" class="btn btn-info btn-md">Voltar</a>
         </div>
     </div>
 </div>
@@ -46,7 +46,6 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Atualize os Dados</h4>
             </div>
             <div class="modal-body">
@@ -95,11 +94,9 @@
             </div>
             <div class="modal-footer">
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <input type="hidden" name="id" value="<?= $usuario->id ?>">
-                        <button type="submit" class="btn btn-success">Atualizar</button>
-                        <button type="reset" class="btn btn-warning">Limpar</button>
-                    </div>
+                    <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
+                    <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
+                    <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                 </div>
                 </form>
             </div>

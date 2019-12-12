@@ -14,12 +14,9 @@ class LoginFormController implements IController
     {
         echo Render::html(
             [
-                "cabecalho.php",
-                "login-form.php",
-                "rodape.php"
+                "login-form.php"
             ],
             [
-                "titulo"=>"Escola",
                 "alerts" =>$this->useAll()
             ]);
             

@@ -51,7 +51,6 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Cadastro de Funcionário</h4>
             </div>
             <div class="modal-body">
@@ -99,14 +98,12 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                                <button type="reset" class="btn btn-default">Limpar</button>
-                            </div>
+                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Cadastrar">
+                            <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
+                            <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                         </div>
                 </form>
             </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
     </div>
 </div>
@@ -117,7 +114,6 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Matrícula de Aluno</h4>
             </div>
             <div class="modal-body">
@@ -188,14 +184,12 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-4">
-                                <button type="submit" class="btn btn-success">Matricular</button>
-                                <button type="reset" class="btn btn-default">Limpar</button>
-                            </div>
+                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Matricular">
+                            <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
+                            <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                         </div>
                 </form>
             </div>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
     </div>
 </div>
