@@ -1,6 +1,6 @@
 <body style="margin-top: 5%;">
 
-    <h3>Disciplinas</h3>
+    <h3>Turmas</h3>
     <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
     <table class="table">
         <thead>
