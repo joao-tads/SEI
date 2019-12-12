@@ -60,3 +60,5 @@ img {
         </div>
     </div>
 </body>
+<script src="/Design/js/menuLateral.js"></script>
+
