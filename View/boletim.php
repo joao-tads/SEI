@@ -14,16 +14,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-success">
-          <td>Português</td>
-          <td>5.8</td>
-          <td>8.0</td>
-          <td>9.5</td>
-          <td>7.0</td>
-          <td>7.5</td>
+      <?php foreach ($boletim as $result) {
+        echo "<tr class='table-success'>
+          <td><?= $result->nome ?></td>
+          <td><?= $result->pb ?></td>
+          <td><?= $result->sb ?></td>
+          <td><?= $result->tb ?></td>
+          <td><?= $result->qb ?></td>
+          <td><?= ($result->pb+$result->sb+$result->tb+$result->qb)\4 ?></td>
           <td>85%</td>
           <td>Aprovado</td>
-        </tr>
+        </tr>";
+      } ?>
+      <!--
         <tr class="table-danger">
           <td>Matemática</td>
           <td>5.0</td>
@@ -74,6 +77,7 @@
           <td>100%</td>
           <td>Aprovado</td>
         </tr>
+      -->
       </tbody>
     </table>
 </div>
