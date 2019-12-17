@@ -79,10 +79,10 @@ CREATE TABLE `DisciplinaTurma` (
     `idDisciplina` INT NOT NULL,
     `idAluno` INT NOT NULL,
     `idTurma` INT NOT NULL,
-    `1b` FLOAT,
-    `2b` FLOAT,
-    `3b` FLOAT,
-    `4b` FLOAT
+    `pb` FLOAT,
+    `sb` FLOAT,
+    `tb` FLOAT,
+    `qb` FLOAT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
     
 ALTER TABLE `Aluno`
@@ -308,6 +308,7 @@ INSERT INTO `DisciplinaTurma` (`idDisciplina`, `idAluno`, `idTurma`, `1b`, `2b`,
     (3, 4, 1, 6.7, 7.0, 8.5, 9.0),
     (4, 4, 1, 6.7, 7.0, 8.5, 9.0),
     (5, 4, 1, 6.7, 7.0, 8.5, 9.0);
+    
 SELECT * FROM `Aluno` ORDER BY `dataNascimento`;
 SELECT COUNT(`nome`) FROM `Aluno`;
 SELECT MAX(`dataNascimento`) FROM `Funcionario`;
@@ -315,7 +316,7 @@ SELECT `d`.`nome`, `f`.`nome` FROM `Disciplina` `d` INNER JOIN `Funcionario` `f`
 SELECT `d`.`nome`, `a`.`nome`  FROM `Disciplina` `d` INNER JOIN `DisciplinaAluno` `da` 
 	INNER JOIN `Aluno` `a` ON (`da`.`idAluno` = `a`.`id` AND `da`.`idDisciplina` = `d`.`id`);
 SELECT `t`.`nome`, `t`.`anoSerie`, `a`.`nome` FROM `Turma` `t` INNER JOIN `Aluno` `a` ON (`t`.`idAluno` = `a`.`id`);
-SELECT `d`.`nome`, `dt`.`1b`, `dt`.`2b`, `dt`.`3b`, `dt`.`4b` FROM `Disciplina` `d` INNER JOIN `DisciplinaTurma` `dt` 
+SELECT `d`.`nome`, `dt`.`pb`, `dt`.`sb`, `dt`.`tb`, `dt`.`qb` FROM `Disciplina` `d` INNER JOIN `DisciplinaTurma` `dt` 
 	INNER JOIN `Aluno` `a` WHERE (`dt`.`idAluno` = `a`.`id` AND `a`.`id` = 1 AND `dt`.`idDisciplina` = 1);
 SELECT * FROM `Responsavel` WHERE (`nome` = 'João Guedes' OR `idAluno` = 1 OR `cpf` = '111.111.111-00');
 
