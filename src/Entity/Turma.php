@@ -10,8 +10,9 @@ class Turma extends Record
 {
     public $id;
     public $nome;
-    public $min;
-    public $max;
     public $turno;
     public $anoSerie;
+    public $min;
+    public $max;
+    public $idAluno;
 }

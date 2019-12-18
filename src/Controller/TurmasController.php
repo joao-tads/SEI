@@ -11,6 +11,7 @@ class TurmasController implements IController
     public function request(): void
     {
         Transaction::open();
+        
         echo Render::html(
             [
                 "cabecalho.php",
@@ -21,7 +22,7 @@ class TurmasController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "turmas" => Turma::all()  
+                "turmas" => Turma::findByConditionAll("idAluno='{$_SESSION['usuario']->id}'")  
             ]
         );
     }

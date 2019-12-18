@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS `Projeto`;
-CREATE DATABASE `Projeto`;
+CREATE DATABASE `Projeto`DEFAULT CHARACTER SET 'UTF8';
 
 USE `Projeto`;
 
@@ -70,7 +70,7 @@ CREATE TABLE `Solicitacao` (
     `tipo` VARCHAR(30) NOT NULL,
     `descricao` TEXT(300) NOT NULL,
     `resposta` TEXT(300),
-    `idSecretario` INT NOT NULL,
+    `idSecretario` INT,
     `idAluno` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -322,3 +322,6 @@ SELECT * FROM `Responsavel` WHERE (`nome` = 'João Guedes' OR `idAluno` = 1 OR `
 
 SELECT * FROM `Responsavel` WHERE (`nome` = 'João Guedes' OR `idAluno` = 1 OR `cpf` = '111.111.111-00'); 
 SELECT * FROM `turma` WHERE (`idAluno` = 1 AND `max` = 40) OR (`idAluno` = 20 AND `turno` = 'Matutino');
+
+select * from Solicitacao;
+select * from Funcionario;

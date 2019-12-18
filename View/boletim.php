@@ -1,5 +1,13 @@
+<?php 
+  function media($a, $b, $c, $d) {
+    return ($a+$b+$c+$d)/4;
+  }
+  function porcent($media) {
+    return ($media*100)/10;
+  }
+?>
 <div class="container">
-  <h3>Boletim</ph3>
+  <h3>Boletim</h3>
     <table class="table">
       <thead>
         <tr>
@@ -14,70 +22,28 @@
         </tr>
       </thead>
       <tbody>
-      <?php foreach ($boletim as $result) {
-        echo "<tr class='table-success'>
-          <td><?= $result->nome ?></td>
-          <td><?= $result->pb ?></td>
-          <td><?= $result->sb ?></td>
-          <td><?= $result->tb ?></td>
-          <td><?= $result->qb ?></td>
-          <td><?= ($result->pb+$result->sb+$result->tb+$result->qb)\4 ?></td>
-          <td>85%</td>
-          <td>Aprovado</td>
-        </tr>";
-      } ?>
-      <!--
-        <tr class="table-danger">
-          <td>Matemática</td>
-          <td>5.0</td>
-          <td>4.0</td>
-          <td>0.5</td>
-          <td>1.0</td>
-          <td>2.6</td>
-          <td>25%</td>
-          <td>Reprovado</td>
+      <?php foreach ($boletim as $r) { $media = media($r->pb,$r->sb,$r->tb,$r->qb); 
+        if ($media <= 3) {
+          echo "<tr class='table-danger'>";
+          $status = "Reprovado";
+        }  else if($media < 6) {
+          echo "<tr class='table-warning'>";
+          $status = "Recuperação";
+        } else if ($media <= 10) {
+          echo "<tr class='table-success'>";
+          $status = "Aprovado";
+        }
+      ?>
+          <td><?= $r->nome ?></td>
+          <td><?= $r->pb ?></td>
+          <td><?= $r->sb ?></td>
+          <td><?= $r->tb ?></td>
+          <td><?= $r->qb ?></td>
+          <td><?= $media ?></td>
+          <td><?= porcent($media) ?>%</td>
+          <td><?= $status ?></td>
         </tr>
-        <tr class="table-warning">
-          <td>Ciências</td>
-          <td>5.8</td>
-          <td>7.0</td>
-          <td>4.5</td>
-          <td>6.0</td>
-          <td>5.8</td>
-          <td>76%</td>
-          <td>Recuperação</td>
-        </tr>
-        <tr class="table-success">
-          <td>História</td>
-          <td>6.4</td>
-          <td>8.0</td>
-          <td>9.5</td>
-          <td>6.0</td>
-          <td>7.4</td>
-          <td>88%</td>
-          <td>Aprovado</td>
-        </tr>
-        <tr class="table-warning">
-          <td>Geografia</td>
-          <td>4.5</td>
-          <td>7.0</td>
-          <td>3.5</td>
-          <td>8.0</td>
-          <td>5.7</td>
-          <td>75%</td>
-          <td>Recuperação</td>
-        </tr>
-        <tr class="table-success">
-          <td>Educação Física</td>
-          <td>10.0</td>
-          <td>10.0</td>
-          <td>10.0</td>
-          <td>10.0</td>
-          <td>10.0</td>
-          <td>100%</td>
-          <td>Aprovado</td>
-        </tr>
-      -->
+      <?php } ?>
       </tbody>
     </table>
 </div>

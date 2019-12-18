@@ -6,13 +6,13 @@
         <a href="/boletim">Boletim</a>
         <a href="#">Declaração</a>
         <a href="/disciplinas-aluno">Disciplinas</a>
-        <a href="#">Turma</a>';
+        <a href="/turmas">Turma</a>';
     } else {
         switch ($usuario->cargo):
             case "Professor(a)":
                 echo '<a href="/perfil-funcionario">Perfil</a>';
-                echo '<a href="/Boletim">Notas</a>';
-                echo '<a href="#">Solicitação</a>';
+                echo '<a href="/inserir-notas">Notas</a>';
+                echo '<a href="/solicitacoes-funcionario">Solicitação</a>';
                 echo '<a href="#">Frequências</a>';
                 echo '<a href="/disciplinas-professor">Disciplinas</a>';
                 echo '<a href="/consultar">Consultas</a>';
@@ -25,18 +25,6 @@
                 echo '<a href="/turmas">Turmas</a>';
                 echo '<a href="/solicitacoes">Solicitações</a>';
                 echo '<a href="/disciplinas">Disciplinas</a>';
-                break;
-            case "Coordenador(a)":
-                echo '<a href="/perfil-funcionario">Perfil</a>';
-                echo '<a href="/Boletim">Boletim</a>';
-                echo '<a href="#">Solicitação</a>';
-                echo '<a href="/turmas">Turmas</a>';
-                break;
-            case "Diretor(a)":
-                echo '<a href="/perfil-funcionario">Perfil</a>';
-                echo '<a href="/Boletim">Boletim</a>';
-                echo '<a href="#">Solicitação</a>';
-                echo '<a href="/turmas">Turma</a>';
                 break;
             default:
                 echo '<a href="/perfil">Erro de Acesso! Usuário não identificado!</a>';
