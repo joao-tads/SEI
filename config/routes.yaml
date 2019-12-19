@@ -28,3 +28,6 @@
 /vincular-aluno: DisciplinaAlunoController
 /disciplina-alunos: VincularAlunoController
 /disciplinas-professor: DisciplinasProfessorController
+/update-perfil-consulta: UpdatePerfilConsultaController
+/update-perfil-consulta-funcionario: UpdatePerfilConsultaFuncionarioController
+/inative-funcionario: InativeFuncionarioController

@@ -37,7 +37,7 @@ CREATE TABLE `Funcionario` (
     `cpf` VARCHAR(14) NOT NULL,
     `email` VARCHAR(50) NOT NULL,
     `telefone` VARCHAR(15) NOT NULL,
-    `dataNascimento` VARCHAR(10) NOT NULL,
+    `dataNascimento` DATE NOT NULL,
     `cargo` VARCHAR(15) NOT NULL,
     `senha` VARCHAR(100),
     `nlogin` INT NOT NULL
@@ -84,6 +84,34 @@ CREATE TABLE `DisciplinaTurma` (
     `tb` FLOAT,
     `qb` FLOAT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `AlunoInativo` (
+	`id` INT NOT NULL,
+    `nome` VARCHAR(100) NOT NULL,
+    `dataNascimento` DATE NOT NULL,
+    `nomeMae` VARCHAR(100) NOT NULL,
+    `nomePai` VARCHAR(100) NOT NULL,
+    `rg` VARCHAR(11) NOT NULL,
+    `cpf` VARCHAR(14) NOT NULL,
+    `naturalidade` VARCHAR(20),
+    `endereco` TEXT NOT NULL,
+    `telefone` VARCHAR(25) NOT NULL,
+    `sexo` varchar(10) NOT NULL,
+    `senha` VARCHAR(100) NOT NULL,
+    `nlogin` INT NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `FuncionarioInativo` (
+	`id` INT NOT NULL,
+    `nome` VARCHAR(100) NOT NULL,
+    `cpf` VARCHAR(14) NOT NULL,
+    `email` VARCHAR(50) NOT NULL,
+    `telefone` VARCHAR(15) NOT NULL,
+    `dataNascimento` DATE NOT NULL,
+    `cargo` VARCHAR(15) NOT NULL,
+    `senha` VARCHAR(100),
+    `nlogin` INT NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
     
 ALTER TABLE `Aluno`
   ADD PRIMARY KEY (`id`);
@@ -119,6 +147,12 @@ ALTER TABLE `DisciplinaTurma`
   ADD KEY `fk_Disciplina_02` (`idDisciplina`),
   ADD KEY `fk_Turma_01` (`idTurma`);
   
+ALTER TABLE `AlunoInativo`
+  ADD PRIMARY KEY (`id`);
+  
+ALTER TABLE `FuncionarioInativo`
+  ADD PRIMARY KEY (`id`);
+  
 ALTER TABLE `Aluno`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
@@ -142,7 +176,13 @@ ALTER TABLE `Solicitacao`
 
 ALTER TABLE `DisciplinaTurma`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `AlunoInativo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `FuncionarioInativo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
 ALTER TABLE `Responsavel`
   ADD CONSTRAINT `Aluno_ibfk_1` FOREIGN KEY (`idAluno`) REFERENCES `Aluno` (`id`);
 
@@ -210,26 +250,26 @@ INSERT INTO `Responsavel` (`idAluno`, `cpf`, `rg`, `telefone`, `email`, `nome`, 
 	(20, '200.200.200-00', '200.200.000', '(84) 99563-7854', 'marcosvinicius@gmail.com', 'Marcos Vinicius Mário Sérgio Moraes', '$argon2i$v=19$m=65536,t=4,p=1$VElZTHFjNGFmL09VSG9vMA$ck1Weu2FoiRk6zK+9uNRVW0hIc2cw/2B3u9f12OrjBA', 0);
 
 INSERT INTO `Funcionario` (`nome`, `cpf`, `email`, `telefone`, `dataNascimento`, `cargo`, `senha`, `nlogin`) VALUES 
-	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$U2p5ZVprc1JGeTRLNEV2bg$oT8t5biZsQN/Z9yx2WgIG5nhM9K/R3kdKX7WbnukzDA', 0),
-	('Matias Justino', '123.222.222-00', 'matiasdocente@gmail.com', '(84) 99494-563', '1998-04-22', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$a05DZmxpWUZIdWNQbm1VVg$TvxXP9LbE7UHByK2PPEdbsm9tYo+DOK3pNftR9/cdCA', 0),
-	('Maria da Penha Justino de Moura', '123.333.333-00', 'mariadocente@gmail.com', '(84) 99494-3578', '1991-10-02', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$UWgzYUtQeFlwaG1qcS4yVA$xep01t3FsecUaSDIUyjElF3jVG9XqKmKYY90kdZHMGM', 0),
-	('Bruna Guedes de Moura', '123.444.444-00', 'brunadocente@gmail.com', '(84) 99494-7676', '1997-05-10', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$V2JZZHkzMVMxMFBIVEd5dg$l0tNs/riGlOt2Ixu1LIkJ2q/2uWqGLKLUsOtMg6z1dw', 0),
-	('Eliane Padilha dos Santos Moura', '123.555.555-00', 'elianedocente@gmail.com', '(84) 99494-5376', '1998-12-02', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$V1dicTh5Ri9BbHZCLkdQVg$xFijUI+qP2zKbRvki0rFyRnhAdirxicfBfKbZRT360M', 0),
-	('Edieluza Ernesto da Silva', '123.666.666-00', 'edileuzadocente@gmail.com', '(84) 99494-9866', '1995-04-12', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$UERNbGFzZC40ZTZGZkFxQw$HsKl1aCGuyiHdCOwgAqU/Al/dt0Vldz8XZZDLeCdIZk', 0),
-	('Carlos Andre de Freitas', '123.777.777-00', 'carlosdocente@gmail.com', '(84) 99494-9494', '1997-05-12', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$SVNLWmUvcFpnYklqbkdOVA$dIpXzzIFGZ6ox3RV2c/3tXrDID9d0HWSzdnjEoF4TCg', 0),
-	('Marcio Oliveira da Silva', '123.888.888-00', 'marciosecretario@gmail.com', '(84) 99094-9494', '1997-02-08', 'Secretario', '$argon2i$v=19$m=65536,t=4,p=1$QTBKZ3dYaHF2a0FaZEhYRQ$aXgT1LJLOAUT7Z4EAmilI+lT+hybgZ2CXnJwWmudd+U', 0),
-	('Geraldo de Souza', '123.999.999-00', 'geraldodocente@gmail.com', '(84) 99494-0000', '1995-08-19', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$NEViWnlPZVp3UUpnWVVSaw$y/eaNmxQI4sYMR6ASzyZmuRIQUIb7q60tcBcw3uIi1A', 0),
-	('Fernando Conceição Marques', '123.101.101-00', 'fernandodocente@gmail.com', '(84) 99494-9000', '1995-07-29', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$N05RejRDY1NWdUR4cmJndw$uinIVr1mPNsJPnN3+i2xNW97SF8ulZQ/1w6P8fNZBgw', 0),
-	('Elizabeth Cavalcante de Souza', '123.110.110-00', 'elizabethdocente@gmail.com', '(84) 99494-9004', '1994-09-07', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$emV1Y0hody5jUXlJSzJmdA$RVFR9ZUnA73NoYyYR/pupEzfUoaS/Mc/F4jmdbHViUc', 0),
-	('Maria Educarda da Conceição', '123.120.120-00', 'mariasecretaria@gmail.com', '(84) 99494-4940', '1992-04-14', 'Secretario', '$argon2i$v=19$m=65536,t=4,p=1$LzdmQjZUR080MEI3Wjd6Rg$3zmOdbSCCnGa0Dbr6jd2tUy4eKJfcQGi8ejZl3JNlUE', 0),
-	('Ednaldo Fernandes de Souza', '123.130.130-00', 'ednaldodocente@gmail.com', '(84) 99494-9794', '1990-09-21', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$c0xvQUdMNkQ0d2toay4vMw$Kwd5K/2p925tZsGQXb+8iSLvJi4xxrzYhRBOkOl6I/8', 0),
-	('Manoel Cerafim da Costa', '123.140.140-00', 'manoeldocente@gmail.com', '(84) 99494-8894', '1995-05-27', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$Z3Raemo2bDdZbllIQ25FTQ$wuCzkdDhItwS2UIcN7W0khfjcc7APvxKgQwUrxvai44', 0),
-	('José Alcantara Furtado', '123.150.150-00', 'josedocente@gmail.com', '(84) 99494-9784', '1990-04-17', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$ZzQ3VWN4YTJKZDE4WHEvaA$4mYuyVeITEx39qcqECo6NUOIK9PkQ9mo9zIsyyJwT3s', 0),
-	('André Gomes', '123.160.160-00', 'andredocente@gmail.com', '(84) 99494-9657', '1999-10-18', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$NEp2N2FkWEIzQ3BSRXZ1bw$K8az8gmB/QWWyv8LcezLVk59uxnBiHGueKKFhC78BFc', 0),
-	('João Carlos Guedes', '123.170.170-00', 'joaosecretario@gmail.com', '(84) 99784-0883', '1993-05-20', 'Secretario', '$argon2i$v=19$m=65536,t=4,p=1$c1NjeU5pc3o5aGxoZzBYZw$9werFIVZrV+X+1J/Jik/EAoWZzqhJNBaUAccwdsTlew', 0),
-	('Vivian Trajano da Silva', '123.180.180-00', 'viviandocente@gmail.com', '(84) 98494-9890', '1994-01-02', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$MldKaDJoSC9hM3JORnNWNg$l/6nxCXHeaSFzukaQugt5GgBzvRNFeKi3PeX8LnUnT4', 0),
-	('Maria Clara da Silva', '123.190.190-00', 'claradocente@gmail.com', '(84) 99432-8494', '1997-05-12', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$WFE0b1RWeXNzbFF6RGdpaw$A60WukGZu9WJI1S4zLSjlCwCcfEIs7++Hvffk0iL++Q', 0),
-	('Otávio Mendonça Silva', '123.200.200-00', 'otaviodocente@gmail.com', '(84) 99976-9854', '1996-06-25', 'Professor', '$argon2i$v=19$m=65536,t=4,p=1$WE1iUFNOTHlvN3JuRGpxTw$GEjxZyXUF3Z1oTYONcMJc5sLoZVK1551NWn7b9F8krY', 0);
+	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$U2p5ZVprc1JGeTRLNEV2bg$oT8t5biZsQN/Z9yx2WgIG5nhM9K/R3kdKX7WbnukzDA', 0),
+	('Matias Justino', '123.222.222-00', 'matiasdocente@gmail.com', '(84) 99494-563', '1998-04-22', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$a05DZmxpWUZIdWNQbm1VVg$TvxXP9LbE7UHByK2PPEdbsm9tYo+DOK3pNftR9/cdCA', 0),
+	('Maria da Penha Justino de Moura', '123.333.333-00', 'mariadocente@gmail.com', '(84) 99494-3578', '1991-10-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$UWgzYUtQeFlwaG1qcS4yVA$xep01t3FsecUaSDIUyjElF3jVG9XqKmKYY90kdZHMGM', 0),
+	('Bruna Guedes de Moura', '123.444.444-00', 'brunadocente@gmail.com', '(84) 99494-7676', '1997-05-10', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$V2JZZHkzMVMxMFBIVEd5dg$l0tNs/riGlOt2Ixu1LIkJ2q/2uWqGLKLUsOtMg6z1dw', 0),
+	('Eliane Padilha dos Santos Moura', '123.555.555-00', 'elianedocente@gmail.com', '(84) 99494-5376', '1998-12-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$V1dicTh5Ri9BbHZCLkdQVg$xFijUI+qP2zKbRvki0rFyRnhAdirxicfBfKbZRT360M', 0),
+	('Edieluza Ernesto da Silva', '123.666.666-00', 'edileuzadocente@gmail.com', '(84) 99494-9866', '1995-04-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$UERNbGFzZC40ZTZGZkFxQw$HsKl1aCGuyiHdCOwgAqU/Al/dt0Vldz8XZZDLeCdIZk', 0),
+	('Carlos Andre de Freitas', '123.777.777-00', 'carlosdocente@gmail.com', '(84) 99494-9494', '1997-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$SVNLWmUvcFpnYklqbkdOVA$dIpXzzIFGZ6ox3RV2c/3tXrDID9d0HWSzdnjEoF4TCg', 0),
+	('Marcio Oliveira da Silva', '123.888.888-00', 'marciosecretario@gmail.com', '(84) 99094-9494', '1997-02-08', 'Secretario(a)', '$argon2i$v=19$m=65536,t=4,p=1$QTBKZ3dYaHF2a0FaZEhYRQ$aXgT1LJLOAUT7Z4EAmilI+lT+hybgZ2CXnJwWmudd+U', 0),
+	('Geraldo de Souza', '123.999.999-00', 'geraldodocente@gmail.com', '(84) 99494-0000', '1995-08-19', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$NEViWnlPZVp3UUpnWVVSaw$y/eaNmxQI4sYMR6ASzyZmuRIQUIb7q60tcBcw3uIi1A', 0),
+	('Fernando Conceição Marques', '123.101.101-00', 'fernandodocente@gmail.com', '(84) 99494-9000', '1995-07-29', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$N05RejRDY1NWdUR4cmJndw$uinIVr1mPNsJPnN3+i2xNW97SF8ulZQ/1w6P8fNZBgw', 0),
+	('Elizabeth Cavalcante de Souza', '123.110.110-00', 'elizabethdocente@gmail.com', '(84) 99494-9004', '1994-09-07', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$emV1Y0hody5jUXlJSzJmdA$RVFR9ZUnA73NoYyYR/pupEzfUoaS/Mc/F4jmdbHViUc', 0),
+	('Maria Educarda da Conceição', '123.120.120-00', 'mariasecretaria@gmail.com', '(84) 99494-4940', '1992-04-14', 'Secretario(a)', '$argon2i$v=19$m=65536,t=4,p=1$LzdmQjZUR080MEI3Wjd6Rg$3zmOdbSCCnGa0Dbr6jd2tUy4eKJfcQGi8ejZl3JNlUE', 0),
+	('Ednaldo Fernandes de Souza', '123.130.130-00', 'ednaldodocente@gmail.com', '(84) 99494-9794', '1990-09-21', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$c0xvQUdMNkQ0d2toay4vMw$Kwd5K/2p925tZsGQXb+8iSLvJi4xxrzYhRBOkOl6I/8', 0),
+	('Manoel Cerafim da Costa', '123.140.140-00', 'manoeldocente@gmail.com', '(84) 99494-8894', '1995-05-27', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$Z3Raemo2bDdZbllIQ25FTQ$wuCzkdDhItwS2UIcN7W0khfjcc7APvxKgQwUrxvai44', 0),
+	('José Alcantara Furtado', '123.150.150-00', 'josedocente@gmail.com', '(84) 99494-9784', '1990-04-17', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$ZzQ3VWN4YTJKZDE4WHEvaA$4mYuyVeITEx39qcqECo6NUOIK9PkQ9mo9zIsyyJwT3s', 0),
+	('André Gomes', '123.160.160-00', 'andredocente@gmail.com', '(84) 99494-9657', '1999-10-18', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$NEp2N2FkWEIzQ3BSRXZ1bw$K8az8gmB/QWWyv8LcezLVk59uxnBiHGueKKFhC78BFc', 0),
+	('João Carlos Guedes', '123.170.170-00', 'joaosecretario@gmail.com', '(84) 99784-0883', '1993-05-20', 'Secretario(a)', '$argon2i$v=19$m=65536,t=4,p=1$c1NjeU5pc3o5aGxoZzBYZw$9werFIVZrV+X+1J/Jik/EAoWZzqhJNBaUAccwdsTlew', 0),
+	('Vivian Trajano da Silva', '123.180.180-00', 'viviandocente@gmail.com', '(84) 98494-9890', '1994-01-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$MldKaDJoSC9hM3JORnNWNg$l/6nxCXHeaSFzukaQugt5GgBzvRNFeKi3PeX8LnUnT4', 0),
+	('Maria Clara da Silva', '123.190.190-00', 'claradocente@gmail.com', '(84) 99432-8494', '1997-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$WFE0b1RWeXNzbFF6RGdpaw$A60WukGZu9WJI1S4zLSjlCwCcfEIs7++Hvffk0iL++Q', 0),
+	('Otávio Mendonça Silva', '123.200.200-00', 'otaviodocente@gmail.com', '(84) 99976-9854', '1996-06-25', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$WE1iUFNOTHlvN3JuRGpxTw$GEjxZyXUF3Z1oTYONcMJc5sLoZVK1551NWn7b9F8krY', 0);
 	
 INSERT INTO `Disciplina` (`nome`, `idProfessor`) VALUES
 	('Português', 2),
@@ -323,5 +363,6 @@ SELECT * FROM `Responsavel` WHERE (`nome` = 'João Guedes' OR `idAluno` = 1 OR `
 SELECT * FROM `Responsavel` WHERE (`nome` = 'João Guedes' OR `idAluno` = 1 OR `cpf` = '111.111.111-00'); 
 SELECT * FROM `turma` WHERE (`idAluno` = 1 AND `max` = 40) OR (`idAluno` = 20 AND `turno` = 'Matutino');
 
-select * from Solicitacao;
+select * from Turma where idAluno = 1;
 select * from Funcionario;
+select * from FuncionarioInativo;

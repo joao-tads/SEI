@@ -15,7 +15,7 @@
                     </tr>
                     <tr>
                         <th>Idade</th>
-                        <td><?= $usuario->idade ?></td>
+                        <td><?= $usuario->dataNascimento ?></td>
                     </tr>
                     <tr>
                         <th>CPF</th>

@@ -6,7 +6,7 @@ namespace Ifnc\Tads\Entity;
 
 use Ifnc\Tads\Helper\Record;
 
-class Funcionario extends Record
+class FuncionarioInativo extends Record
 {
     public $id;
     public $nome;
@@ -25,4 +25,5 @@ class Funcionario extends Record
     public function verificar($cpf){
         return ($cpf==$this->cpf);
     }
+
 }

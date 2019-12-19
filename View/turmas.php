@@ -1,7 +1,7 @@
-<body style="margin-top: 5%;">
+<body>
 
     <h3>Turmas</h3>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
+    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3">Solicitar Vínculo</span></button>
     <table class="table">
         <thead>
             <tr>
@@ -21,9 +21,9 @@
                     <td><?= $turma->anoSerie ?></td>
                     <td>
                         <div class="btn-group">
-                            <i title="Visualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-eye-open"></span></i>
-                            <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                            <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
+                            <a href="\visualizar-turma?id=<?= $turma->id ?>"><button title="Visualizar" class="btn "class="btn btn-primary"><i class="fas fa-eye"></button></a>
+                            <i title="Atualizar" class="fas fa-edit" http-url="\editar-turma?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                            <i title="Deletar" class="fas fa-trash-alt" http-url="\deletar-turma?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
                         </div>
                     </td>
                 </tr>

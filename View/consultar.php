@@ -1,4 +1,4 @@
-<body style="margin-top: 5%;">
+<body">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
@@ -29,7 +29,7 @@
                                 <td>
                                     <div class="btn-group">
                                         <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i></i>
-                                        <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
                                         <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
                                     </div>
                                 </td>
@@ -70,6 +70,93 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="myModalA2<?= $user->id ?>" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Atualize os Dados</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" action="/update-perfil-consulta" method="post">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Nome:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" value="<?= $user->nome ?>" name="nome">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Data de Nascimento:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="date" class="form-control" value="<?= $user->dataNascimento ?>" name="dataNascimento">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Nome da Mãe:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" value="<?= $user->nomeMae ?>" name="nomeMae">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Nome do Pai:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" value="<?= $user->nomePai ?>" name="nomePai">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">RG:</label>
+                                                    <div class="col-sm-5">
+                                                        <input id="rg" type="text" class="form-control" value="<?= $user->rg ?>" name="rg">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">CPF:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $user->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Naturalidade:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" value="<?= $user->naturalidade ?>" name="naturalidade">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Endereço:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="text" class="form-control" value="<?= $user->endereco ?>" name="endereco">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Telefone:</label>
+                                                    <div class="col-sm-5">
+                                                        <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $user->telefone ?>" name="telefone">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">Sexo:</label>
+                                                    <div class="col-sm-5">
+                                                        <select class="form-control" id="sel2" name="sexo">
+                                                            <option>Masculino</option>
+                                                            <option>Feminino</option>
+                                                            <option>Outros</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="id" value="<?= $user->id ?>">
+                                                <input type="hidden" name="senha" value="<?= $user->senha ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="form-group">
+                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
+                                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -92,10 +179,11 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i>
-                                            <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>
-                                                <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalF2<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
+                                        <i title="Inativar" data-toggle="modal" data-target="#myModalF3<?= $user->id ?> " class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
                                     </div>
+                                </td>
                                 </td>
                             </tr>
                             <div id="myModalF<?= $user->id ?>" class="modal fade" role="dialog">
@@ -103,8 +191,8 @@
 
                                     <!-- Modal content-->
                                     <div class="modal-content">
-                                        <div class="modal-header>
-                                            <h4 class=" modal-title">Dados Pessoais</h4>
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Dados Pessoais</h4>
                                         </div>
                                         <div class="modal-body">
                                             <Strong>Matrícula:</Strong><br>
@@ -128,9 +216,101 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="myModalF2<?= $user->id ?>" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Atualize os Dados</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="form-horizontal" action="/update-perfil-consulta-funcionario" method="post">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" for="nome">Nome:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" placeholder="Nome completo... " name="nome" value="<?= $user->nome ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" for="idade">Data de Nascimento:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="date" class="form-control" placeholder="idade... " name="idade" value="<?= $user->dataNascimento ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" for="cpd">CPF:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" value="<?= $user->cpf ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" for="email">Email:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email" value="<?= $user->email ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" onkeypress="Mascara(this);" maxlength="15" for="telefone">Telefone:</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control" placeholder="Número de contato ..." name="telefone" value="<?= $user->telefone ?>">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-2" for="sel1">Cargo:</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control" id="sel1" name="cargo" value="<?= $user->cargo ?>">
+                                                            <option>Professor(a)</option>
+                                                            <option>Secretario(a)</option>
+                                                            <option>Coordenador(a)</option>
+                                                            <option>Diretor(a)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" name="id" value="<?= $user->id ?>">
+                                                <input type="hidden" name="senha" value="<?= $user->senha ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="form-group">
+                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
+                                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="myModalF3<?= $user->id ?>" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <h4 class="modal-title">Realmente deseja Inativar Esse Funcionário?</h4>
+
+                                            <form class="form-horizontal" action="/inative-funcionario" method="post">
+                                                <input type="hidden" name="nome" value="<?= $user->nome ?>">
+                                                <input type="hidden" name="dataNascimento" value="<?= $user->dataNascimento ?>">
+                                                <input type="hidden" name="cargo" value="<?= $user->cargo ?>">
+                                                <input type="hidden" name="telefone" value="<?= $user->telefone ?>">
+                                                <input type="hidden" name="email" value="<?= $user->email ?>">
+                                                <input type="hidden" name="senha" value="<?= $user->senha ?>">
+                                                <input type="hidden" name="cpf" value="<?= $user->cpf ?>">
+                                                <input type="hidden" name="id" value="<?= $user->id ?>">
+                                                <input type="hidden" name="nlogin" value="<?= $user->nlogin ?>">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="form-group">
+                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Inativar">
+                                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <?php } ?>
                     </tbody>
                 </table>
             </div>
         </div>
-</body>
+        </body>
