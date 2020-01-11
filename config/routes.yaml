@@ -31,3 +31,4 @@
 /update-perfil-consulta: UpdatePerfilConsultaController
 /update-perfil-consulta-funcionario: UpdatePerfilConsultaFuncionarioController
 /inative-funcionario: InativeFuncionarioController
+/imprimir-boletim: ImprimirBoletimController

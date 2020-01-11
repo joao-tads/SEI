@@ -46,4 +46,5 @@
       <?php } ?>
       </tbody>
     </table>
+    <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary">Imprimir</a>
 </div>
