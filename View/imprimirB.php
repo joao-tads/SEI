@@ -54,6 +54,11 @@
     $dompdf->load_html('
     <h1 align="center">Boletim</h1>'.$html);
 
+    ob_start();
+    require_once 'pdf-boletim.php';
+    $dompdf->loadhtml(ob_get_clean());
+
+    $dompdf->setPaper("A4", "landscape");
     $dompdf->render();
 
     $dompdf->stream("test.pdf", 
