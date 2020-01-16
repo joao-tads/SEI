@@ -5,8 +5,7 @@
         echo '<a href="/perfil"> <i class="fas fa-user"></i> Perfil</a>
         <a href="/boletim"> <i class="fas fa-id-card"></i> Boletim</a>
         <a href="#"> <i class="fas fa-file-alt"></i> Declaração</a>
-        <a href="/disciplinas-aluno"> <i class="fas fa-book-open"></i> Disciplinas</a>
-        <a href="/turmas"> <i class="fas fa-users"></i> Turma</a>';
+        <a href="/disciplinas-aluno"> <i class="fas fa-book-open"></i> Disciplinas</a>';
     } else {
         switch ($usuario->cargo):
             case "Professor(a)":

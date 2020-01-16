@@ -18,6 +18,7 @@
 /matricular: MatricularController
 /consultar: ConsultarController
 /turmas: TurmasController
+/turma-aluno: TurmaAlunoController
 /disciplinas: DisciplinasController
 /disciplinas-aluno: DisciplinasAlunoController
 /cadastrar-turma: CadastroTurmaController

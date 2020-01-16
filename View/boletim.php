@@ -12,44 +12,44 @@ namespace Ifnc\Tads\Controller;
 <div style="margin-top: 10%;">
 <div class="container">
   <h3>Boletim</h3>
-    <table class="table table-bordered table-condensed table-hover table-sm">
-      <thead>
-        <tr>
-          <th>Disciplinas</th>
-          <th>1º B</th>
-          <th>2º B</th>
-          <th>3º B</th>
-          <th>4º B</th>
-          <th>Média</th>
-          <th>Frequência</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-      <?php foreach ($boletim as $r) { $media = media($r->pb,$r->sb,$r->tb,$r->qb); 
-        if ($media <= 3) {
-          echo "<tr class='table-danger'>";
-          $status = "Reprovado";
-        }  else if($media < 6) {
-          echo "<tr class='table-warning'>";
-          $status = "Recuperação";
-        } else if ($media <= 10) {
-          echo "<tr class='table-success'>";
-          $status = "Aprovado";
-        }
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Disciplinas</th>
+        <th scope="col">1º B</th>
+        <th scope="col">2º B</th>
+        <th scope="col">3º B</th>
+        <th scope="col">4º B</th>
+        <th scope="col">Média</th>
+        <th scope="col">Frequência</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($boletim as $r) {
+        $media = media($r->pb, $r->sb, $r->tb, $r->qb);
       ?>
-          <td><?= $r->nome ?></td>
+        <tr>
+          <td scope="col"><?= $r->nome ?></td>
           <td><?= $r->pb ?></td>
           <td><?= $r->sb ?></td>
           <td><?= $r->tb ?></td>
           <td><?= $r->qb ?></td>
           <td><?= $media ?></td>
           <td><?= porcent($media) ?>%</td>
-          <td><?= $status ?></td>
+          <?php
+          if ($media <= 3) {
+            echo "<td class='table-danger'>Reprovado</td>";
+          } else if ($media < 6) {
+            echo "<td class='table-warning'>Recuperação</td>";
+          } else if ($media <= 10) {
+            echo "<td class='table-success'>Aprovado</td>";
+          }
+          ?>
         </tr>
       <?php } ?>
-      </tbody>
-    </table>
+    </tbody>
+  </table>
     <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary border-0" style="background-color: #323a47">Imprimir</a>
 </div>
 </div>
