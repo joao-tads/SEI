@@ -1,4 +1,5 @@
 <body">
+<div style="margin-top: 10%;">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
@@ -7,18 +8,18 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#menu1">Funcionarios</a>
         </li>
-
         <!-- Tab panes -->
         <div class="tab-content">
             <div id="home" class="container tab-pane active"><br>
                 <h3>Alunos</h3>
-                <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
-                <table class="table">
+                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47">Adicionar</a>              
+                <br></br>
+                <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Matrícula</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">ações</th>
+                            <th scope="col">Funções</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,9 +29,10 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i></i>
-                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
-                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
+                                    </div>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-edit"></i></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-user-slash"></i></i>
                                     </div>
                                 </td>
                             </tr>
@@ -65,7 +67,7 @@
                                             <p><?= $user->telefone ?></p>
                                             <Strong>Sexo</Strong><br>
                                             <p><?= $user->sexo ?></p>
-                                            <b class="btn btn-info btn-md" data-dismiss="modal">Sair</b>
+                                            <b class="btn btn-info btn-md border-0" style="background-color: #323a47"data-dismiss="modal">Sair</b>
                                         </div>
                                     </div>
                                 </div>
@@ -149,8 +151,8 @@
                                         </div>
                                         <div class="modal-footer">
                                             <div class="form-group">
-                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
-                                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Atualizar">
+                                                <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                                             </div>
                                             </form>
                                         </div>
@@ -163,8 +165,10 @@
             </div>
             <div id="menu1" class="container tab-pane fade"><br>
                 <h3>Funcionários</h3>
-                <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>
-                <table class="table">
+                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47">Adicionar</a>              
+                <br></br>
+               <!-- <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>-->
+                <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Matrícula</th>
@@ -178,11 +182,17 @@
                                 <th scope="row"><?= $user->id ?></th>
                                 <td><?= $user->nome ?></td>
                                 <td>
-                                    <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary"><i class="far fa-eye"></i></i>
-                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalF2<?= $user->id ?>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i></i>
-                                        <i title="Inativar" data-toggle="modal" data-target="#myModalF3<?= $user->id ?> " class="btn btn-primary"><i class="fas fa-trash-alt"></i></i>
+                                <div class="btn-group">
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
                                     </div>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-edit"></i></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-user-slash"></i></i>
+                                    </div>
+                                   <!-- <div class="btn-group">
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalF2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-pencil-alt"></i></i>
+                                        <i title="Inativar" data-toggle="modal" data-target="#myModalF3<?= $user->id ?> " class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-trash-alt"></i></i>
+                                    </div>-->
                                 </td>
                                 </td>
                             </tr>
@@ -312,5 +322,6 @@
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
         </body>

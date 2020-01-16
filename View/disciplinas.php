@@ -1,13 +1,20 @@
 <body>
-
+<div style="margin-top: 8%;">
     <h3>Disciplinas</h3>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
-    <table class="table">
+    <p></p>
+    <button class="btn btn-info btn-md border-0 position-absolute text-align: center" 
+    style="background-color: #323a47" data-toggle="modal" data-target="#myModal3">Adicionar Disciplina</span></button>
+    <br>
+    </br>
+       <!--<button class="btn btn-info btn-block border-0" style="background-color: #323a47" 
+    data-toggle="modal" data-target="#myModal3"><span class="fas fa-plus"></span></button>-->
+    <table class="table table-condensed table-hover table-sm">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Professor</th>
+                <th scope="col">Funções</th>
             </tr>
         </thead>
         <tbody>
@@ -22,8 +29,9 @@
                         <?php }
                             } ?>
                         <div class="btn-group">
-                            <i title="Remover" http-url="#" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                            <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></a>
+                            <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><span class="fas fa-check"></span></a>
+                        </div>    
+                            <i title="Remover" http-url="#" class="btn btn-primary border-0" style="background-color: #323a47"><span class="fas fa-trash-alt"></span></i>
                         </div>
                             </td>
                 </tr>
@@ -61,13 +69,14 @@
                         </div>
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Solicitar">
-                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Solicitar">
+                                <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Limpar">
+                                <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+   </div>
 </body>

@@ -1,8 +1,13 @@
 <body>
-
-    <h3>Disciplinas</h3>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3">Solicite matrícula nas disciplinas</button>
-    <table class="table">
+<div style="margin-top: 10%;">
+    <h2>Disciplinas</h2>
+    <h5>Solicite matrícula nas disciplinas</h5>
+    <button class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47" data-toggle="modal" 
+            data-target="#myModal3">Solicitar</button>
+    <table class="table table-bordered table-condensed table-hover table-sm"> <!--colocar botão no centro-->
+</div>
+<br>
+</br>
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -10,6 +15,7 @@
                 <th scope="col">Professor</th>
             </tr>
         </thead>
+        
         <tbody>
             <?php
             foreach ($disciplinaAluno as $da) {
@@ -26,8 +32,7 @@
                                             } ?>
                                 <div class="btn-group">
                                     <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                                    <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></i>
-                                </div>
+                                    <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary
                                     </td>
                         </tr>
             <?php }
@@ -64,9 +69,9 @@
                         <input type="hidden" name="idAluno" value="<?= $usuario->id ?>">
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Solicitar">
-                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Solicitar">
+                                <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
+                                <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>
                     </form>
                 </div>

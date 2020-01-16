@@ -1,8 +1,9 @@
+
 <body>
 
     <h3>Disciplinas</h3>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
-    <table class="table">
+    <button class="btn btn-info btn-blockborder-0" style="background-color: #323a47" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
+    <table class="table table-condensed table-hover table-sm">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -21,7 +22,7 @@
                     <td>
                         <?php } } ?>
                         <div class="btn-group">
-                            <i title="Remover" http-url="#" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
+                            <i title="Remover" http-url="#" class="btn btn-primary"><span class=" glyphicon glyphicon-remove"></span></i>
                             <a title="Vincular alunos" href="/vincular-aluno" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></a>
                         </div>
                     </td>
@@ -59,9 +60,9 @@
                     </div>
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Solicitar">
-                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                                <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Solicitar">
+                                <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
+                                <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>
                         </div>
                 </form>

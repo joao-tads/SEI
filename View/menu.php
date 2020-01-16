@@ -2,29 +2,29 @@
 
     <?php
     if ($type == "Aluno") {
-        echo '<a href="/perfil">Perfil</a>
-        <a href="/boletim">Boletim</a>
-        <a href="#">Declaração</a>
-        <a href="/disciplinas-aluno">Disciplinas</a>
-        <a href="/turmas">Turma</a>';
+        echo '<a href="/perfil"> <i class="fas fa-user"></i> Perfil</a>
+        <a href="/boletim"> <i class="fas fa-id-card"></i> Boletim</a>
+        <a href="#"> <i class="fas fa-file-alt"></i> Declaração</a>
+        <a href="/disciplinas-aluno"> <i class="fas fa-book-open"></i> Disciplinas</a>
+        <a href="/turmas"> <i class="fas fa-users"></i> Turma</a>';
     } else {
         switch ($usuario->cargo):
             case "Professor(a)":
-                echo '<a href="/perfil-funcionario">Perfil</a>';
-                echo '<a href="/inserir-notas">Notas</a>';
-                echo '<a href="/solicitacoes-funcionario">Solicitação</a>';
-                echo '<a href="#">Frequências</a>';
-                echo '<a href="/disciplinas-professor">Disciplinas</a>';
-                echo '<a href="/consultar">Consultas</a>';
+                echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>';
+                echo '<a href="/inserir-notas"> <i class="fas fa-folder-plus"> Notas</a>';
+                echo '<a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"> Solicitação</a>';
+                echo '<a href="#"> <i class="fas fa-user-check"></i> Frequências</a>';
+                echo '<a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>';
+                echo '<a href="/consultar"> <i class="fas fa-search"></i> Consultas</a>';
                 break;
             case "Secretario(a)":
-                echo '<a href="/perfil-funcionario">Perfil</a>';
-                echo '<a href="#" data-toggle="modal" data-target="#myModal2">Matriculas</a>';
-                echo '<a href="/consultar">Consultas</a>';
-                echo '<a href="#" data-toggle="modal" data-target="#myModal">Cadastro</a>';
-                echo '<a href="/turmas">Turmas</a>';
-                echo '<a href="/solicitacoes">Solicitações</a>';
-                echo '<a href="/disciplinas">Disciplinas</a>';
+                echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>';
+                echo '<a href="#" data-toggle="modal" data-target="#myModal2"> <i class="fas fa-user-plus"></i> Matriculas</a>';
+                echo '<a href="/consultar"> <i class="fas fa-search"></i> Consultas</a>';
+                echo '<a href="#" data-toggle="modal" data-target="#myModal"> <i class="fas fa-user-tie"></i> Funcionários </a>';
+                echo '<a href="/turmas"> <i class="fas fa-users"></i> Turmas</a>';
+                echo '<a href="/solicitacoes"> <i class="fas fa-folder-plus"></i> Solicitações</a>';
+                echo '<a href="/disciplinas"> <i class="fas fa-book-open"></i> Disciplinas</a>';
                 break;
             default:
                 echo '<a href="/perfil">Erro de Acesso! Usuário não identificado!</a>';
@@ -40,6 +40,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Cadastro de Funcionário</h4>
+
             </div>
             <div class="modal-body">
                 <form class="form-horizontal" action="/cadastrar" method="post">
@@ -86,9 +87,9 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Cadastrar">
-                            <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                            <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Cadastrar">
+                            <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
+                            <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                         </div>
                 </form>
             </div>
@@ -172,9 +173,9 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md" value="Matricular">
-                            <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                            <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Matricular">
+                            <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
+                            <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                         </div>
                 </form>
             </div>

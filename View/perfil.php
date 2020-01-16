@@ -1,9 +1,9 @@
-<div style="margin-top: 5%;">
+<div style="margin-top: 10%;">
     <div class="container">
         <h2>Perfil</h2>
         <p>Dados pessoais cadastrados:</p>
         <div class="w-auto p-3">
-            <table class="table">
+            <table class="table table-bordered table-condensed table-hover table-sm">
                 <tbody>
                     <tr>
                         <th>Matrícula</th>
@@ -26,11 +26,11 @@
                         <td><?= $usuario->nomePai ?></td>
                     </tr>
                     <tr>
-                        <th>Registro Geral</th>
+                        <th>RG</th>
                         <td><?= $usuario->rg ?></td>
                     </tr>
                     <tr>
-                        <th>Cadastro de Pessoa Física</th>
+                        <th>CPF</th>
                         <td><?= $usuario->cpf ?></td>
                     </tr>
                     <tr>
@@ -51,8 +51,8 @@
                     </tr>
                 </tbody>
             </table>
-            <input type="submit" name="submit" data-toggle="modal" data-target="#myModal5" class="btn btn-info btn-md" value="Atualizar dados">
-            <a href="/Pagina-inicial" class="btn btn-info btn-md">Voltar</a>
+            <input type="submit" name="submit" data-toggle="modal" data-target="#myModal5" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Atualizar dados">
+            <a href="/Pagina-inicial" class="btn btn-info btn-md border-0" style="background-color: #323a47" >Voltar</a>
         </div>
     </div>
 </div>
@@ -135,9 +135,9 @@
             </div>
             <div class="modal-footer">
                 <div class="form-group">
-                    <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
-                    <input type="reset" name="reset" class="btn btn-info btn-md" value="Limpar">
-                    <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
+                    <input type="submit" name="submit" class="btn btn-info btn-md border-0"style="background-color: #323a47"  value="Atualizar">
+                    <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
+                    <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                 </div>
                 </form>
             </div>

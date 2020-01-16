@@ -7,10 +7,12 @@ namespace Ifnc\Tads\Controller;
   function porcent($media) {
     return ($media*100)/10;
   }
+  
 ?>
+<div style="margin-top: 10%;">
 <div class="container">
   <h3>Boletim</h3>
-    <table class="table">
+    <table class="table table-bordered table-condensed table-hover table-sm">
       <thead>
         <tr>
           <th>Disciplinas</th>
@@ -48,5 +50,6 @@ namespace Ifnc\Tads\Controller;
       <?php } ?>
       </tbody>
     </table>
-    <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary">Imprimir</a>
+    <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary border-0" style="background-color: #323a47">Imprimir</a>
+</div>
 </div>
