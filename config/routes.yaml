@@ -18,7 +18,6 @@
 /matricular: MatricularController
 /consultar: ConsultarController
 /turmas: TurmasController
-/turma-aluno: TurmaAlunoController
 /disciplinas: DisciplinasController
 /disciplinas-aluno: DisciplinasAlunoController
 /cadastrar-turma: CadastroTurmaController
@@ -33,3 +32,4 @@
 /update-perfil-consulta-funcionario: UpdatePerfilConsultaFuncionarioController
 /inative-funcionario: InativeFuncionarioController
 /imprimir-boletim: ImprimirBoletimController
+/inserir-notas: InserirNotasController

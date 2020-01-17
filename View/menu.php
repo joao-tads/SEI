@@ -9,12 +9,12 @@
     } else {
         switch ($usuario->cargo):
             case "Professor(a)":
-                echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>';
-                echo '<a href="/inserir-notas"> <i class="fas fa-folder-plus"> Notas</a>';
-                echo '<a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"> Solicitação</a>';
-                echo '<a href="#"> <i class="fas fa-user-check"></i> Frequências</a>';
-                echo '<a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>';
-                echo '<a href="/consultar"> <i class="fas fa-search"></i> Consultas</a>';
+                echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>
+                <a href="/inserir-notas"> <i class="fas fa-folder-plus"></i> Notas</a>
+                <a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"></i> Solicitação</a>
+                <a href="#"> <i class="fas fa-user-check"></i> Frequências</a>
+                <a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>
+                <a href="/consultar"> <i class="fas fa-search"></i> Consultas</a>';
                 break;
             case "Secretario(a)":
                 echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>';
