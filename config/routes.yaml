@@ -32,4 +32,5 @@
 /update-perfil-consulta-funcionario: UpdatePerfilConsultaFuncionarioController
 /inative-funcionario: InativeFuncionarioController
 /imprimir-boletim: ImprimirBoletimController
+/lista-turmas: ListarTurmasController
 /inserir-notas: InserirNotasController
