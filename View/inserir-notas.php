@@ -29,7 +29,9 @@ function porcent($media)
       </thead>
       <tbody>
         <form action="">
-          <?php foreach ($alunos as $a) {
+          <?php 
+          $cont = 0;
+          foreach ($alunos as $a) {
             $media = media($a->pb, $a->sb, $a->tb, $a->qb);
           ?>
             <tr>
@@ -47,6 +49,7 @@ function porcent($media)
               } else if ($media <= 10) {
                 echo "<td class='table-success'>Aprovado</td>";
               }
+              $cont++;
               ?>
             </tr>
           <?php } ?>

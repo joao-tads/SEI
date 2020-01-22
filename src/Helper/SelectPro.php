@@ -32,4 +32,17 @@ final class SelectPro
         }
 
     }
+    public static function turmasProfessor($id)
+    {
+        $sql = "SELECT * FROM turma WHERE id = (SELECT DISTINCT idTurma 
+        FROM disciplinaturma WHERE idDisciplina = (SELECT id FROM
+        disciplina WHERE idProfessor = $id))";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
 }
