@@ -23,7 +23,7 @@ class InserirNotasController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "alunos" => SelectPro::InserirNotas($_SESSION["usuario"]->id)
+                "alunos" => SelectPro::InserirNotas($_SESSION["usuario"]->id, $_GET["id"])
             ]
         );
     }

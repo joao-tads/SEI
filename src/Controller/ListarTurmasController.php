@@ -2,11 +2,11 @@
 
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
-class TurmasController implements IController
+class ListarTurmasController implements IController
 {
     public function request(): void
     {
@@ -22,7 +22,7 @@ class TurmasController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "turmas" => Turma::findByConditionAll("idAluno='{$_SESSION['usuario']->id}'")  
+                "turmas" => SelectPro::turmasProfessor($_SESSION['usuario']->id)  
             ]
         );
     }
