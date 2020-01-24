@@ -6,7 +6,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color:#323a47;
+    background-color:#1c2127;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 53px;
@@ -21,16 +21,16 @@
     color: #fff;
     display: block;
     transition: 0.3s;
-    border-bottom: 2px solid #1d2637;
-    background-color:#3c4657;
+    border-bottom: 2px solid #0e131b;
+    background-color:#222b32;
 }
 
 
 .sidenav a:hover {
-    background-color: #f4f4f4;
+    background-color: #33a583;
     box-shadow: inset;
     text-decoration: none;
-    color: #25344b; 
+    color: #ffffff; 
 }
 
 .sidenav .closebtn {
