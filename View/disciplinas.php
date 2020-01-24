@@ -2,19 +2,14 @@
 <div style="margin-top: 8%;">
     <h3>Disciplinas</h3>
     <p></p>
-    <button class="btn btn-info btn-md border-0 position-absolute text-align: center" 
-    style="background-color: #323a47" data-toggle="modal" data-target="#myModal3">Adicionar Disciplina</span></button>
-    <br>
-    </br>
-       <!--<button class="btn btn-info btn-block border-0" style="background-color: #323a47" 
-    data-toggle="modal" data-target="#myModal3"><span class="fas fa-plus"></span></button>-->
+    <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i> Adicionar Disciplina</span></button><br>
     <table class="table table-condensed table-hover table-sm">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Professor</th>
-                <th scope="col">Funções</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -29,9 +24,9 @@
                         <?php }
                             } ?>
                         <div class="btn-group">
-                            <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><span class="fas fa-check"></span></a>
+                            <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><span class="fas fa-check"></span></a>
                         </div>    
-                            <i title="Remover" http-url="#" class="btn btn-primary border-0" style="background-color: #323a47"><span class="fas fa-trash-alt"></span></i>
+                            <i title="Remover" http-url="#" class="btn btn-primary border-0" style="background-color: #db2938"><span class="fas fa-trash-alt"></span></i>
                         </div>
                             </td>
                 </tr>

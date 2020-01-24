@@ -2,12 +2,10 @@
 <div style="margin-top: 10%;">
     <h2>Disciplinas</h2>
     <h5>Solicite matrícula nas disciplinas</h5>
-    <button class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47" data-toggle="modal" 
-            data-target="#myModal3">Solicitar</button>
+    <button class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583" data-toggle="modal" 
+        data-target="#myModal3"><i class="fas fa-plus-circle"></i> Solicitar</button>
     <table class="table table-bordered table-condensed table-hover table-sm"> <!--colocar botão no centro-->
-</div>
-<br>
-</br>
+</div><br>
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -69,7 +67,7 @@
                         <input type="hidden" name="idAluno" value="<?= $usuario->id ?>">
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Solicitar">
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583" value="Solicitar">
                                 <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                                 <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>

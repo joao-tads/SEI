@@ -51,8 +51,8 @@
                     </tr>
                 </tbody>
             </table>
-            <input type="submit" name="submit" data-toggle="modal" data-target="#myModal5" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Atualizar dados">
-            <a href="/Pagina-inicial" class="btn btn-info btn-md border-0" style="background-color: #323a47" >Voltar</a>
+            <input type="submit" name="submit" data-toggle="modal" data-target="#myModal5" class="btn btn-info btn-md border-0 btn-lg" style="background-color: #33a583" value="Atualizar dados">
+            <a href="/Pagina-inicial" class="btn btn-info btn-md border-0 btn-lg" style="background-color: #323a47">Voltar</a>
         </div>
     </div>
 </div>
@@ -135,7 +135,7 @@
             </div>
             <div class="modal-footer">
                 <div class="form-group">
-                    <input type="submit" name="submit" class="btn btn-info btn-md border-0"style="background-color: #323a47"  value="Atualizar">
+                    <input type="submit" name="submit" class="btn btn-info btn-md border-0"style="background-color: #33a583"  value="Atualizar">
                     <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                     <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                 </div>

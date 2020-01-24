@@ -19,7 +19,7 @@
 
 <body class="bg-light"  id="main">
     <?php if (isset($usuario)) { ?>
-        <nav class="navbar fixed-top navbar-dark border-bottom-white" style="background-color: #323a47">
+        <nav class="navbar fixed-top navbar-dark border-bottom-white" style="background-color: #1c2127">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
                     <a href="#" style="color: #ffff"><i onclick="closeOpenNav()" class="fas fa-bars fa-lg"></i></a>

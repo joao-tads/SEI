@@ -1,18 +1,16 @@
 <body>
 <div style="margin-top: 10%;">
     <h3>Turmas</h3>
-    <button class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47" data-toggle="modal" data-target="#myModal3">Solicitar Vínculo</span></button>
-    <table class="table">
-    </div>
-    <br>
-    </br>
+    <button class="btn btn-info btn-md border-0 btn-block btn-lg"  data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i> Solicitar Vínculo</span></button>
+    <table class="table table-condensed table-hover">
+    </div><br>
         <thead class="thead-">
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Turma</th>
                 <th scope="col">Turno</th>
                 <th scope="col">Ano ou Série</th>
-                <th scope="col">Funções</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -24,10 +22,10 @@
                     <td><?= $turma->anoSerie ?></td>
                     <td>
                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                     </div>
-                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-edit"></i></i>
-                                        <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-trash-alt"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
+                                        <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-trash-alt"></i></i>
                                     </div>
                             <!--<i title="Visualizar" class="fas fa-eye" http-url="\visualizar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
                             <i title="Atualizar" class="fas fa-edit" http-url="\editar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
@@ -93,13 +91,12 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Cadastrar">
+                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583"value="Cadastrar">
                             <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                             <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                         </div>
                 </form>
             </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
     </div>
 </div>

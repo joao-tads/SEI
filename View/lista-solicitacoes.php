@@ -8,7 +8,7 @@
                 <th scope="col">Tipo</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">Solicitante</th>
-                <th scope="col">Fuções</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -28,10 +28,10 @@
                         <input type="hidden" name="idAluno" value="<?= $retorno ?>">
                         <input type="hidden" name="idDisciplina" value="<?= $soli->descricao ?>">
                             <div class="btn-group">
-                                <button class="btn btn-primary border-0" title="Confirmar" style="background-color: #323a47" type="submit"><span class="fas fa-check"></span></button>
+                                <button class="btn btn-primary border-0" title="Confirmar" style="background-color: #33a583" type="submit"><span class="fas fa-check"></span></button>
                             </div>
                             <div class="btn-group">
-                                <button class="btn btn-primary border-0" title="Remover" style="background-color: #323a47" type="submit"><span class="fas fa-trash-alt"></span></button>
+                                <button class="btn btn-primary border-0" title="Remover" style="background-color: #db2938" type="submit"><span class="fas fa-trash-alt"></span></button>
                             </div>
                         </form>
                             </td>

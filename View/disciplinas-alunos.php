@@ -72,7 +72,7 @@ foreach ($funcionario as $func) {
                         <input type="hidden" name="idDisciplina" value="<?= $_GET['id'] ?>">
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md"style="background-color: #323a47" value="Solicitar">
+                                <input type="submit" name="submit" class="btn btn-info btn-md"style="background-color: #33a583" value="Solicitar">
                                 <input type="reset" name="reset" class="btn btn-info btn-md" style="background-color: #323a47"value="Limpar">
                                 <b class="btn btn-info btn-md"style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>

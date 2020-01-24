@@ -2,7 +2,7 @@
 <body>
 
     <h3>Disciplinas</h3>
-    <button class="btn btn-info btn-blockborder-0" style="background-color: #323a47" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
+    <button class="btn btn-info btn-blockborder-0" style="background-color: #33a583" data-toggle="modal" data-target="#myModal3"><span class="	glyphicon glyphicon-plus"></span></button>
     <table class="table table-condensed table-hover table-sm">
         <thead>
             <tr>
@@ -22,8 +22,8 @@
                     <td>
                         <?php } } ?>
                         <div class="btn-group">
-                            <i title="Remover" http-url="#" class="btn btn-primary"><span class=" glyphicon glyphicon-remove"></span></i>
-                            <a title="Vincular alunos" href="/vincular-aluno" class="btn btn-primary"><span class="	glyphicon glyphicon-pencil"></span></a>
+                            <i title="Remover" http-url="#" class="btn btn-primary" style="background-color: #db2938"><span class="glyphicon glyphicon-remove"></span></i>
+                            <a title="Vincular alunos" href="/vincular-aluno" class="btn btn-primary"style="background-color: #33a583"><span class="glyphicon glyphicon-pencil"></span></a>
                         </div>
                     </td>
                 </tr>
@@ -60,7 +60,7 @@
                     </div>
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Solicitar">
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583" value="Solicitar">
                                 <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                                 <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>

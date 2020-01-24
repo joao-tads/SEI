@@ -10,7 +10,7 @@
         switch ($usuario->cargo):
             case "Professor(a)":
                 echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>
-                <a href="/lista-turmas"> <i class="fas fa-folder-plus"></i> Notas</a>
+                <a href="/lista-turmas"> <i class="fas fa-plus-circle"></i> Notas</a>
                 <a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"></i> Solicitação</a>
                 <a href="#"> <i class="fas fa-user-check"></i> Frequências</a>
                 <a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Cadastrar">
+                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583" value="Cadastrar">
                             <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                             <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                         </div>
@@ -172,7 +172,7 @@
                     </div>
                     <div class="modal-footer">
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Matricular">
+                            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color:#33a583" value="Matricular">
                             <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                             <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                         </div>

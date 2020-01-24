@@ -3,23 +3,23 @@
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="#home">Alunos</a>
+            <a class="nav-link active" data-toggle="tab" href="#home"style="color: #323a47">Alunos</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#menu1">Funcionarios</a>
+            <a class="nav-link" data-toggle="tab" href="#menu1" style="color: #323a47">Funcionarios</a>
         </li>
         <!-- Tab panes -->
         <div class="tab-content">
             <div id="home" class="container tab-pane active"><br>
-                <h3>Alunos</h3>
-                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47">Adicionar</a>              
-                <br></br>
+            <br></br>
+                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>  Adicionar Aluno</a><br>              
+               
                 <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Matrícula</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Funções</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,10 +29,10 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                     <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                     </div>
-                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-edit"></i></i>
-                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-user-slash"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-user-slash"></i></i>
                                     </div>
                                 </td>
                             </tr>
@@ -67,7 +67,7 @@
                                             <p><?= $user->telefone ?></p>
                                             <Strong>Sexo</Strong><br>
                                             <p><?= $user->sexo ?></p>
-                                            <b class="btn btn-info btn-md border-0" style="background-color: #323a47"data-dismiss="modal">Sair</b>
+                                            <b class="btn btn-info btn-md border-0" style="background-color: #33a583"data-dismiss="modal">Sair</b>
                                         </div>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <div class="form-group">
-                                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Atualizar">
+                                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583"value="Atualizar">
                                                 <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                                             </div>
                                             </form>
@@ -164,16 +164,16 @@
                 </table>
             </div>
             <div id="menu1" class="container tab-pane fade"><br>
-                <h3>Funcionários</h3>
-                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 position-absolute" style="background-color: #323a47">Adicionar</a>              
-                <br></br>
+            <br></br>
+                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>
+ Adicionar Funcionário</a><br>
                <!-- <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>-->
                 <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr>
                             <th scope="col">Matrícula</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">ações</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -183,10 +183,10 @@
                                 <td><?= $user->nome ?></td>
                                 <td>
                                 <div class="btn-group">
-                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                     </div>
-                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-edit"></i></i>
-                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="fas fa-user-slash"></i></i>
+                                        <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
+                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-user-slash"></i></i>
                                     </div>
                                    <!-- <div class="btn-group">
                                         <i title="Visualizar" data-toggle="modal" data-target="#myModalF<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #323a47"><i class="far fa-eye"></i></i>
@@ -221,7 +221,7 @@
                                             <p><?= $user->dataNascimento ?></p>
                                             <Strong>Cargo</Strong><br>
                                             <p><?= $user->cargo ?></p>
-                                            <b class="btn btn-info btn-md" data-dismiss="modal">Sair</b>
+                                            <b class="btn btn-info btn-md" style="background-color: #33a583" data-dismiss="modal">Sair</b>
                                         </div>
                                     </div>
                                 </div>
@@ -282,7 +282,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <div class="form-group">
-                                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Atualizar">
+                                                <input type="submit" name="submit" class="btn btn-info btn-md" style="background-color: #33a583" value="Atualizar">
                                                 <b class="btn btn-info btn-md" data-dismiss="modal">Cancelar</b>
                                             </div>
                                             </form>

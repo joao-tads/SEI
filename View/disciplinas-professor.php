@@ -6,7 +6,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Disciplina</th>
-                <th scope="col">Funções</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -19,10 +19,10 @@
                     <td>
                         <div class="btn-group">
                             <a title="Vincular alunos" href="/vincular-aluno?id=<?= $dis->id ?>" class="btn btn-primary border-0" 
-                            style="background-color: #323a47"><span class="fas fa-check"></span></a>
+                            style="background-color: #33a583"><span class="fas fa-check"></span></a>
                         </div>
                             <i title="Remover" url="#" class="btn btn-primary border-0" 
-                            style="background-color: #323a47"><span class="fas fa-times"></span></i>
+                            style="background-color: #db2938"><span class="fas fa-trash-alt"></span></i>
                         </div>
                     </td>
                 </tr>

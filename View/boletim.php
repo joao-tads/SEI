@@ -50,6 +50,6 @@ namespace Ifnc\Tads\Controller;
       <?php } ?>
     </tbody>
   </table>
-    <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary border-0" style="background-color: #323a47">Imprimir</a>
+    <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583"><i class="fas fa-print"></i> Imprimir</a>
 </div>
 </div>

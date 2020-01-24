@@ -15,7 +15,7 @@ function porcent($media)
 <div style="margin-top: 10%;">
   <div class="container">
     <h3>Notas</h3>
-    <table class="table table-striped">
+    <table class="table table-striped table-condensed">
       <thead>
         <tr>
           <th scope="col">Aluno</th>
@@ -56,6 +56,6 @@ function porcent($media)
         </form>
       </tbody>
     </table>
-    <button type="submit" class="btn btn-primary border-0" style="background-color: #323a47">Salvar</a>
+    <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</a>
   </div>
 </div>
