@@ -32,5 +32,9 @@
 /update-perfil-consulta-funcionario: UpdatePerfilConsultaFuncionarioController
 /inative-funcionario: InativeFuncionarioController
 /imprimir-boletim: ImprimirBoletimController
+/imprimir-dvinculo: ImprimirVinculoController
+/imprimir-dfrequencia: ImprimirHistoricoController
+/imprimir-dhistorico: ImprimirFrequenciaController
 /lista-turmas: ListarTurmasController
 /inserir-notas: InserirNotasController
+/declaracoes: DeclaracoesController

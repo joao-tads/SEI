@@ -2,21 +2,25 @@
 
 namespace Ifnc\Tads\Controller;
 
+use Ifnc\Tads\Helper\SelectPro;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
-class EmailController implements IController
+class ImprimirBoletimController implements IController
 {
     public function request(): void
     {
         Transaction::open();
+
         echo Render::html(
             [
-                "email.php"
+                "imprimirB.php",
             ],
             [
                 "usuario" => $_SESSION["usuario"],
-                "type" => $_SESSION["type"]
+                "turma" => Turma::findByCondition("idAluno='{$_SESSION['usuario']->id}'"),
+                "boletim" => SelectPro::boletim($_SESSION["usuario"]->id)
             ]
         );
     }
