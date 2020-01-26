@@ -1,3 +1,8 @@
+<?php
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Sao_Paulo');
+echo strftime('%A, %d de %B de %Y', strtotime('today'));
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -18,28 +23,31 @@
 
 <body>
   <div class="form-group">
-    <img src="../public/Design/img/logo.png" alt="logo" width="18%" height="20%">
-    <strong>ESCOLA MUNICIPAL PROFESSOR FULANDO SOUZA DA SILVA
+    <img src="../public/Design/img/logo.png" alt="logo" width="10%" height="10%" style="float: left;">
+    <div align="center">
+      <strong>ESCOLA MUNICIPAL PROFESSOR FULANDO SOUZA DA SILVA
+        <br>
+        Rua Lugar Nenhum, Nº 0. BAIRRO: CENTRO CEP: 59215-000
+        <br>
+      </strong>
       <br>
-      Rua Lugar Nenhum, Nº 0. BAIRRO: CENTRO CEP: 59215-000
       <br>
-    </strong>
+      <br>
+      <h3>Declaração de Vínculo</h3>
+    </div>
   </div>
   <br>
-  <br>
-  <br>
-  <h3 align="center">Declaração de Vínculo</h3>
-  <br>
-  <P align="justify">Declaramos para os devidos fins que
+  <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que
     <b><?= $usuario->nome ?></b>
     inscrito no <b>CPF: <?= $usuario->cpf ?></b> e
-    <b>RG: <?= $usuario->rg ?></b> é aluno do <b>6º ano vespertino</b>
-    com carga horária de 25 horas aulas semanais</P>
+    <b>RG: <?= $usuario->rg ?></b> é aluno da <b>Escola Municipal Professor
+      Fulano de Souza da Silva</b> e está matriculado na turma <b><?= $turma->anoSerie ?> "<?= $turma->nome ?>"</b>
+    turno <b><?= $turma->turno ?></b> com matrícula: <b><?= $usuario->id ?></b> com carga horária de 25 horas aulas semanais</P>
 
   <br>
   <br>
   <br>
-  <u align="right">Nova Cruz/RN 24 de janeiro de 2020</u>
+  <div style="text-align: right;">Nova Cruz /RN, <?php echo strftime('%d de %B de %Y', strtotime('today')) ?></div> 
   <br>
   <br>
   <div align="center">

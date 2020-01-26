@@ -13,13 +13,13 @@
     $dompdf = new Dompdf();
 
     ob_start();
-    require_once 'pdf-boletim.php';
+    require_once 'pdf-frequencia.php';
     $dompdf->loadhtml(ob_get_clean());
 
     $dompdf->setPaper("A4", "landscape");
     $dompdf->render();
 
-    $dompdf->stream("Boletim.pdf", 
+    $dompdf->stream("Frequencia.pdf", 
     array("Attachment" => false)
 );
 ?>

@@ -15,11 +15,11 @@ class ImprimirVinculoController implements IController
 
         echo Render::html(
             [
-                "imprimirV.php",
+                "imprimirV.php"
             ],
             [
                 "usuario" => $_SESSION["usuario"],
-                "turma" => Turma::findByCondition("idAluno='{$_SESSION['usuario']->id}'"),
+                "turma" => Turma::findByCondition("idAluno='{$_SESSION['usuario']->id}'")
             ]
         );
     }

@@ -23,13 +23,16 @@
     Rua Lugar Nenhum, Nº 0. BAIRRO: CENTRO CEP: 59215-000
     <br>
   </strong>
-  <h3 align="center">Declaração de Vínculo</h3>
+  <h3 align="center">Declaração de Frequência</h3>
   <br>
   <P align="justify">Declaramos para os devidos fins que
     <b>JOÃO GUEDES DE MOURA JUNIOR</b>
     inscrito no <b>CPF: 111.111.111-11</b> e
-    <b>RG: 111.111.111</b> é aluno do <b>6º ano vespertino</b>
-    com carga horária de 25 horas aulas semanais</P>
+    <b>RG: 111.111.111</b> aluno da turma <b>6º ano vespertino</b>
+    com carga horária de 25 horas aulas semanais, Possui um percentual de <b>83%</b> de frquências.</P>
+    <p>Esse dado é baseado em média aritmética da relação de presença em todas as disciplinas, sendo
+      assim, um cálculo geral.
+    </p>
 
   <br>
   <br>
