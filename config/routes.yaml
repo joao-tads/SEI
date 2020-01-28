@@ -38,3 +38,4 @@
 /lista-turmas: ListarTurmasController
 /inserir-notas: InserirNotasController
 /declaracoes: DeclaracoesController
+/vizualizar-turma: VizualizarTurmasController

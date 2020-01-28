@@ -1,28 +1,27 @@
 <body>
     <div style="margin-top: 10%;">
-        <h3>Turmas</h3>
-        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>Cadastrar Turma</span></button>
+        <h2><?= $_POST['anoSerie']." (".$_POST['nome'].") ".$_POST['turno'] ?></h2>
+        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>Vincular Aluno</span></button>
         <table class="table table-condensed table-hover">
     </div><br>
     <thead class="thead-">
         <tr>
-            <th scope="col">Turma</th>
-            <th scope="col">Turno</th>
-            <th scope="col">Ano ou Série</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Data de Nascimento</th>
             <th scope="col">Ações</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($turmas as $turma) { ?>
+        <?php foreach ($alunos as $aluno) { ?>
             <tr>
-                <th scope="row"><?= $turma->nome ?></th>
-                <td><?= $turma->turno ?></td>
-                <td><?= $turma->anoSerie ?></td>
+                <th scope="row"><?= $aluno->nome ?></th>
+                <td><?= $aluno->sexo ?></td>
+                <td><?= $aluno->dataNascimento ?></td>
                 <td>
                     <div class="btn-group">
                         <form action="/vizualizar-turma" method="POST">
                             <input type="hidden" name="nome" value="<?= $turma->nome ?>">
-                            <input type="hidden" name="anoSerie" value="<?= $turma->anoSerie ?>">
                             <input type="hidden" name="turno" value="<?= $turma->turno ?>">
                             <button type="submit" title="Visualizar" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></button>
                         </form>

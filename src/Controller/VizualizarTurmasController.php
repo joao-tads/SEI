@@ -6,7 +6,7 @@ use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
-class TurmasController implements IController
+class VizualizarTurmasController implements IController
 {
     public function request(): void
     {
@@ -16,13 +16,13 @@ class TurmasController implements IController
             [
                 "cabecalho.php",
                 "menu.php",
-                "turmas.php",
+                "vizualizar-turmas.php",
                 "rodape.php"
             ],
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "turmas" => SelectPro::turmasAll() 
+                "alunos" => SelectPro::turmasAlunos($_POST['nome'], $_POST['turno']) 
             ]
         );
     }

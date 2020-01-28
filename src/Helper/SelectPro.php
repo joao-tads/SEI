@@ -32,6 +32,30 @@ final class SelectPro
         }
 
     }
+    public static function turmasAll()
+    {
+        $sql = "SELECT DISTINCT turno, nome, anoSerie FROM turma;";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+    public static function turmasAlunos($nome, $turno)
+    {
+        $sql = "SELECT a.nome, a.dataNascimento, a.sexo FROM aluno a 
+        INNER JOIN turma t ON (t.idAluno = a.id) 
+        WHERE t.nome = '$nome' and t.turno = '$turno';";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
     public static function turmasProfessor($id)
     {
         $sql = "SELECT * FROM turma WHERE id = (SELECT DISTINCT idTurma 
