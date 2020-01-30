@@ -18,6 +18,7 @@ function porcent($media)
     <table class="table table-striped table-condensed">
       <thead>
         <tr>
+          <th scope="col">#</th>
           <th scope="col">Aluno</th>
           <th scope="col">1º B</th>
           <th scope="col">2º B</th>
@@ -28,34 +29,41 @@ function porcent($media)
         </tr>
       </thead>
       <tbody>
-        <form action="">
-          <?php 
-          $cont = 0;
+        <form action="/update-notas?id=<?= $_GET['id'] ?>" name="Update-notas" method="post">
+          <?php
           foreach ($alunos as $a) {
             $media = media($a->pb, $a->sb, $a->tb, $a->qb);
           ?>
             <tr>
+              <td scope="col"><?= $a->id ?></td>
               <td scope="col"><?= $a->nome ?></td>
-              <td  scope="row"><input type="text" name="pb" class="form-control" value="<?= $a->pb ?>"></td>
-              <td><input type="text" name="sb" class="form-control" value="<?= $a->sb ?>"></td>
-              <td><input type="text" name="tb" class="form-control" value="<?= $a->tb ?>"></td>
-              <td><input type="text" name="qb" class="form-control" value="<?= $a->qb ?>"></td>
-              <td><input type="text" name="media" class="form-control" value="<?= $media ?>"></td>
+              <td scope="row"><input type="text" name="pb-<?= $a->id ?>" class="form-control" value="<?= $a->pb ?>"></td>
+              <td><input type="text" name="sb-<?= $a->id ?>" class="form-control" value="<?= $a->sb ?>"></td>
+              <td><input type="text" name="tb-<?= $a->id ?>" class="form-control" value="<?= $a->tb ?>"></td>
+              <td><input type="text" name="qb-<?= $a->id ?>" class="form-control" value="<?= $a->qb ?>"></td>
+              <td scope="col"><?= $media ?></td>
               <?php
-              if ($media <= 3) {
-                echo "<td class='table-danger'>Reprovado</td>";
-              } else if ($media < 6) {
-                echo "<td class='table-warning'>Recuperação</td>";
-              } else if ($media <= 10) {
-                echo "<td class='table-success'>Aprovado</td>";
+              if ($a->pb == "" || $a->sb == "" || $a->tb == "" || $a->qb == "") {
+                echo "<td class='table-info'>Cursando</td>";
+              } else {
+                if ($media <= 3) {
+                  echo "<td class='table-danger'>Reprovado</td>";
+                } else if ($media < 6) {
+                  echo "<td class='table-warning'>Recuperação</td>";
+                } else if ($media <= 10) {
+                  echo "<td class='table-success'>Aprovado</td>";
+                }
               }
-              $cont++;
               ?>
             </tr>
+            <input type="hidden" name="idTurma-<?= $a->id ?>" value="<?= $a->idTurma ?>">
+            <input type="hidden" name="idAluno-<?= $a->id ?>" value="<?= $a->idAluno ?>">
+            <input type="hidden" name="idDisciplina-<?= $a->id ?>" value="<?= $a->idDisciplina ?>">
+            <input type="hidden" name="id-<?= $a->id ?>" value="<?= $a->id ?>">
           <?php } ?>
+              <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
         </form>
       </tbody>
     </table>
-    <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</a>
   </div>
 </div>

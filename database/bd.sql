@@ -112,7 +112,16 @@ CREATE TABLE `FuncionarioInativo` (
     `senha` VARCHAR(100),
     `nlogin` INT NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
-    
+
+CREATE TABLE `Frequencia` (
+	`id` INT NOT NULL,
+    `idProfessor` INT NOT NULL,
+    `idTurma` INT NOT NULL,
+    `idAluno` INT NOT NULL,
+    `dataHora` DATETIME NOT NULL,
+    `status` VARCHAR(20) NOT NULL
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 ALTER TABLE `Aluno`
   ADD PRIMARY KEY (`id`);
 
@@ -152,6 +161,9 @@ ALTER TABLE `AlunoInativo`
   
 ALTER TABLE `FuncionarioInativo`
   ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `Frequencia`
+  ADD PRIMARY KEY (`id`);
   
 ALTER TABLE `Aluno`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -182,6 +194,9 @@ ALTER TABLE `AlunoInativo`
 
 ALTER TABLE `FuncionarioInativo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `Frequencia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
   
 ALTER TABLE `Responsavel`
   ADD CONSTRAINT `Aluno_ibfk_1` FOREIGN KEY (`idAluno`) REFERENCES `Aluno` (`id`);
@@ -204,6 +219,11 @@ ALTER TABLE `DisciplinaTurma`
   ADD CONSTRAINT `Aluno_ibfk_6` FOREIGN KEY (`idAluno`) REFERENCES `Aluno` (`id`), 
   ADD CONSTRAINT `Disciplian_ibfk_2` FOREIGN KEY (`idDisciplina`) REFERENCES `Disciplina` (`id`),
   ADD CONSTRAINT `Turma_ibfk_1` FOREIGN KEY (`idTurma`) REFERENCES `Turma` (`id`);
+
+ALTER TABLE `Frequencia`
+  ADD CONSTRAINT `Aluno_ibfk_7` FOREIGN KEY (`idAluno`) REFERENCES `Aluno` (`id`), 
+  ADD CONSTRAINT `Professor_ibfk_2` FOREIGN KEY (`idProfessor`) REFERENCES `Funcionario` (`id`),
+  ADD CONSTRAINT `Turma_ibfk_2` FOREIGN KEY (`idTurma`) REFERENCES `Turma` (`id`);
   
 INSERT INTO `Aluno` (`nome`, `dataNascimento`, `nomeMae`, `nomePai`, `rg`, `cpf`, `naturalidade`, `endereco`, `telefone`, `sexo`, `senha`, `nlogin`) VALUES
 	('João Guedes de Moura Junior', '2002-05-15', 'Maria da Penha', 'João Guedes', '111.222.333', '111.111.111-11', 'Nova Cruz', 'Rua Antônio Viana Barbosa 104', '(84) 99478-6496', 'Masculino', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 0),
@@ -250,14 +270,14 @@ INSERT INTO `Responsavel` (`idAluno`, `cpf`, `rg`, `telefone`, `email`, `nome`, 
 	(20, '200.200.200-00', '200.200.000', '(84) 99563-7854', 'marcosvinicius@gmail.com', 'Marcos Vinicius Mário Sérgio Moraes', '$argon2i$v=19$m=65536,t=4,p=1$VElZTHFjNGFmL09VSG9vMA$ck1Weu2FoiRk6zK+9uNRVW0hIc2cw/2B3u9f12OrjBA', 0);
 
 INSERT INTO `Funcionario` (`nome`, `cpf`, `email`, `telefone`, `dataNascimento`, `cargo`, `senha`, `nlogin`) VALUES 
-	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 0),
+	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 1),
 	('Matias Justino', '123.222.222-00', 'matiasdocente@gmail.com', '(84) 99494-563', '1998-04-22', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$a05DZmxpWUZIdWNQbm1VVg$TvxXP9LbE7UHByK2PPEdbsm9tYo+DOK3pNftR9/cdCA', 0),
 	('Maria da Penha Justino de Moura', '123.333.333-00', 'mariadocente@gmail.com', '(84) 99494-3578', '1991-10-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$UWgzYUtQeFlwaG1qcS4yVA$xep01t3FsecUaSDIUyjElF3jVG9XqKmKYY90kdZHMGM', 0),
 	('Bruna Guedes de Moura', '123.444.444-00', 'brunadocente@gmail.com', '(84) 99494-7676', '1997-05-10', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$V2JZZHkzMVMxMFBIVEd5dg$l0tNs/riGlOt2Ixu1LIkJ2q/2uWqGLKLUsOtMg6z1dw', 0),
 	('Eliane Padilha dos Santos Moura', '123.555.555-00', 'elianedocente@gmail.com', '(84) 99494-5376', '1998-12-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$V1dicTh5Ri9BbHZCLkdQVg$xFijUI+qP2zKbRvki0rFyRnhAdirxicfBfKbZRT360M', 0),
 	('Edieluza Ernesto da Silva', '123.666.666-00', 'edileuzadocente@gmail.com', '(84) 99494-9866', '1995-04-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$UERNbGFzZC40ZTZGZkFxQw$HsKl1aCGuyiHdCOwgAqU/Al/dt0Vldz8XZZDLeCdIZk', 0),
 	('Carlos Andre de Freitas', '123.777.777-00', 'carlosdocente@gmail.com', '(84) 99494-9494', '1997-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$SVNLWmUvcFpnYklqbkdOVA$dIpXzzIFGZ6ox3RV2c/3tXrDID9d0HWSzdnjEoF4TCg', 0),
-	('Marcio Oliveira da Silva', '123.888.888-00', 'marciosecretario@gmail.com', '(84) 99094-9494', '1997-02-08', 'Secretario(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 0),
+	('Marcio Oliveira da Silva', '123.888.888-00', 'marciosecretario@gmail.com', '(84) 99094-9494', '1997-02-08', 'Secretario(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 1),
 	('Geraldo de Souza', '123.999.999-00', 'geraldodocente@gmail.com', '(84) 99494-0000', '1995-08-19', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$NEViWnlPZVp3UUpnWVVSaw$y/eaNmxQI4sYMR6ASzyZmuRIQUIb7q60tcBcw3uIi1A', 0),
 	('Fernando Conceição Marques', '123.101.101-00', 'fernandodocente@gmail.com', '(84) 99494-9000', '1995-07-29', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$N05RejRDY1NWdUR4cmJndw$uinIVr1mPNsJPnN3+i2xNW97SF8ulZQ/1w6P8fNZBgw', 0),
 	('Elizabeth Cavalcante de Souza', '123.110.110-00', 'elizabethdocente@gmail.com', '(84) 99494-9004', '1994-09-07', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$emV1Y0hody5jUXlJSzJmdA$RVFR9ZUnA73NoYyYR/pupEzfUoaS/Mc/F4jmdbHViUc', 0),
@@ -366,3 +386,5 @@ SELECT * FROM `turma` WHERE (`idAluno` = 1 AND `max` = 40) OR (`idAluno` = 20 AN
 select * from Turma where idAluno = 1;
 select * from Funcionario;
 select * from FuncionarioInativo;
+select * from Frequencia;
+select * from Aluno;

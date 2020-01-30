@@ -21,8 +21,7 @@ final class SelectPro
     }
     public static function InserirNotas($a, $b)
     {
-        $sql = "SELECT a.nome, dt.pb, dt.sb, dt.tb, dt.qb 
-        FROM Aluno a INNER JOIN disciplinaturma dt ON (a.id = dt.idAluno) 
+        $sql = "SELECT *  FROM Aluno a INNER JOIN disciplinaturma dt ON (a.id = dt.idAluno) 
         WHERE dt.idDisciplina = (SELECT id FROM disciplina WHERE idProfessor = $a) and dt.idTurma = $b";
         if ($conn = Transaction::get()) {
             return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());

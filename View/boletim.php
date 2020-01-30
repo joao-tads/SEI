@@ -38,13 +38,17 @@ namespace Ifnc\Tads\Controller;
           <td><?= $media ?></td>
           <td><?= porcent($media) ?>%</td>
           <?php
-          if ($media <= 3) {
-            echo "<td class='table-danger'>Reprovado</td>";
-          } else if ($media < 6) {
-            echo "<td class='table-warning'>Recuperação</td>";
-          } else if ($media <= 10) {
-            echo "<td class='table-success'>Aprovado</td>";
-          }
+              if ($r->pb == "" || $r->sb == "" || $r->tb == "" || $r->qb == "") {
+                echo "<td class='table-info'>Cursando</td>";
+              } else {
+                if ($media <= 3) {
+                  echo "<td class='table-danger'>Reprovado</td>";
+                } else if ($media < 6) {
+                  echo "<td class='table-warning'>Recuperação</td>";
+                } else if ($media <= 10) {
+                  echo "<td class='table-success'>Aprovado</td>";
+                }
+              }
           ?>
         </tr>
       <?php } ?>

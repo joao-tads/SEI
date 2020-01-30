@@ -1,12 +1,12 @@
 <?php
 
 namespace Ifnc\Tads\Controller;
-use Ifnc\Tads\Entity\Turma;
+
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
-class VizualizarTurmasController implements IController
+class ListaTurmasController implements IController
 {
     public function request(): void
     {
@@ -16,14 +16,13 @@ class VizualizarTurmasController implements IController
             [
                 "cabecalho.php",
                 "menu.php",
-                "vizualizar-turmas.php",
+                "lista-turma.php",
                 "rodape.php"
             ],
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "aluno" => Turma::findByCondition("nome='{$_POST['nome']}' AND anoSerie='{$_POST['anoSerie']}' AND turno='{$_POST['turno']}'"),
-                "alunos" => SelectPro::turmasAlunos($_POST['nome'], $_POST['turno']) 
+                "turmas" => SelectPro::turmasProfessor($_SESSION['usuario']->id)  
             ]
         );
     }

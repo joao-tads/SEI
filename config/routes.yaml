@@ -35,7 +35,11 @@
 /imprimir-dvinculo: ImprimirVinculoController
 /imprimir-dfrequencia: ImprimirHistoricoController
 /imprimir-dhistorico: ImprimirFrequenciaController
-/lista-turmas: ListarTurmasController
-/inserir-notas: InserirNotasController
+/lista-turmas: ListaTurmasController
+/listar-turmas: ListarTurmasController
+/inserir-notas: InserirNotasFormController
+/inserir-frequencia: InserirFrequenciaFormController
+/update-notas: InserirNotasController
+/update-frequencia: InserirFrequenciasController
 /declaracoes: DeclaracoesController
 /vizualizar-turma: VizualizarTurmasController

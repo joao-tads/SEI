@@ -10,9 +10,9 @@
         switch ($usuario->cargo):
             case "Professor(a)":
                 echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>
-                <a href="/lista-turmas"> <i class="fas fa-plus-circle"></i> Notas</a>
+                <a href="/listar-turmas"> <i class="fas fa-plus-circle"></i> Notas</a>
                 <a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"></i> Solicitação</a>
-                <a href="#"> <i class="fas fa-user-check"></i> Frequências</a>
+                <a href="lista-turmas"> <i class="fas fa-user-check"></i> Frequências</a>
                 <a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>
                 <a href="/consultar"> <i class="fas fa-search"></i> Consultas</a>';
                 break;
