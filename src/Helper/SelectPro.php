@@ -8,7 +8,7 @@ final class SelectPro
 {
     public static function boletim($id)
     {   
-        $sql = "SELECT d.nome, dt.ano, dt.pb, dt.sb, dt.tb, dt.qb FROM Disciplina d 
+        $sql = "SELECT d.id, d.nome, d.idProfessor, dt.ano, dt.pb, dt.sb, dt.tb, dt.qb FROM Disciplina d 
             INNER JOIN DisciplinaTurma dt ON (d.id = dt.idDisciplina) WHERE 
             (dt.idAluno = $id)";
         if ($conn = Transaction::get()) {

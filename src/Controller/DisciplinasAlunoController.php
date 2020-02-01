@@ -2,6 +2,7 @@
 
 namespace Ifnc\Tads\Controller;
 
+use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Entity\Disciplina;
 use Ifnc\Tads\Entity\DisciplinaAluno;
 use Ifnc\Tads\Entity\Funcionario;
@@ -23,6 +24,7 @@ class DisciplinasAlunoController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "boletim" => SelectPro::boletim($_SESSION["usuario"]->id),
                 "funcionario" => Funcionario::all(),
                 "disciplina" => Disciplina::all(),
                 "disciplinaAluno" => DisciplinaAluno::all()  

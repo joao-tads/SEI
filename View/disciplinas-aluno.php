@@ -1,3 +1,14 @@
+<?php
+namespace Ifnc\Tads\Controller;
+
+  function media($a, $b, $c, $d) {
+    return ($a+$b+$c+$d)/4;
+  }
+  function porcent($media) {
+    return ($media*100)/10;
+  }
+  
+?>
 <link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
 <div style="margin-top: 10%;">
@@ -7,38 +18,53 @@
         data-target="#myModal3"><i class="fas fa-plus-circle"></i> Solicitar</button>
     <table class="table table-bordered table-condensed table-hover table-sm"> <!--colocar botão no centro-->
 </div><br>
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Professor</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <?php
-            foreach ($disciplinaAluno as $da) {
-                foreach ($disciplina as $dis) {
-                    if ($da->idAluno == $usuario->id && $dis->id == $da->idDisciplina) { ?>
-                        <tr>
-                            <th scope="row"><?= $dis->id ?></th>
-                            <td><?= $dis->nome ?></td>
-                            <?php foreach ($funcionario as $func) {
-                                            if ($func->id == $dis->idProfessor) { ?>
-                                    <td><?= $func->nome ?></td>
-                                    <td>
-                                <?php }
-                                            } ?>
-                                <div class="btn-group">
-                                    <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary"><span class="	glyphicon glyphicon-remove"></span></i>
-                                    <i title="Atualizar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary
-                                    </td>
-                        </tr>
-            <?php }
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Professor</th>
+        <th scope="col">Média</th>
+        <th scope="col">Frequência</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($boletim as $r) {
+        date_default_timezone_set('America/Recife');
+        if($r->ano == date('Y')) {
+        $media = media($r->pb, $r->sb, $r->tb, $r->qb);
+      ?>
+        <tr>
+          <td scope="col"><?= $r->id ?></td>
+          <td><?= $r->nome ?></td>
+          <?php foreach ($funcionario as $f) {
+              if ($r->idProfessor == $f->id) {
+                echo "<td>".$f->nome."</td>";
+              }
+            }
+          ?>
+          <td><?= $media ?></td>
+          <td><?= porcent($media) ?>%</td>
+          <?php
+              if ($r->pb == "" || $r->sb == "" || $r->tb == "" || $r->qb == "") {
+                echo "<td class='table-info'>Cursando</td>";
+              } else {
+                if ($media <= 3) {
+                  echo "<td class='table-danger'>Reprovado</td>";
+                } else if ($media < 6) {
+                  echo "<td class='table-warning'>Recuperação</td>";
+                } else if ($media <= 10) {
+                  echo "<td class='table-success'>Aprovado</td>";
                 }
-            } ?>
-        </tbody>
-    </table>
+              }
+          ?>
+        </tr>
+      <?php } 
+      }
+       ?>
+    </tbody>
+  </table>
     <div id="myModal3" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -54,14 +80,20 @@
                             <label class="control-label col-sm-2" for="sel1">Disciplinas:</label>
                             <div class="col-sm-10">
                                 <select class="form-control" id="sel1" name="descricao">
-                                    <?php foreach ($disciplina as $dis) {
-                                        echo "<option>$dis->nome - ";
-                                        foreach ($funcionario as $func) {
-                                            if ($dis->idProfessor == $func->id) {
-                                                echo "$func->nome</option>";
+                                <?php 
+                                foreach ($disciplina as $d) {
+                                    foreach ($boletim as $r) {
+                                        if ($d->nome != $r->nome) {
+                                            echo "<option>$d->nome";
+                                            foreach($funcionario as $f) {
+                                                if ($f->id == $d->idProfessor) {
+                                                    echo " - $f->nome</option>";
+                                                }
                                             }
                                         }
-                                    } ?>
+                                    }
+                                }
+                                ?>
                                 </select>
                             </div>
                         </div>
