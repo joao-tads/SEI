@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <div style="margin-top: 10%;">
     <div class="container">
         <h2>Perfil</h2>
@@ -35,8 +36,8 @@
                     </tr>
                 </tbody>
             </table>
-            <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583" value="Atualizar dados" data-toggle="modal" data-target="#myModal20" value="Atualizar dados">
-            <a href="/Pagina-inicial" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Atualizar dados">Voltar</a>
+            <input type="submit" name="submit" class="btn btn-info btn-md border-0 btn-lg" style="background-color: #33a583" value="Atualizar dados" data-toggle="modal" data-target="#myModal20" value="Atualizar dados">
+            <a href="/Pagina-inicial" class="btn btn-info btn-md border-0 btn-lg" style="background-color: #323a47" value="Atualizar dados">Voltar</a>
         </div>
     </div>
 </div>

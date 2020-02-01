@@ -12,13 +12,14 @@ function porcent($media)
 }
 
 ?>
-<div style="margin-top: 10%;">
+<link rel="stylesheet" href="/Design/css/botoes.css">
+<div style="margin-top: 8%;">
   <div class="container">
-    <h3>Notas</h3>
-    <table class="table table-striped table-condensed">
+    <h3>Notas</h3><p>
+    <table class="table table-striped table-condensed table-sm">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col">Id</th>
           <th scope="col">Aluno</th>
           <th scope="col">1º B</th>
           <th scope="col">2º B</th>
@@ -61,9 +62,9 @@ function porcent($media)
             <input type="hidden" name="idDisciplina-<?= $a->id ?>" value="<?= $a->idDisciplina ?>">
             <input type="hidden" name="id-<?= $a->id ?>" value="<?= $a->id ?>">
           <?php } ?>
-              <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
         </form>
       </tbody>
     </table>
+    <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
   </div>
 </div>

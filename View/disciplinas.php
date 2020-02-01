@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
 <div style="margin-top: 8%;">
     <h3>Disciplinas</h3>
@@ -64,7 +65,7 @@
                         </div>
                         <div class="modal-footer">
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Solicitar">
+                                <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583"value="Solicitar">
                                 <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47"value="Limpar">
                                 <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                             </div>

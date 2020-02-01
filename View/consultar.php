@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body">
 <div style="margin-top: 10%;">
     <!-- Nav tabs -->
@@ -12,8 +13,15 @@
         <div class="tab-content">
             <div id="home" class="container tab-pane active"><br>
             <br></br>
-                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>  Adicionar Aluno</a><br>              
-               
+
+                        
+
+<div class="col-xs-6">
+<div class="input-group">
+            <input class="form-control" type="text" placeholder="Pesquisar">
+                <i title="Buscar" class="btn btn-primary border-0 rounded-0" style="background-color: #25b0c6"><i class="fa fa-search"></i></i>
+</div><br>
+
                 <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr>
@@ -165,8 +173,16 @@
             </div>
             <div id="menu1" class="container tab-pane fade"><br>
             <br></br>
-                <a href="/adicionar-produto-form" class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>
- Adicionar Funcionário</a><br>
+
+            
+<!--<div class="col-xs-6">
+  <div class="input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-addon">
+      <button class="fa fa-search"></button>
+    </span>
+  </div>
+</div>--><br>
                <!-- <a href="/adicionar-produto-form" class="fas fa-plus text-dark text-decoration-none"></a>-->
                 <table class="table table-condensed table-hover table-sm">
                     <thead>

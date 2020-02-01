@@ -1,8 +1,8 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
     <div style="margin-top: 10%;">
-        <h3>Turmas</h3>
-        <h4>Notas</h4>
-        <table class="table table-condensed table-hover">
+        <h3>Inserir notas</h3>
+        <table class="table table-condensed table-hover table-sm">
     </div><br>
     <thead class="thead-">
         <tr>

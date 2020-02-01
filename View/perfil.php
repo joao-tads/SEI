@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <div style="margin-top: 10%;">
     <div class="container">
         <h2>Perfil</h2>

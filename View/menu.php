@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <div id="mySidenav" class="sidenav">
 
     <?php

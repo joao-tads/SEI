@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
     <div style="margin-top: 10%;">
-        <h3>Turmas</h3>
-        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>Cadastrar Turma</span></button>
-        <table class="table table-condensed table-hover">
+        <h3 class="text-muted">Turmas</h3>
+        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i> Cadastrar Turma</span></button>
+        <table class="table table-condensed table-hover table-sm">
     </div><br>
     <thead class="thead-">
         <tr>

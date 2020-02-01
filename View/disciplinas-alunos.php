@@ -12,24 +12,26 @@ foreach ($funcionario as $func) {
     }
 }
 ?>
-
+<link rel="stylesheet" href="/Design/css/botoes.css">
+<div style="margin-top: 6%;">
 <body>
-    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal3">Vincular Alunos</button>
-    <table class="table" style="border: solid 1px black;">
+<h3 class="text-dark">Vincular Alunos</h3>
+    <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3"style="background-color: #33a583"><i class="fas fa-plus-circle"></i> Vincular Alunos</button><p>
+    <table class="table table-condensed border text-dark">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <td style="border: solid 1px black;"><?= $d->id ?></td>
+                <th scope="col">Id</th>
+                <td><?= $d->id ?></td>
                 <th scope="col">Disciplina:</th>
-                <td style="border: solid 1px black;"><?= $d->nome ?></td>
+                <td><?= $d->nome ?></td>
                 <th scope="col">Professor:</th>
-                <td style="border: solid 1px black;"><?= $f->nome ?></td>
+                <td><?= $f->nome ?></td>
             </tr>
         </thead>
     </table>
     <tbody>
         <div class="list-group">
-            <a href="#" class="list-group-item active">Alunos: </a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark text-dark font-weight-bold">Alunos</a>
             <?php 
 
             $auxi;
@@ -41,7 +43,7 @@ foreach ($funcionario as $func) {
                         }
                     }
                     if (!empty($auxi)) {
-                        echo "<a href='#' class='list-group-item'>$auxi->nome</a>";
+                        echo "<a href='#' class='list-group-item list-group-item-action text-dark'>$auxi->nome</a>";
                     }
             }
             ?>

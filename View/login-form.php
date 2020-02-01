@@ -16,6 +16,7 @@
 
 <!-- meu CSS -->
 <link rel="shortcut icon" href="/Design/img/logo favicon.png" type="image/x-icon" />
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <link rel="stylesheet" href="/Design/css/login.css">
 <link rel="stylesheet" href="/Design/css/menuLateral.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -24,8 +25,6 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
-
 
 <body>
    <div>
@@ -39,7 +38,7 @@
         <div class="container">
         <?php if (isset($alerts)) { ?>
             <?php foreach ($alerts as $alert) { ?>
-                <div class="alert alert-<?= $alert->context ?> alert-dismissible col-md-3 text-center" role="alert">
+                <div class="alert alert-<?= $alert->context ?> alert-dismissible col-md-4" role="alert">
                     <?= $alert->content?>
                 </div>
             <?php } ?>

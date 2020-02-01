@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <form action="/recuperar" method="post">
     <div class=>
         <div class="form-group">

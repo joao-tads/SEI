@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
-    <div style="margin-top: 10%;">
-        <h2><?= $_POST['anoSerie']." (".$_POST['nome'].") ".$_POST['turno'] ?></h2>
-        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i>Vincular Aluno</span></button>
-        <table class="table table-condensed table-hover">
+    <div style="margin-top: 8%;">
+        <h2><?= $_POST['anoSerie']." (".$_POST['nome'].") ".$_POST['turno'] ?></h2><p>
+        <button class="btn btn-info btn-md border-0 btn-block btn-lg" data-toggle="modal" data-target="#myModal3" style="background-color: #33a583"><i class="fas fa-plus-circle"></i> Vincular Aluno</span></button>
+        <table class="table table-condensed table-hover table-sm">
     </div><br>
     <thead class="thead-">
         <tr>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
     <div style="margin-top: 10%;">
         <h2>Declarações</h2>

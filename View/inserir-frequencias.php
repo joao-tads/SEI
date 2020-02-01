@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <div style="margin-top: 10%;">
   <div class="container">
-    <h3>Frequencias</h3>
-    <table class="table table-striped table-condensed">
+    <h3 style="float:left">Frequências</h3>
+    <table class="table table-striped table-condensed table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -11,9 +12,8 @@
       </thead>
       <tbody>
         <form action="/update-frequencia?id=<?= $_GET['id'] ?>" name="Update-notas" method="post">
-          <br>
-          <input class="form-control" type="datetime-local" name="datahora" required>
-          <?php
+          <input style="float:right" class="w-25 p-1" class="form-control" type="datetime-local" name="datahora" required><br></br>
+   <?php
           foreach ($alunos as $a) {
           ?>
             <tr>
@@ -29,9 +29,9 @@
             <input type="hidden" name="idTurma-<?= $a->id ?>" value="<?= $a->idTurma ?>">
             <input type="hidden" name="idAluno-<?= $a->id ?>" value="<?= $a->idAluno ?>">
           <?php } ?>
-          <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
-        </form>
+          </form>
       </tbody>
     </table>
+    <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
   </div>
 </div>

@@ -1,6 +1,7 @@
+<link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
 <div style="margin-top: 10%;">
-    <h3>Solicitações</h3>
+    <h3>Solicitações</h3><br>
     <table class="table table-condensed table-hover table-sm">
         <thead>
             <tr>
