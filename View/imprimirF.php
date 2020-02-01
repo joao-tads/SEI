@@ -16,7 +16,7 @@
     require_once 'pdf-frequencia.php';
     $dompdf->loadhtml(ob_get_clean());
 
-    $dompdf->setPaper("A4", "landscape");
+    $dompdf->setPaper("A4");
     $dompdf->render();
 
     $dompdf->stream("Frequencia.pdf", 

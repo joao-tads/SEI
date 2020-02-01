@@ -1,3 +1,7 @@
+<?php
+setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+date_default_timezone_set('America/Recife');
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -17,31 +21,47 @@
 </head>
 
 <body>
-  <img src="../public/Design/img/logo.jpg" alt="logo">
-  <strong>ESCOLA MUNICIPAL PROFESSOR FULANDO SOUZA DA SILVA
-    <br>
-    Rua Lugar Nenhum, Nº 0. BAIRRO: CENTRO CEP: 59215-000
-    <br>
-  </strong>
-  <h3 align="center">Declaração de Frequência</h3>
+  <div class="form-group">
+    <img src="../public/Design/img/logo.png" alt="logo" width="10%" height="10%" style="float: left;">
+    <div align="center">
+      <strong>ESCOLA MUNICIPAL PROFESSOR FULANDO SOUZA DA SILVA
+        <br>
+        Rua Lugar Nenhum, Nº 0. BAIRRO: CENTRO CEP: 59215-000
+        <br>
+      </strong>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3>Declaração de Frequência</h3>
+    </div>
+  </div>
   <br>
-  <P align="justify">Declaramos para os devidos fins que
-    <b>JOÃO GUEDES DE MOURA JUNIOR</b>
-    inscrito no <b>CPF: 111.111.111-11</b> e
-    <b>RG: 111.111.111</b> aluno da turma <b>6º ano vespertino</b>
-    com carga horária de 25 horas aulas semanais, Possui um percentual de <b>83%</b> de frquências.</P>
-    <p>Esse dado é baseado em média aritmética da relação de presença em todas as disciplinas, sendo
-      assim, um cálculo geral.
-    </p>
+  <br>
+  <br>
+  <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que o aluno 
+    <b><?= $usuario->nome ?></b>
+    inscrito no <b>CPF: <?= $usuario->cpf ?></b>, <b>RG: <?= $usuario->rg ?></b> matriculado na <b>Escola Municipal Professor
+      Fulano de Souza da Silva</b>, turma: <b><?= $turma->anoSerie ?> "<?= $turma->nome ?>"</b>
+    turno <b><?= $turma->turno ?></b> e matrícula: <b><?= $usuario->id ?></b>. Possui 83% de frequência nas aulas 
+    e/ou atividades acadêmicas, em uma modalidade de ensino de meior período com carga horária de 25 horas aulas semanais</P>
 
   <br>
   <br>
   <br>
-  <u align="right">Nova Cruz/RN 24 de janeiro de 2020</u>
+  <br>
+  <div style="text-align: right;">Nova Cruz /RN, <?php echo strftime('%d de %B de %Y', strtotime('today')) ?></div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br>
   <div align="center">
-    <img src="../public/Design/img/ass.jpg" alt="Assinatura">
+    <img src="../public/Design/img/ass.jpg" alt="Assinatura" width="20%" height="30%">
     <br>
     <b>João Guedes</b>
     <br>

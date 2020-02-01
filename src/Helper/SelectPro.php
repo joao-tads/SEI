@@ -7,8 +7,8 @@ use PDO;
 final class SelectPro
 {
     public static function boletim($id)
-    {
-        $sql = "SELECT d.nome, dt.pb, dt.sb, dt.tb, dt.qb FROM Disciplina d 
+    {   
+        $sql = "SELECT d.nome, dt.ano, dt.pb, dt.sb, dt.tb, dt.qb FROM Disciplina d 
             INNER JOIN DisciplinaTurma dt ON (d.id = dt.idDisciplina) WHERE 
             (dt.idAluno = $id)";
         if ($conn = Transaction::get()) {
@@ -33,7 +33,7 @@ final class SelectPro
     }
     public static function turmasAll()
     {
-        $sql = "SELECT DISTINCT turno, nome, anoSerie FROM turma;";
+        $sql = "SELECT DISTINCT turno, nome, anoSerie, FROM turma;";
         if ($conn = Transaction::get()) {
             return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
         }
@@ -47,6 +47,17 @@ final class SelectPro
         $sql = "SELECT a.nome, a.dataNascimento, a.sexo FROM aluno a 
         INNER JOIN turma t ON (t.idAluno = a.id) 
         WHERE t.nome = '$nome' and t.turno = '$turno';";
+        if ($conn = Transaction::get()) {
+            return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
+        }
+        else {
+            throw new Exception('Não há transação ativa!!');
+        }
+
+    }
+    public static function ano($id)
+    {
+        $sql = "SELECT DISTINCT ano FROM DisciplinaTurma WHERE idAluno = $id;";
         if ($conn = Transaction::get()) {
             return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
         }

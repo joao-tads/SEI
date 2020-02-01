@@ -28,6 +28,8 @@ namespace Ifnc\Tads\Controller;
     </thead>
     <tbody>
       <?php foreach ($boletim as $r) {
+        date_default_timezone_set('America/Recife');
+        if($r->ano == date('Y')) {
         $media = media($r->pb, $r->sb, $r->tb, $r->qb);
       ?>
         <tr>
@@ -52,7 +54,9 @@ namespace Ifnc\Tads\Controller;
               }
           ?>
         </tr>
-      <?php } ?>
+      <?php } 
+      }
+       ?>
     </tbody>
   </table>
     <a href="/imprimir-boletim" target="_blanck" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583"><i class="fas fa-print"></i> Imprimir</a>

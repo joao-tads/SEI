@@ -79,6 +79,7 @@ CREATE TABLE `DisciplinaTurma` (
     `idDisciplina` INT NOT NULL,
     `idAluno` INT NOT NULL,
     `idTurma` INT NOT NULL,
+    `ano` VARCHAR(20) NOT NULL,
     `pb` FLOAT,
     `sb` FLOAT,
     `tb` FLOAT,
@@ -270,7 +271,7 @@ INSERT INTO `Responsavel` (`idAluno`, `cpf`, `rg`, `telefone`, `email`, `nome`, 
 	(20, '200.200.200-00', '200.200.000', '(84) 99563-7854', 'marcosvinicius@gmail.com', 'Marcos Vinicius Mário Sérgio Moraes', '$argon2i$v=19$m=65536,t=4,p=1$VElZTHFjNGFmL09VSG9vMA$ck1Weu2FoiRk6zK+9uNRVW0hIc2cw/2B3u9f12OrjBA', 0);
 
 INSERT INTO `Funcionario` (`nome`, `cpf`, `email`, `telefone`, `dataNascimento`, `cargo`, `senha`, `nlogin`) VALUES 
-	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 1),
+	('João Guedes de Moura Junior', '123.111.111-00', 'joaodocente@gmail.com', '(84) 99494-9494', '1995-05-12', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$dy5YUGQwYnV0SmdMSDdYcg$wsBBeyEnae8C1qY6mCKe0vZAuHiIszETOJNTGVyZ/Yw', 0),
 	('Matias Justino', '123.222.222-00', 'matiasdocente@gmail.com', '(84) 99494-563', '1998-04-22', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$a05DZmxpWUZIdWNQbm1VVg$TvxXP9LbE7UHByK2PPEdbsm9tYo+DOK3pNftR9/cdCA', 0),
 	('Maria da Penha Justino de Moura', '123.333.333-00', 'mariadocente@gmail.com', '(84) 99494-3578', '1991-10-02', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$UWgzYUtQeFlwaG1qcS4yVA$xep01t3FsecUaSDIUyjElF3jVG9XqKmKYY90kdZHMGM', 0),
 	('Bruna Guedes de Moura', '123.444.444-00', 'brunadocente@gmail.com', '(84) 99494-7676', '1997-05-10', 'Professor(a)', '$argon2i$v=19$m=65536,t=4,p=1$V2JZZHkzMVMxMFBIVEd5dg$l0tNs/riGlOt2Ixu1LIkJ2q/2uWqGLKLUsOtMg6z1dw', 0),
@@ -347,27 +348,27 @@ INSERT INTO `Turma` (`nome`, `turno`, `anoSerie`, `min`, `max`, `idAluno`) VALUE
     ('C', 'Matutino', '8º ano', 20, 40, 19),
     ('C', 'Matutino', '8º ano', 20, 40, 20);
 
-INSERT INTO `DisciplinaTurma` (`idDisciplina`, `idAluno`, `idTurma`, `pb`, `sb`, `tb`, `qb`) VALUES 
-	(1, 1, 1, 6.7, 7.0, 8.5, 9.0),
-    (2, 1, 1, 6.0, 7.0, 8.5, 9.0),
-    (3, 1, 1, 3.4, 7.0, 8.5, 9.0),
-    (4, 1, 1, 8.6, 7.0, 8.5, 9.0),
-    (5, 1, 1, 8.7, 7.0, 8.5, 9.0),
-    (1, 2, 1, 6.8, 7.0, 8.5, 9.0),
-    (2, 2, 1, 6.0, 7.0, 8.5, 9.0),
-    (3, 2, 1, 5.0, 7.0, 8.5, 9.0),
-    (4, 2, 1, 6.7, 7.0, 8.5, 9.0),
-    (5, 2, 1, 6.7, 7.0, 8.5, 9.0),
-    (1, 3, 1, 6.7, 7.0, 8.5, 9.0),
-    (2, 3, 1, 6.7, 7.0, 8.5, 9.0),
-    (3, 3, 1, 6.7, 7.0, 8.5, 9.0),
-    (4, 3, 1, 6.7, 7.0, 8.5, 9.0),
-    (5, 3, 1, 6.7, 7.0, 8.5, 9.0),
-    (1, 4, 1, 6.7, 7.0, 8.5, 9.0),
-    (2, 4, 1, 6.7, 7.0, 8.5, 9.0),
-    (3, 4, 1, 6.7, 7.0, 8.5, 9.0),
-    (4, 4, 1, 6.7, 7.0, 8.5, 9.0),
-    (5, 4, 1, 6.7, 7.0, 8.5, 9.0);
+INSERT INTO `DisciplinaTurma` (`idDisciplina`, `idAluno`, `idTurma`, `ano`, `pb`, `sb`, `tb`, `qb`) VALUES 
+	(1, 1, 1, 2020, 6.7, 7.0, 8.5, 9.0),
+    (2, 1, 1, 2019, 6.0, 7.0, 8.5, 9.0),
+    (3, 1, 1, 2019, 3.4, 7.0, 8.5, 9.0),
+    (4, 1, 1, 2019, 8.6, 7.0, 8.5, 9.0),
+    (5, 1, 1, 2019, 8.7, 7.0, 8.5, 9.0),
+    (1, 2, 1, 2019, 6.8, 7.0, 8.5, 9.0),
+    (2, 2, 1, 2019, 6.0, 7.0, 8.5, 9.0),
+    (3, 2, 1, 2019, 5.0, 7.0, 8.5, 9.0),
+    (4, 2, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (5, 2, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (1, 3, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (2, 3, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (3, 3, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (4, 3, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (5, 3, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (1, 4, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (2, 4, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (3, 4, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (4, 4, 1, 2019, 6.7, 7.0, 8.5, 9.0),
+    (5, 4, 1, 2019, 6.7, 7.0, 8.5, 9.0);
     
 SELECT * FROM `Aluno` ORDER BY `dataNascimento`;
 SELECT COUNT(`nome`) FROM `Aluno`;
@@ -388,3 +389,5 @@ select * from Funcionario;
 select * from FuncionarioInativo;
 select * from Frequencia;
 select * from Aluno;
+
+select distinct ano from DisciplinaTurma where idAluno = 1;

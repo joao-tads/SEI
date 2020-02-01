@@ -2,7 +2,6 @@
 
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;

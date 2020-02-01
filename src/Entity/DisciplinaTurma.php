@@ -11,6 +11,7 @@ class DisciplinaTurma extends Record
     public $idDisciplina;
     public $idAluno;
     public $idTurma;
+    public $ano;
     public $pb;
     public $sb;
     public $tb;

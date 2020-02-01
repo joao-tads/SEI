@@ -1,7 +1,6 @@
 <?php
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
-date_default_timezone_set('America/Sao_Paulo');
-echo strftime('%A, %d de %B de %Y', strtotime('today'));
+date_default_timezone_set('America/Recife');
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -33,9 +32,13 @@ echo strftime('%A, %d de %B de %Y', strtotime('today'));
       <br>
       <br>
       <br>
+      <br>
+      <br>
       <h3>Declaração de Vínculo</h3>
     </div>
   </div>
+  <br>
+  <br>
   <br>
   <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que
     <b><?= $usuario->nome ?></b>
@@ -47,7 +50,14 @@ echo strftime('%A, %d de %B de %Y', strtotime('today'));
   <br>
   <br>
   <br>
+  <br>
   <div style="text-align: right;">Nova Cruz /RN, <?php echo strftime('%d de %B de %Y', strtotime('today')) ?></div> 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br>
   <div align="center">

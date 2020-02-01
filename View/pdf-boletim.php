@@ -72,6 +72,8 @@ function porcent($media)
     </thead>
     <tbody>
       <?php foreach ($boletim as $r) {
+        date_default_timezone_set('America/Recife');
+        if ($r->ano == date('Y')) {
         $media = media($r->pb, $r->sb, $r->tb, $r->qb);
       ?>
         <tr>
@@ -92,7 +94,9 @@ function porcent($media)
           }
           ?>
         </tr>
-      <?php } ?>
+      <?php }
+      }
+    ?>
     </tbody>
   </table>
 </body>
