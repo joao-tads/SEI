@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <form action="/update-frequencia?id=<?= $_GET['id'] ?>" name="Update-notas" method="post">
-          <input style="float:right" class="w-25 p-1" class="form-control" type="datetime-local" name="datahora" required><br></br>
+          <input style="float:right" class="w-25 p-1" class="form-control" type="date-local" name="data" required><br></br>
    <?php
           foreach ($alunos as $a) {
           ?>

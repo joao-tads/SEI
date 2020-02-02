@@ -26,8 +26,7 @@ class DisciplinasAlunoController implements IController
                 "usuario" => $_SESSION["usuario"],
                 "boletim" => SelectPro::boletim($_SESSION["usuario"]->id),
                 "funcionario" => Funcionario::all(),
-                "disciplina" => Disciplina::all(),
-                "disciplinaAluno" => DisciplinaAluno::all()  
+                "disciplina" => Disciplina::all()
             ]
         );
     }

@@ -31,9 +31,6 @@
                     <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
                     <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-trash-alt"></i></i>
                     </div>
-                    <!--<i title="Visualizar" class="fas fa-eye" http-url="\visualizar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
-                            <i title="Atualizar" class="fas fa-edit" http-url="\editar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
-                            <i title="Deletar" class="fas fa-trash-alt" http-url="\deletar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>-->
                     </div>
                     </div>
                 </td>

@@ -40,18 +40,21 @@ date_default_timezone_set('America/Recife');
   <br>
   <br>
   <br>
-  <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que o aluno 
-    <b><?= $usuario->nome ?></b>
-    inscrito no <b>CPF: <?= $usuario->cpf ?></b>, <b>RG: <?= $usuario->rg ?></b> matriculado na <b>Escola Municipal Professor
-      Fulano de Souza da Silva</b>, turma: <b><?= $turma->anoSerie ?> "<?= $turma->nome ?>"</b>
-    turno <b><?= $turma->turno ?></b> e matrícula: <b><?= $usuario->id ?></b>. Possui 83% de frequência nas aulas 
-    e/ou atividades acadêmicas, em uma modalidade de ensino de meior período com carga horária de 25 horas aulas semanais</P>
-
+  <?php if (is_null($turma)) { ?>
+    <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que o aluno
+      <b><?= $usuario->nome ?></b>
+      inscrito no <b>CPF: <?= $usuario->cpf ?></b>, <b>RG: <?= $usuario->rg ?></b> matriculado na <b>Escola Municipal Professor
+        Fulano de Souza da Silva</b>, turma: <b><?= $turma->anoSerie ?> "<?= $turma->nome ?>"</b>
+      turno <b><?= $turma->turno ?></b> e matrícula: <b><?= $usuario->id ?></b>. Possui 83% de frequência nas aulas
+      e/ou atividades acadêmicas, em uma modalidade de ensino de meior período com carga horária de 25 horas aulas semanais</P>
+  <?php } else { ?>
+    <P style="text-align: center">Aluno(a) <?= $usuario->nome ?> Ainda não foi finculado a uma turma!</P>
+  <?php } ?>
   <br>
   <br>
   <br>
   <br>
-  <div style="text-align: right;">Nova Cruz /RN, <?php echo strftime('%d de %B de %Y', strtotime('today')) ?></div> 
+  <div style="text-align: right;">Nova Cruz /RN, <?php echo strftime('%d de %B de %Y', strtotime('today')) ?></div>
   <br>
   <br>
   <br>

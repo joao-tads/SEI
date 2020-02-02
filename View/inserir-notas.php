@@ -62,9 +62,9 @@ function porcent($media)
             <input type="hidden" name="idDisciplina-<?= $a->id ?>" value="<?= $a->idDisciplina ?>">
             <input type="hidden" name="id-<?= $a->id ?>" value="<?= $a->id ?>">
           <?php } ?>
+          <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
         </form>
       </tbody>
     </table>
-    <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button>
   </div>
 </div>

@@ -33,7 +33,7 @@ final class SelectPro
     }
     public static function turmasAll()
     {
-        $sql = "SELECT DISTINCT turno, nome, anoSerie, FROM turma;";
+        $sql = "SELECT DISTINCT nome, anoSerie, turno FROM turma;";
         if ($conn = Transaction::get()) {
             return $conn->query($sql)->fetchAll(PDO::FETCH_CLASS,get_called_class());
         }

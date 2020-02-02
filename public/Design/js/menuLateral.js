@@ -34,3 +34,30 @@ function Mascara(objeto) {
     if (objeto.value.length == 10)
         objeto.value = objeto.value + '-';
 }
+$("#pesquisar").on("input", function() {
+    var filtro = event.target.value;
+    if (filtro.length > 0) {
+        var exp = new RegExp("^" + filtro, "i");
+        $("tr").each(function(index) {
+            var item = $("tbody tr")[index];
+            testaExpressao(item, exp);
+        });
+    } else {
+        $("tr").each(function(index) {
+            var item = $("tbody tr")[index];
+            item.classList.add("d-none");
+            item.classList.remove("d-none");
+        });
+    }
+});
+
+
+function testaExpressao(item, exp) {
+    if (exp.test(item.childNodes[1].textContent)) {
+        item.classList.add("d-none");
+        item.classList.remove("d-none");
+    } else {
+        item.classList.remove("d-none");
+        item.classList.add("d-none");
+    }
+}

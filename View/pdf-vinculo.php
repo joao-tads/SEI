@@ -40,13 +40,16 @@ date_default_timezone_set('America/Recife');
   <br>
   <br>
   <br>
+  <?php if (is_null($turma)) { ?>
   <P align="justify"><b style="color: white">________</b> Declaramos para os devidos fins que
     <b><?= $usuario->nome ?></b>
     inscrito no <b>CPF: <?= $usuario->cpf ?></b> e
     <b>RG: <?= $usuario->rg ?></b> é aluno da <b>Escola Municipal Professor
       Fulano de Souza da Silva</b> e está matriculado na turma <b><?= $turma->anoSerie ?> "<?= $turma->nome ?>"</b>
     turno <b><?= $turma->turno ?></b> com matrícula: <b><?= $usuario->id ?></b> com carga horária de 25 horas aulas semanais</P>
-
+  <?php } else { ?>
+    <P style="text-align: center">Aluno(a) <?= $usuario->nome ?> Ainda não foi finculado a uma turma!</P>
+  <?php } ?>
   <br>
   <br>
   <br>

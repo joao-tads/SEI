@@ -12,6 +12,6 @@ class Frequencia extends Record
     public $idProfessor;
     public $idTurma;
     public $idAluno;
-    public $dataHora;
+    public $data;
     public $status;
 }

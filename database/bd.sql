@@ -119,7 +119,7 @@ CREATE TABLE `Frequencia` (
     `idProfessor` INT NOT NULL,
     `idTurma` INT NOT NULL,
     `idAluno` INT NOT NULL,
-    `dataHora` DATETIME NOT NULL,
+    `data` DATETIME NOT NULL,
     `status` VARCHAR(20) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -410,5 +410,5 @@ select * from Funcionario;
 select * from FuncionarioInativo;
 select * from Frequencia;
 select * from Aluno;
-
-select distinct ano from DisciplinaTurma where idAluno = 1;
+SELECT DISTINCT nome, anoSerie, turno FROM turma;
+select distinct ano from DisciplinaTurma where idAluno = 4;

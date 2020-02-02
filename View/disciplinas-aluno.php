@@ -82,14 +82,11 @@ namespace Ifnc\Tads\Controller;
                                 <select class="form-control" id="sel1" name="descricao">
                                 <?php 
                                 foreach ($disciplina as $d) {
-                                    foreach ($boletim as $r) {
-                                        if ($d->nome != $r->nome) {
-                                            echo "<option>$d->nome";
-                                            foreach($funcionario as $f) {
-                                                if ($f->id == $d->idProfessor) {
-                                                    echo " - $f->nome</option>";
-                                                }
-                                            }
+                                    echo "<option>$d->nome";
+                                    foreach($funcionario as $f) {
+                                        if ($f->id == $d->idProfessor) {
+                                            echo " - $f->nome</option>";
+                                        break;
                                         }
                                     }
                                 }
