@@ -12,9 +12,10 @@
             case "Professor(a)":
                 echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>
                 <a href="/listar-turmas"> <i class="fas fa-plus-circle"></i> Notas</a>
-                <a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"></i> Solicitação</a>
+                <a href="/solicitacoes-funcionario"> <i class="fas fa-folder-plus"></i> Declarações</a>
                 <a href="lista-turmas"> <i class="fas fa-user-check"></i> Frequências</a>
-                <a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>';
+                <a href="/disciplinas-professor"> <i class="fas fa-book-open"></i> Disciplinas</a>
+                <a href="lista-turmas"> <i class="fas fa-users"></i> Minhas Turmas</a>';
                 break;
             case "Secretario(a)":
                 echo '<a href="/perfil-funcionario"> <i class="fas fa-user"></i> Perfil</a>';
@@ -23,7 +24,7 @@
                 echo '<a href="#" data-toggle="modal" data-target="#myModal"> <i class="fas fa-user-tie"></i> Funcionários </a>';
                 echo '<a href="/turmas"> <i class="fas fa-users"></i> Turmas</a>';
                 echo '<a href="/solicitacoes"> <i class="fas fa-folder-plus"></i> Solicitações</a>';
-                echo '<a href="/disciplinas"> <i class="fas fa-book-open"></i> Disciplinas</a>';
+                echo '<a href="/list-team"> <i class="fas fa-book-open"></i> Disciplinas</a>';
                 break;
             default:
                 echo '<a href="/perfil">Erro de Acesso! Usuário não identificado!</a>';

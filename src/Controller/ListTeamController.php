@@ -6,16 +6,17 @@ use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
-class DisciplinaAlunoController implements IController
+class InserirNotasFormController implements IController
 {
     public function request(): void
     {
         Transaction::open();
+
         echo Render::html(
             [
                 "cabecalho.php",
                 "menu.php",
-                "disciplinas-alunos.php",
+                "inserir-notas.php",
                 "rodape.php"
             ],
             [
