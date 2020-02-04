@@ -43,4 +43,6 @@
 /update-frequencia: InserirFrequenciasController
 /declaracoes: DeclaracoesController
 /vizualizar-turma: VizualizarTurmasController
+/turmas-professor: TurmasProfessorController
+/detalhar-turma: DetalharTurmaController
 /list-team: ListTeamController

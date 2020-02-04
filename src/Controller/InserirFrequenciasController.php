@@ -20,7 +20,7 @@ class InserirFrequenciasController implements IController
             $new->idProfessor = $_SESSION["usuario"]->id;
             $new->idAluno = $_POST['idAluno-'.$d->id];
             $new->idTurma = $_POST['idTurma-'.$d->id];
-            $new->dataHora = $_POST['data'];
+            $new->data = $_POST['data'];
             $new->status = $_POST['status-'.$d->id];
             var_dump($new);
             Transaction::open();

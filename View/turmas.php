@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/Design/css/botoes.css">
+
 <body>
     <div style="margin-top: 10%;">
         <h3 class="text-muted">Turmas</h3>
@@ -28,13 +29,6 @@
                             <button type="submit" title="Visualizar" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></button>
                         </form>
                     </div>
-                    <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
-                    <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-trash-alt"></i></i>
-                    </div>
-                    </div>
-                    </div>
-                </td>
-            </tr>
         <?php } ?>
     </tbody>
     </table>

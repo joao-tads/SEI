@@ -119,7 +119,7 @@ CREATE TABLE `Frequencia` (
     `idProfessor` INT NOT NULL,
     `idTurma` INT NOT NULL,
     `idAluno` INT NOT NULL,
-    `data` DATETIME NOT NULL,
+    `data` DATE NOT NULL,
     `status` VARCHAR(20) NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
