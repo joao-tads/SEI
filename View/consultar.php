@@ -31,7 +31,7 @@
                                     <th class="text-center"><?= $user->id ?></th>
                                     <td>
                                         <div class="btn-group">
-                                            <i title="Visualizar" data-toggle="modal" data-target="#myModalAluno<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
+                                        <i title="Visualizar" data-toggle="modal" data-target="#myModalAluno<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                         </div>
                                         <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
                                         <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-user-slash"></i></i>
@@ -43,8 +43,8 @@
 
                         <!-- Modal content-->
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Dados Pessoais</h4>
+                            <div class="modal-header"style="background-color: #33a583">
+                                <h4 class="modal-title"style="color: #fff">Dados Pessoais</h4>
                             </div>
                             <div class="modal-body">
                                 <Strong>Matrícula:</Strong><br>
@@ -79,67 +79,67 @@
 
                         <!-- Modal content-->
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title">Atualize os Dados</h4>
+                            <div class="modal-header" style="background-color: #33a583">
+                                <h4 class="modal-title" style="color: #fff">Atualize os Dados</h4>
                             </div>
                             <div class="modal-body">
                                 <form class="form-horizontal" action="/update-perfil-consulta" method="post">
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Nome:</label>
+                                        <label class="control-label col-sm-4">Nome</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" value="<?= $user->nome ?>" name="nome" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Data de Nascimento:</label>
+                                        <label class="control-label col-sm-4">Data de Nascimento</label>
                                         <div class="col-sm-5">
                                             <input type="date" class="form-control" value="<?= $user->dataNascimento ?>" name="dataNascimento" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Nome da Mãe:</label>
+                                        <label class="control-label col-sm-4">Nome da Mãe</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" value="<?= $user->nomeMae ?>" name="nomeMae" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Nome do Pai:</label>
+                                        <label class="control-label col-sm-4">Nome do Pai</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" value="<?= $user->nomePai ?>" name="nomePai" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">RG:</label>
+                                        <label class="control-label col-sm-4">RG</label>
                                         <div class="col-sm-5">
                                             <input id="rg" type="text" class="form-control" value="<?= $user->rg ?>" name="rg" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">CPF:</label>
+                                        <label class="control-label col-sm-4">CPF</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $user->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Naturalidade:</label>
+                                        <label class="control-label col-sm-4">Naturalidade</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" value="<?= $user->naturalidade ?>" name="naturalidade" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Endereço:</label>
+                                        <label class="control-label col-sm-4">Endereço</label>
                                         <div class="col-sm-5">
                                             <input type="text" class="form-control" value="<?= $user->endereco ?>" name="endereco" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Telefone:</label>
+                                        <label class="control-label col-sm-4">Telefone</label>
                                         <div class="col-sm-5">
                                             <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $user->telefone ?>" name="telefone" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-4">Sexo:</label>
+                                        <label class="control-label col-sm-4">Sexo</label>
                                         <div class="col-sm-5">
                                             <select class="form-control" id="sel2" name="sexo">
                                                 <option>Masculino</option>
@@ -165,8 +165,7 @@
             </tbody>
             </table>
             </div>
-            <div id="menu1" class="container tab-pane fade">
-                <br></br>
+            <div id="menu1" class="container tab-pane fade"><br>
                 <table class="table table-condensed table-hover table-sm">
                     <thead>
                         <tr class="text-center">
@@ -195,8 +194,8 @@
 
                     <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Dados Pessoais</h4>
+                        <div class="modal-header" style="background-color: #33a583">
+                            <h4 class="modal-title" style="color: #fff">Dados Pessoais</h4>
                         </div>
                         <div class="modal-body">
                             <Strong>Matrícula:</Strong><br>
@@ -225,19 +224,19 @@
 
                     <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Atualize os Dados</h4>
+                        <div class="modal-header" style="background-color: #33a583">
+                            <h4 class="modal-title" style="color: #fff">Atualize os Dados</h4>
                         </div>
                         <div class="modal-body">
                             <form class="form-horizontal" action="/update-perfil-consulta-funcionario" method="post">
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="nome">Nome:</label>
+                                    <label class="control-label col-sm-2" for="nome">Nome</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" placeholder="Nome completo... " name="nome" value="<?= $user->nome ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="idade">Data de Nascimento:</label>
+                                    <label class="control-label col-sm-2" for="idade">Data de Nascimento</label>
                                     <div class="col-sm-10">
                                         <input type="date" class="form-control" placeholder="idade... " name="idade" value="<?= $user->dataNascimento ?>">
                                     </div>
@@ -249,7 +248,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="email">Email:</label>
+                                    <label class="control-label col-sm-2" for="email">Email</label>
                                     <div class="col-sm-10">
                                         <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email" value="<?= $user->email ?>">
                                     </div>
@@ -261,7 +260,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="sel1">Cargo:</label>
+                                    <label class="control-label col-sm-2" for="sel1">Cargo</label>
                                     <div class="col-sm-10">
                                         <select class="form-control" id="sel1" name="cargo" value="<?= $user->cargo ?>">
                                             <option>Professor(a)</option>

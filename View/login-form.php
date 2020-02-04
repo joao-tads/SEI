@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                <input type="password" placeholder="Senha" name="senha" id="password" class="form-control" required>
-                               <i class="fas fa-lock icon-modify"></i>
+                               <i class="fas fa-key"></i>
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit" class="btn btn-info btn-md border-0"style="background-color: #33a583" value="Entrar">

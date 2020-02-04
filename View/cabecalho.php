@@ -33,13 +33,7 @@
             </div>
         </nav>
     <?php } else { ?>
-        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><?= $titulo ?></a>
-                </li>
-            </ul>
-        </nav>
+        
     <?php } ?>
     <main class="container">
         <?php if (isset($alerts)) { ?>

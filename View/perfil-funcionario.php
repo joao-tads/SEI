@@ -58,11 +58,11 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-5">
                             <label class="control-label" for="idade">Data de Nascimento</label>
                             <input type="date" class="form-control" placeholder="idade... " name="dataNascimento" value="<?= $usuario->dataNascimento ?>" required>
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-7">
                             <label class="control-label" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" for="cpd">CPF</label>
                             <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" value="<?= $usuario->cpf ?>" required>
                         </div>

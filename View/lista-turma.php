@@ -21,7 +21,7 @@
                 <td><?= $turma->turno ?></td>
                 <td><?= $turma->anoSerie ?></td>
                 <td>
-                    <a href="/detalhar-turma?id=<?= $turma->id ?>">
+                    <a href="/inserir-frequencia?id=<?= $turma->id ?>">
                         <i title="Entrar" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sign-in-alt"></i></i>
                     </a>
                 </td>

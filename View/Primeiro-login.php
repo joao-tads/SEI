@@ -40,12 +40,12 @@
                             <div class=>
                                 <div class="form-group">
                                     <input type="password" name="senha" class="form-control" placeholder="Insira a nova Senha" required>
-                                    <i class="fas fa-lock icon-modify"></i>
+                                    <i class="fas fa-key"></i>
                                 </div>
 
                                 <div class="form-group">
                                     <input type="password" name="confirmeSenha" class="form-control" placeholder="Confirme sua nova Senha" required>
-                                    <i class="fas fa-lock icon-modify"></i>
+                                    <i class="fas fa-key"></i>
                                 </div>
                                 <input type="hidden" name="id" value="<?= $usuario->id ?>">
                                 <input type="hidden" name="type" value="<?= $type ?>">

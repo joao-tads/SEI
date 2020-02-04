@@ -19,7 +19,7 @@ function porcent($media)
     <table class="table table-striped table-condensed table-sm">
       <thead class="text-center">
         <tr>
-          <th scope="col">Id</th>
+          <th scope="col">Matrícula</th>
           <th scope="col">Aluno</th>
           <th scope="col">1º B</th>
           <th scope="col">2º B</th>
