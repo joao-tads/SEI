@@ -412,3 +412,6 @@ select * from Frequencia;
 select * from Aluno;
 SELECT DISTINCT nome, anoSerie, turno FROM turma;
 select distinct ano from DisciplinaTurma where idAluno = 4;
+delete from disciplinaTurma where idDisciplina = 2;
+delete from disciplinaAluno where idDisciplina = 2;
+delete from disciplina where id = 2;

@@ -86,9 +86,9 @@ abstract class Record
             throw new Exception('Não há transação ativa!!');
         }
     }
-    public static function delete($id){
+    public static function delete($filter = TRUE){
         $rc = new ReflectionClass(get_called_class());
-        $sql = "DELETE FROM {$rc->getShortName()} WHERE id = $id";
+        $sql = "DELETE FROM {$rc->getShortName()} WHERE {$filter}";
         if ($conn = Transaction::get()) {
             return $conn->exec($sql);
         }

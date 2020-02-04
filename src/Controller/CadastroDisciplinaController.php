@@ -25,7 +25,7 @@ class  CadastroDisciplinaController implements IController
         $disciplina->store();
         Transaction::close();
 
-        header('Location: /disciplinas', true, 302);
+        header('Location: /list-team', true, 302);
         exit();
     }
 }

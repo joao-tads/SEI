@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <!-- meu CSS -->
     <link rel="shortcut icon" href="/Design/img/logo favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/Design/css/menuLateral.css">

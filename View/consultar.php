@@ -31,14 +31,14 @@
                                     <th class="text-center"><?= $user->id ?></th>
                                     <td>
                                         <div class="btn-group">
-                                            <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
+                                            <i title="Visualizar" data-toggle="modal" data-target="#myModalAluno<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                         </div>
                                         <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
                                         <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-user-slash"></i></i>
                 </div>
                 </td>
                 </tr>
-                <div id="myModalA<?= $user->id ?>" class="modal fade" role="dialog">
+                <div id="myModalAluno<?= $user->id ?>" class="modal fade" role="dialog">
                     <div class="modal-dialog">
 
                         <!-- Modal content-->

@@ -2,11 +2,12 @@
 
 namespace Ifnc\Tads\Controller;
 
-use Ifnc\Tads\Helper\SelectPro;
+use Ifnc\Tads\Entity\Disciplina;
+use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
 
-class InserirNotasFormController implements IController
+class ListTeamController implements IController
 {
     public function request(): void
     {
@@ -16,13 +17,14 @@ class InserirNotasFormController implements IController
             [
                 "cabecalho.php",
                 "menu.php",
-                "inserir-notas.php",
+                "disciplina.php",
                 "rodape.php"
             ],
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
-                "alunos" => SelectPro::InserirNotas($_SESSION["usuario"]->id, $_GET["id"])
+                "funcionario" => Funcionario::all(),
+                "disciplina" => Disciplina::all() 
             ]
         );
     }

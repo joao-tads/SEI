@@ -47,3 +47,4 @@
 /turmas-professor: TurmasProfessorController
 /detalhar-turma: DetalharTurmaController
 /list-team: ListTeamController
+/deletar-disciplina: DeletarDisciplinaController

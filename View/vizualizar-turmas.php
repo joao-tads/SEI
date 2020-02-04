@@ -24,15 +24,9 @@
                         <form action="/vizualizar-turma" method="POST">
                             <input type="hidden" name="nome" value="<?= $turma->nome ?>">
                             <input type="hidden" name="turno" value="<?= $turma->turno ?>">
-                            <button type="submit" title="Visualizar" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></button>
                         </form>
                     </div>
-                    <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
-                    <i title="Remover" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-trash-alt"></i></i>
                     </div>
-                    <!--<i title="Visualizar" class="fas fa-eye" http-url="\visualizar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
-                            <i title="Atualizar" class="fas fa-edit" http-url="\editar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>
-                            <i title="Deletar" class="fas fa-trash-alt" http-url="\deletar-turma?id=<?= $user->id ?>" class="btn btn-primary"></i>-->
                     </div>
                     </div>
                 </td>
