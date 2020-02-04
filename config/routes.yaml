@@ -11,6 +11,7 @@
 /perfil: PerfilController
 /perfil-funcionario: PerfilFuncionarioController
 /update-perfil: UpdatePerfilController
+/update-perfilf: UpdatePerfilFuncionarioController
 /primeiro-login: PrimeiroLoginFormController
 /primeroLogin: PrimeiroLoginController
 /cadastro-form: CadastroFormController
