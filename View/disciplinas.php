@@ -48,7 +48,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="nome">Nome:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" placeholder="Nome da disciplina " name="nome">
+                                <input type="text" class="form-control" placeholder="Nome da disciplina " name="nome" required>
                             </div>
                         </div>
                         <div class="form-group">

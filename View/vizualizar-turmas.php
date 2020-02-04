@@ -47,25 +47,25 @@
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="nome">Nome</label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control" placeholder="Nome da turma" name="nome">
+                                <input type="text" class="form-control" placeholder="Nome da turma" name="nome" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-6" for="min">Quantidade Mínima</label>
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" placeholder="Quantidade Mínima de Alunos " name="min">
+                                <input type="number" class="form-control" placeholder="Quantidade Mínima de Alunos " name="min" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-6" for="nome">Quantidade Máxima</label>
                             <div class="col-sm-6">
-                                <input type="number" class="form-control" placeholder="Quantidade Máxima de Alunos" name="max">
+                                <input type="number" class="form-control" placeholder="Quantidade Máxima de Alunos" name="max" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="sel1">Turno</label>
                             <div class="col-sm-6">
-                                <select class="form-control" id="sel1" name="turno">
+                                <select class="form-control" id="sel1" name="turno" required>
                                     <option>Matutino</option>
                                     <option>Vespertino</option>
                                     <option>Noturno</option>

@@ -71,23 +71,23 @@
                     <div class="form-group row">
                     <div class="col-sm-12">
                         <label class="control-label">Nome</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nome ?>" name="nome">
+                        <input type="text" class="form-control" value="<?= $usuario->nome ?>" name="nome" required>
                         </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-5">
                         <label class="control-label">RG</label>
-                        <input id="rg" type="text" class="form-control" value="<?= $usuario->rg ?>" name="rg">
+                        <input id="rg" type="text" class="form-control" value="<?= $usuario->rg ?>" name="rg" required>
                     </div>
                     <div class="col-sm-7">
                         <label class="control-label ">CPF</label>
-                        <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $usuario->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
+                        <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $usuario->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
                     </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-5">
                         <label class="control-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" value="<?= $usuario->dataNascimento ?>" name="dataNascimento">
+                        <input type="date" class="form-control" value="<?= $usuario->dataNascimento ?>" name="dataNascimento" required>
                     </div>
                     <div class="col-sm-3">
                         <label class="control-label">Sexo</label>
@@ -99,29 +99,29 @@
                     </div>
                     <div class="col-sm-4">
                         <label class="control-label">Naturalidade</label>
-                        <input type="text" class="form-control" value="<?= $usuario->naturalidade ?>" name="naturalidade">
+                        <input type="text" class="form-control" value="<?= $usuario->naturalidade ?>" name="naturalidade" required>
                     </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-12">
                         <label class="control-label">Nome da Mãe</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nomeMae ?>" name="nomeMae">
+                        <input type="text" class="form-control" value="<?= $usuario->nomeMae ?>" name="nomeMae" required>
                     </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-12">
                         <label class="control-label">Nome do Pai</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nomePai ?>" name="nomePai">
+                        <input type="text" class="form-control" value="<?= $usuario->nomePai ?>" name="nomePai" required>
                     </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-7">
                         <label class="control-label">Endereço</label>
-                        <input type="text" class="form-control" value="<?= $usuario->endereco ?>" name="endereco">
+                        <input type="text" class="form-control" value="<?= $usuario->endereco ?>" name="endereco" required>
                     </div>
                     <div class="col-sm-5">
                         <label class="control-label">Telefone</label>
-                        <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $usuario->telefone ?>" name="telefone">
+                        <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $usuario->telefone ?>" name="telefone" required>
                     </div>
                     </div>
                     

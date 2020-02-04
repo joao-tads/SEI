@@ -14,8 +14,9 @@ CREATE TABLE `Aluno` (
     `naturalidade` VARCHAR(20),
     `endereco` TEXT NOT NULL,
     `telefone` VARCHAR(25) NOT NULL,
-    `sexo` varchar(10) NOT NULL,
+    `sexo` VARCHAR(10) NOT NULL,
     `senha` VARCHAR(100) NOT NULL,
+    `condition` VARCHAR(10),
     `nlogin` INT NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -69,6 +70,7 @@ CREATE TABLE `Solicitacao` (
 	`id` INT NOT NULL,
     `tipo` VARCHAR(30) NOT NULL,
     `descricao` TEXT(300) NOT NULL,
+    `idDisciplina` INT NOT NULL,
     `resposta` TEXT(300),
     `idSecretario` INT,
     `idAluno` INT NOT NULL
@@ -412,6 +414,3 @@ select * from Frequencia;
 select * from Aluno;
 SELECT DISTINCT nome, anoSerie, turno FROM turma;
 select distinct ano from DisciplinaTurma where idAluno = 4;
-delete from disciplinaTurma where idDisciplina = 2;
-delete from disciplinaAluno where idDisciplina = 2;
-delete from disciplina where id = 2;

@@ -54,27 +54,27 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <label class="control-label" for="nome">Nome</label>
-                            <input type="text" class="form-control" placeholder="Nome completo... " name="nome" value="<?= $usuario->nome ?>">
+                            <input type="text" class="form-control" placeholder="Nome completo... " name="nome" value="<?= $usuario->nome ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
                             <label class="control-label" for="idade">Data de Nascimento</label>
-                            <input type="date" class="form-control" placeholder="idade... " name="dataNascimento" value="<?= $usuario->dataNascimento ?>">
+                            <input type="date" class="form-control" placeholder="idade... " name="dataNascimento" value="<?= $usuario->dataNascimento ?>" required>
                         </div>
                         <div class="col-sm-8">
                             <label class="control-label" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" for="cpd">CPF</label>
-                            <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" value="<?= $usuario->cpf ?>">
+                            <input type="text" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" value="<?= $usuario->cpf ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-7">
                             <label class="control-label" for="email">Email</label>
-                            <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email" value="<?= $usuario->email ?>">
+                            <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email" value="<?= $usuario->email ?>" required>
                         </div>
                         <div class="col-sm-5">
                             <label class="control-label col-sm-2" onkeypress="Mascara(this);" maxlength="15" for="telefone">Telefone</label>
-                            <input type="text" class="form-control" placeholder="Número de contato ..." name="telefone" value="<?= $usuario->telefone ?>">
+                            <input type="text" class="form-control" placeholder="Número de contato ..." name="telefone" value="<?= $usuario->telefone ?>" required>
                         </div>
                     </div>
                     <div class="form-group row">

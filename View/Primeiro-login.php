@@ -29,15 +29,6 @@
         </p>
     </nav>
     </div>
-        <?php if (isset($usuario)) { ?>
-           <!-- <nav class="navbar navbar-expand-sm bg-info navbar-dark">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#"><?= $titulo ?></a>
-                    </div>
-                </div>
-            </nav>-->
-        <?php } ?>
         <div id="login-row" class="row justify-content-center align-items-center">
             <div id="login-column" class="col">
                 <div id="login-box" class="col" >
@@ -48,12 +39,12 @@
                         <main class="container">
                             <div class=>
                                 <div class="form-group">
-                                    <input type="password" name="senha" class="form-control" placeholder="Insira a nova Senha">
+                                    <input type="password" name="senha" class="form-control" placeholder="Insira a nova Senha" required>
                                     <i class="fas fa-lock icon-modify"></i>
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="password" name="confirmeSenha" class="form-control" placeholder="Confirme sua nova Senha">
+                                    <input type="password" name="confirmeSenha" class="form-control" placeholder="Confirme sua nova Senha" required>
                                     <i class="fas fa-lock icon-modify"></i>
                                 </div>
                                 <input type="hidden" name="id" value="<?= $usuario->id ?>">

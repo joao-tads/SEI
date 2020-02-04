@@ -12,4 +12,5 @@ class Solicitacao extends Record
     public $tipo;
     public $descricao;
     public $idAluno;
+    public $idDisciplina;
 }

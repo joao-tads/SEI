@@ -20,14 +20,22 @@
                     <td><?= $soli->descricao ?></td>
                     <?php foreach ($alunos as $a) {
                             if ($a->id == $soli->idAluno) {
-                                $retorno = $a->id; ?>
+                                $retorno = $a->id;
+                                foreach ($turmas as $t) {
+                                    if ($t->idAluno == $retorno) {
+                                        $retorno2 = $t->id;
+                                    }
+                                }
+                                ?>
                             <td><?= $a->nome ?></td>
                             <td>
                         <?php }
                             } ?>
-                        <form action="/vincular-aluno" method="post">
+                        <form action="/disciplina-alunos" method="post">
                         <input type="hidden" name="idAluno" value="<?= $retorno ?>">
-                        <input type="hidden" name="idDisciplina" value="<?= $soli->descricao ?>">
+                        <input type="hidden" name="idDisciplina" value="<?= $soli->idDisciplina ?>">
+                        <input type="hidden" name="idTurma" value="<?= $retorno2 ?>">
+                        <input type="hidden" name="id" value="<?= $soli->id ?>">
                             <div class="btn-group">
                                 <button class="btn btn-primary border-0" title="Confirmar" style="background-color: #33a583" type="submit"><span class="fas fa-check"></span></button>
                             </div>

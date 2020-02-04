@@ -87,55 +87,55 @@
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Nome:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" value="<?= $user->nome ?>" name="nome">
+                                            <input type="text" class="form-control" value="<?= $user->nome ?>" name="nome" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Data de Nascimento:</label>
                                         <div class="col-sm-5">
-                                            <input type="date" class="form-control" value="<?= $user->dataNascimento ?>" name="dataNascimento">
+                                            <input type="date" class="form-control" value="<?= $user->dataNascimento ?>" name="dataNascimento" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Nome da Mãe:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" value="<?= $user->nomeMae ?>" name="nomeMae">
+                                            <input type="text" class="form-control" value="<?= $user->nomeMae ?>" name="nomeMae" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Nome do Pai:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" value="<?= $user->nomePai ?>" name="nomePai">
+                                            <input type="text" class="form-control" value="<?= $user->nomePai ?>" name="nomePai" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">RG:</label>
                                         <div class="col-sm-5">
-                                            <input id="rg" type="text" class="form-control" value="<?= $user->rg ?>" name="rg">
+                                            <input id="rg" type="text" class="form-control" value="<?= $user->rg ?>" name="rg" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">CPF:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $user->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');">
+                                            <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $user->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Naturalidade:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" value="<?= $user->naturalidade ?>" name="naturalidade">
+                                            <input type="text" class="form-control" value="<?= $user->naturalidade ?>" name="naturalidade" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Endereço:</label>
                                         <div class="col-sm-5">
-                                            <input type="text" class="form-control" value="<?= $user->endereco ?>" name="endereco">
+                                            <input type="text" class="form-control" value="<?= $user->endereco ?>" name="endereco" required>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label col-sm-4">Telefone:</label>
                                         <div class="col-sm-5">
-                                            <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $user->telefone ?>" name="telefone">
+                                            <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $user->telefone ?>" name="telefone" required>
                                         </div>
                                     </div>
                                     <div class="form-group">

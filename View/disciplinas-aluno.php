@@ -71,7 +71,7 @@ namespace Ifnc\Tads\Controller;
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header" style="background-color: #33a583">
-                    <h4 class="modal-title" style="color: #fff">Cadastrar nova disciplina</h4>
+                    <h4 class="modal-title" style="color: #fff">Solicitar Disciplina</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" action="/solicitacao" method="post">
@@ -79,16 +79,18 @@ namespace Ifnc\Tads\Controller;
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="sel1">Disciplinas</label>
                             <div class="col-sm-10">
-                                <select class="form-control" id="sel1" name="descricao">
+                                <select class="form-control" id="sel1" name="idDisciplina" required>
                                 <?php 
                                 foreach ($disciplina as $d) {
-                                    echo "<option>$d->nome";
+                                    echo "<option value='$d->id'>$d->nome";
                                     foreach($funcionario as $f) {
                                         if ($f->id == $d->idProfessor) {
                                             echo " - $f->nome</option>";
                                         break;
                                         }
                                     }
+                                  ?>  
+                                  <?php
                                 }
                                 ?>
                                 </select>

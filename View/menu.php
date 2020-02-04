@@ -45,29 +45,29 @@
                     <div class="form-row mb-3">
                         <label class="control-label" for="nome">Nome</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" placeholder="Nome completo... " name="nome">
+                            <input type="text" class="form-control" placeholder="Nome completo... " name="nome" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                     <div class="form-group col-sm-6 mb-3">
                             <label class="control-label" for="idade">Data de Nascimento</label>
-                            <input type="date" class="form-control" placeholder="idade... " name="dataNascimento">
+                            <input type="date" class="form-control" placeholder="idade... " name="dataNascimento" required>
                     </div>
                     <div class="form-group col-sm-6">
                             <label class="control-label" for="cpd">CPF</label>
-                            <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf">
+                            <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" placeholder="Cadastro de Pessoa Física... " name="cpf" required>
                     </div>
                     </div>
                     
                     <div class="form-row">
                     <div class="form-group col-sm-6">
                         <label class="control-label" for="email">Email</label>
-                        <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email">
+                        <input type="email" class="form-control" placeholder="Endereço de e-mail... " name="email" required>
                     </div>
                     <div class="form-group col-sm-6">
                            <label class="control-label" for="telefone">Telefone</label>
-                           <input type="text" class="form-control" onkeypress="Mascara(this);" maxlength="15" placeholder="Número de contato ..." name="telefone">
+                           <input type="text" class="form-control" onkeypress="Mascara(this);" maxlength="15" placeholder="Número de contato ..." name="telefone" required>
                     </div>
                     </div>
           
@@ -107,13 +107,13 @@
                     <div class="form-group form-row">
                         <label class="control-label">Nome</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="nome">
+                            <input type="text" class="form-control" name="nome" required>
                         </div>
                     </div>
                     <div class="form-group form-row">
                     <div class="col-sm-4">
                         <label class="control-label text-center">Data de Nascimento</label>
-                            <input type="date" class="form-control" name="dataNascimento">
+                            <input type="date" class="form-control" name="dataNascimento" required>
                     </div>
                     <div class="col-sm-4">
                         <label class="control-label">Sexo</label>
@@ -125,41 +125,41 @@
                     </div>
                     <div class="col-sm-4">
                         <label class="control-label">Naturalidade</label>
-                        <input type="text" class="form-control" name="naturalidade">
+                        <input type="text" class="form-control" name="naturalidade" required>
                     </div>
                     </div>
                     <div class="form-group row">
                     <div class="col-sm-5">
                         <label class="control-label">RG</label>
-                        <input id="rg" type="text" maxlength="11" OnKeyPress="formatar('###.###.###', this)" class="form-control" name="rg">
+                        <input id="rg" type="text" maxlength="11" OnKeyPress="formatar('###.###.###', this)" class="form-control" name="rg" required>
                     </div>
                     <div class="col-sm-7">
                         <label class="control-label">CPF</label>
-                        <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" name="cpf">
+                        <input type="text" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" class="form-control" name="cpf" required>
                     </div>
                     </div>
                     <div class="form-group form-row">
                     <div class="col-sm-12">
                         <label class="control-label">Nome da Mãe</label>
-                        <input type="text" class="form-control" name="nomeMae">
+                        <input type="text" class="form-control" name="nomeMae" required>
                     </div>
                     </div>
                     <div class="form-group form-row">
                     <div class="col-sm-12">
                         <label class="control-label">Nome do Pai</label>
-                        <input type="text" class="form-control" name="nomePai">
+                        <input type="text" class="form-control" name="nomePai" required>
                         </div>
                     </div>              
                     <div class="form-group form-row">
                         <label class="control-label">Endereço</label>
                         <div class="col-sm-12">
-                            <input type="text" class="form-control" name="endereco">
+                            <input type="text" class="form-control" name="endereco" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label col-sm-4">Telefone</label>
                         <div class="col-sm-5">
-                            <input type="text" onkeypress="Mascara(this);" maxlength="15" class="form-control" name="telefone">
+                            <input type="text" onkeypress="Mascara(this);" maxlength="15" class="form-control" name="telefone" required>
                         </div>
                     </div>
                    
