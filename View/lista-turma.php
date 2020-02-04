@@ -4,7 +4,7 @@
         <h3>Frequência/Turmas</h3>
         <table class="table table-condensed table-hover table-sm">
     </div><br>
-    <thead class="thead-">
+    <thead class="thead text-center">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Turma</th>
@@ -15,7 +15,7 @@
     </thead>
     <tbody>
         <?php foreach ($turmas as $turma) { ?>
-            <tr>
+            <tr class="text-center">
                 <th scope="row"><?= $turma->id ?></th>
                 <td><?= $turma->nome ?></td>
                 <td><?= $turma->turno ?></td>

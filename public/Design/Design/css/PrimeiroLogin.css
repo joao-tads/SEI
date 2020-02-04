@@ -1,0 +1,75 @@
+.login-row {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  .form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+  }
+  
+  body {
+    background: #ecf0f1; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #ecf0f1, #fff);
+    background: -moz-linear-gradient(right, #ecf0f1, #fff);
+    background: -o-linear-gradient(right, #ecf0f1, #fff);
+    background: linear-gradient(to left, #ecf0f1, #fff);
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+  }
+   
+    .form-group input[type="text"] {
+      padding-left: 35px;
+    }
+  
+    .form-group input[type="password"] {
+      padding-left: 35px;
+    }
+    .form-group {
+      position: relative;
+    }
+    
+    /*configuração dos icones*/
+    .form-group i {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      padding: 9px 8px;
+      color: rgb(146, 146, 146);
+      transition: 0.3s;
+    }
+    
+    .alert {
+      left: 0;
+      margin: auto; 
+      position: absolute; 
+      right: 0;
+      text-align: center; 
+      top: 5%;
+      width: 80%;
+      z-index: 1; 
+     
+  }
+  
+div > div {
+    display: inline-block;
+    margin: 6px; 
+}
+input.btn:hover{
+    background-color:#4cbb9a!important;
+   
+ } 

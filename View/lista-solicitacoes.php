@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/Design/css/botoes.css">
 <body>
 <div style="margin-top: 10%;">
-    <h3>Solicitações</h3><br>
+    <h3>Solicitações</h3><p>
     <table class="table table-condensed table-hover table-sm">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th scope="col">#</th>
                 <th scope="col">Tipo</th>
                 <th scope="col">Descrição</th>
@@ -14,7 +14,7 @@
         </thead>
         <tbody>
             <?php foreach ($solicitacao as $soli) { ?>
-                <tr>
+                <tr class="text-center">
                     <th scope="row"><?= $soli->id ?></th>
                     <td><?= $soli->tipo ?></td>
                     <td><?= $soli->descricao ?></td>

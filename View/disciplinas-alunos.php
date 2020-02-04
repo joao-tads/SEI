@@ -22,9 +22,9 @@ foreach ($funcionario as $func) {
             <tr>
                 <th scope="col">Id</th>
                 <td><?= $d->id ?></td>
-                <th scope="col">Disciplina:</th>
+                <th scope="col">Disciplina</th>
                 <td><?= $d->nome ?></td>
-                <th scope="col">Professor:</th>
+                <th scope="col">Professor</th>
                 <td><?= $f->nome ?></td>
             </tr>
         </thead>
@@ -52,13 +52,13 @@ foreach ($funcionario as $func) {
     <div id="myModal3" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header" style="background-color: #33a583">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Vincular aluno à Disciplina</h4>
+                    <h4 class="modal-title" style="color: #fff">Vincular aluno à Disciplina</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" action="/disciplina-alunos" method="post">
-                        <p>Adicionar Alunos: </p>
+                        <p>Adicionar Alunos </p>
                         <div class="form-group">
                             <div class="col-sm-10">
                                 <select class="form-control" id="sel1" name="idAluno">

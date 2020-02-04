@@ -17,7 +17,7 @@ namespace Ifnc\Tads\Controller;
     <button class="btn btn-info btn-md border-0 btn-block btn-lg" style="background-color: #33a583" data-toggle="modal" 
         data-target="#myModal3"><i class="fas fa-plus-circle"></i> Solicitar</button>
     <table class="table table-bordered table-condensed table-hover table-sm"> <!--colocar botão no centro-->
-</div><br>
+</div><p>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -70,14 +70,14 @@ namespace Ifnc\Tads\Controller;
 
             <!-- Modal content-->
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Cadastrar nova Disciplina</h4>
+                <div class="modal-header" style="background-color: #33a583">
+                    <h4 class="modal-title" style="color: #fff">Cadastrar nova disciplina</h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" action="/solicitacao" method="post">
                         <input type="hidden" name="tipo" Value="Vincular Disciplina">
                         <div class="form-group">
-                            <label class="control-label col-sm-2" for="sel1">Disciplinas:</label>
+                            <label class="control-label col-sm-2" for="sel1">Disciplinas</label>
                             <div class="col-sm-10">
                                 <select class="form-control" id="sel1" name="descricao">
                                 <?php 

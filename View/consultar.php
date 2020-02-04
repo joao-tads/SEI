@@ -11,15 +11,14 @@
             </li>
             <!-- Tab panes -->
             <div class="tab-content">
-                <br></br>
                 <div class="input-group">
                     <input class="form-control" id="pesquisar" type="text" placeholder="Pesquisar">
-                    <i title="Buscar" class="btn btn-primary border-0 rounded-0" style="background-color: #25b0c6"><i class="fa fa-search"></i></i>
+                    <i title="Buscar" class="btn btn-primary border-0 rounded-0" style="background-color: #33a583"><i class="fa fa-search"></i></i>
                 </div><br>
                 <div id="home" class="container tab-pane active"><br>
                     <table class="table table-condensed table-hover table-sm">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <th scope="col">Nome</th>
                                 <th scope="col">Matrícula</th>
                                 <th scope="col">Ações</th>
@@ -29,7 +28,7 @@
                             <?php foreach ($alunos as $user) { ?>
                                 <tr>
                                     <td scope="row"><?= $user->nome ?></td>
-                                    <th><?= $user->id ?></th>
+                                    <th class="text-center"><?= $user->id ?></th>
                                     <td>
                                         <div class="btn-group">
                                             <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
@@ -170,7 +169,7 @@
                 <br></br>
                 <table class="table table-condensed table-hover table-sm">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">Nome</th>
                             <th scope="col">Matrícula</th>
                             <th scope="col">Ações</th>
@@ -180,7 +179,7 @@
                         <?php foreach ($funcionarios as $user) { ?>
                             <tr>
                                 <td><?= $user->nome ?></td>
-                                <th scope="row"><?= $user->id ?></th>
+                                <th scope="row" class="text-center"><?= $user->id ?></th>
                                 <td>
                                     <div class="btn-group">
                                         <i title="Visualizar" data-toggle="modal" data-target="#myModalA<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>

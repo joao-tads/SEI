@@ -7,12 +7,12 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Aluno</th>
-          <th scope="col">Status</th>
+          <th scope="col" class="text-center">Status</th>
         </tr>
       </thead>
       <tbody>
-        <form action="/update-frequencia?id=<?= $_GET['id'] ?>" name="Update-notas" method="post">
-          <input style="float:right" class="w-25 p-1" class="form-control" type="date" name="data" required><br></br>
+        <form action="/update-frequencia?id=<?= $_GET['id'] ?>" name="Update-notas" method="post">  
+        <input style="float:right" class="w-25 p-1 rounded" class="form-control" type="date" name="data" required><br></br>
    <?php
           foreach ($alunos as $a) {
           ?>
@@ -29,9 +29,10 @@
             <input type="hidden" name="idTurma-<?= $a->id ?>" value="<?= $a->idTurma ?>">
             <input type="hidden" name="idAluno-<?= $a->id ?>" value="<?= $a->idAluno ?>">
           <?php } ?>
-          <button type="submit" class="btn btn-primary border-0 btn-lg" style="background-color: #33a583">Salvar</button><p>
+          <button type="submit" class="btn btn-primary border-0 btn-lg" style=
+          "position:top; background-color: #33a583">Salvar</button><p>
           </form>
       </tbody>
     </table>
-    </div>
+     </div>
 </div>

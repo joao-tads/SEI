@@ -2,7 +2,7 @@
 <body>
     <div style="margin-top: 10%;">
         <h2>Declarações</h2>
-        <h5>Solicite a declaração que deseja: </h5>
+        <h5>Solicite a declaração que deseja</h5>
         <a href="/imprimir-dvinculo" target="_blanck" 
             class="btn btn-info btn-md border-0 btn-block btn-lg" 
             style="background-color: #33a583"><i class="fas fa-file-pdf">

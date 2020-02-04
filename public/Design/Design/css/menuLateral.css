@@ -1,0 +1,63 @@
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#1c2127;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 53px;
+    color:#f4f4f9;
+    
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid #0e131b;
+    background-color:#222b32;
+}
+
+
+.sidenav a:hover {
+    background-color: #33a583;
+    box-shadow: inset;
+    text-decoration: none;
+    color: #ffffff; 
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 14px;
+    }
+}
+
+.navbar-info {
+    background-color: #323a47;
+}
+
+
+  
