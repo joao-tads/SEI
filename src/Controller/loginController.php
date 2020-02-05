@@ -12,7 +12,6 @@ use Ifnc\Tads\Helper\Transaction;
 class LoginController implements IController
 {
     use Flash;
-
     public function request(): void
     {
         $cpf = filter_input(
@@ -24,9 +23,8 @@ class LoginController implements IController
         if (is_null($cpf) || $cpf == false) {
             $this->create(
                 new Message(
-                    "alert-login",
                     "CPF vazio!",
-                    "danger"
+                    "alert-danger"
                 )
             );
             header('Location: /login-form');
@@ -42,9 +40,8 @@ class LoginController implements IController
         if (is_null($senha) || $senha == false) {
             $this->create(
                 new Message(
-                    "alert-login",
                     "Senha vazia!",
-                    "danger"
+                    "alert-danger"
                 )
             );
             header('Location: /login-form');
@@ -58,9 +55,8 @@ class LoginController implements IController
             if (!$usuario) {
                 $this->create(
                     new Message(
-                        "alert-login",
                         "CPF inválido!",
-                        "danger"
+                        "alert-danger"
                     )
                 );
                 var_dump($usuario);
@@ -69,9 +65,8 @@ class LoginController implements IController
             } else if (!$usuario->valide($senha)) {
                 $this->create(
                     new Message(
-                        "alert-login",
                         "Senha inválida!",
-                        "danger"
+                        "alert-danger"
                     )
                 );
                 var_dump($usuario);
@@ -92,9 +87,8 @@ class LoginController implements IController
         } else if (!$usuario->valide($senha)) {
             $this->create(
                 new Message(
-                    "alert-login",
                     "Senha inválida!",
-                    "danger"
+                    "alert-danger"
                 )
             );
             header('Location: /login-form');

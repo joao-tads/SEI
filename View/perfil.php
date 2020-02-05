@@ -1,6 +1,13 @@
 <link rel="stylesheet" href="/Design/css/botoes.css">
 <div style="margin-top: 10%;">
     <div class="container">
+        <div style="text-align: center">
+            <?php
+
+            use Ifnc\Tads\Helper\Flash;
+
+            Flash::showAll(); ?>
+        </div>
         <h2>Perfil</h2>
         <p>Dados pessoais cadastrados</p>
         <div class="w-auto p-3">
@@ -50,7 +57,7 @@
                         <th>Telefone</th>
                         <td><?= $usuario->telefone ?></td>
                     </tr>
-                    
+
                 </tbody>
             </table>
             <input type="submit" name="submit" data-toggle="modal" data-target="#myModal5" class="btn btn-info btn-md border-0 btn-lg" style="background-color: #33a583" value="Atualizar dados">
@@ -69,68 +76,68 @@
             <div class="modal-body">
                 <form class="form-horizontal" action="/update-perfil" method="post">
                     <div class="form-group row">
-                    <div class="col-sm-12">
-                        <label class="control-label">Nome</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nome ?>" name="nome" required>
+                        <div class="col-sm-12">
+                            <label class="control-label">Nome</label>
+                            <input type="text" class="form-control" value="<?= $usuario->nome ?>" name="nome" required>
                         </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-sm-5">
-                        <label class="control-label">RG</label>
-                        <input id="rg" type="text" class="form-control" value="<?= $usuario->rg ?>" name="rg" required>
-                    </div>
-                    <div class="col-sm-7">
-                        <label class="control-label ">CPF</label>
-                        <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $usuario->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
-                    </div>
+                        <div class="col-sm-5">
+                            <label class="control-label">RG</label>
+                            <input id="rg" type="text" class="form-control" value="<?= $usuario->rg ?>" name="rg" required>
+                        </div>
+                        <div class="col-sm-7">
+                            <label class="control-label ">CPF</label>
+                            <input type="text" class="form-control" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" value="<?= $usuario->cpf ?>" name="cpf" onkeypress="$(this).mask('000.000.000-00');" required>
+                        </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-sm-5">
-                        <label class="control-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" value="<?= $usuario->dataNascimento ?>" name="dataNascimento" required>
-                    </div>
-                    <div class="col-sm-3">
-                        <label class="control-label">Sexo</label>
-                           <select class="form-control" id="sel2" name="sexo">
+                        <div class="col-sm-5">
+                            <label class="control-label">Data de Nascimento</label>
+                            <input type="date" class="form-control" value="<?= $usuario->dataNascimento ?>" name="dataNascimento" required>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="control-label">Sexo</label>
+                            <select class="form-control" id="sel2" name="sexo">
                                 <option>Masculino</option>
                                 <option>Feminino</option>
                                 <option>Outros</option>
                             </select>
-                    </div>
-                    <div class="col-sm-4">
-                        <label class="control-label">Naturalidade</label>
-                        <input type="text" class="form-control" value="<?= $usuario->naturalidade ?>" name="naturalidade" required>
-                    </div>
-                    </div>
-                    <div class="form-group row">
-                    <div class="col-sm-12">
-                        <label class="control-label">Nome da Mãe</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nomeMae ?>" name="nomeMae" required>
-                    </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="control-label">Naturalidade</label>
+                            <input type="text" class="form-control" value="<?= $usuario->naturalidade ?>" name="naturalidade" required>
+                        </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-sm-12">
-                        <label class="control-label">Nome do Pai</label>
-                        <input type="text" class="form-control" value="<?= $usuario->nomePai ?>" name="nomePai" required>
-                    </div>
+                        <div class="col-sm-12">
+                            <label class="control-label">Nome da Mãe</label>
+                            <input type="text" class="form-control" value="<?= $usuario->nomeMae ?>" name="nomeMae" required>
+                        </div>
                     </div>
                     <div class="form-group row">
-                    <div class="col-sm-7">
-                        <label class="control-label">Endereço</label>
-                        <input type="text" class="form-control" value="<?= $usuario->endereco ?>" name="endereco" required>
+                        <div class="col-sm-12">
+                            <label class="control-label">Nome do Pai</label>
+                            <input type="text" class="form-control" value="<?= $usuario->nomePai ?>" name="nomePai" required>
+                        </div>
                     </div>
-                    <div class="col-sm-5">
-                        <label class="control-label">Telefone</label>
-                        <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $usuario->telefone ?>" name="telefone" required>
+                    <div class="form-group row">
+                        <div class="col-sm-7">
+                            <label class="control-label">Endereço</label>
+                            <input type="text" class="form-control" value="<?= $usuario->endereco ?>" name="endereco" required>
+                        </div>
+                        <div class="col-sm-5">
+                            <label class="control-label">Telefone</label>
+                            <input type="tel" class="form-control" onkeypress="Mascara(this);" maxlength="15" value="<?= $usuario->telefone ?>" name="telefone" required>
+                        </div>
                     </div>
-                    </div>
-                    
+
                     <input type="hidden" name="id" value="<?= $usuario->id ?>">
                     <input type="hidden" name="senha" value="<?= $usuario->senha ?>">
             </div>
             <div class="modal-footer">
                 <div class="form-group">
-                    <input type="submit" name="submit" class="btn btn-info btn-md border-0"style="background-color: #33a583"  value="Atualizar">
+                    <input type="submit" name="submit" class="btn btn-info btn-md border-0" style="background-color: #33a583" value="Atualizar">
                     <input type="reset" name="reset" class="btn btn-info btn-md border-0" style="background-color: #323a47" value="Limpar">
                     <b class="btn btn-info btn-md border-0" style="background-color: #323a47" data-dismiss="modal">Cancelar</b>
                 </div>

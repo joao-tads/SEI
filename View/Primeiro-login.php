@@ -22,38 +22,46 @@
 <div style="margin-top: 2%;">
 
     <body class="bg-light" id="main">
-    <div>
-    <nav class="navbar fixed-top navbar-dark" style="background-color: #1c2127">
-        <p class="text-white text-center">
-            <h4 style="color: #fff;font-family:verdana;font-size:100%">Por favor, redefina uma nova senha para utilizar o sistema</h4>
-        </p>
-    </nav>
-    </div>
-        <div id="login-row" class="row justify-content-center align-items-center">
-            <div id="login-column" class="col">
-                <div id="login-box" class="col" >
-                    <form id="login-form" class="form" action="/primeroLogin" method="post">
+        <div>
+            <nav class="navbar fixed-top navbar-dark" style="background-color: #1c2127">
+                <p class="text-white text-center">
+                    <h4 style="color: #fff;font-family:verdana;font-size:100%">Por favor, redefina uma nova senha para utilizar o sistema</h4>
+                </p>
+            </nav>
+        </div>
+        <h3 class="text-center text-white pt-5"></h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col">
+                    <div id="login-box" class="col">
+                        <form id="login-form" class="form" action="/primeroLogin" method="post">
+                            <h3 class="text-center text-info"><img src="/Design/img/logo.png" height="100" width="130"></h3>
+                            <br>
+                            <div style="text-align: center">
+                                <?php
 
-                        <h3 class="text-center text-info"><img src="/Design/img/logo.png" height="100" width="130"></h3>
-                        <br>
-                        <main class="container">
-                            <div class=>
-                                <div class="form-group">
-                                    <input type="password" name="senha" class="form-control" placeholder="Insira a nova Senha" required>
-                                    <i class="fas fa-key"></i>
-                                </div>
+                                use Ifnc\Tads\Helper\Flash;
 
-                                <div class="form-group">
-                                    <input type="password" name="confirmeSenha" class="form-control" placeholder="Confirme sua nova Senha" required>
-                                    <i class="fas fa-key"></i>
-                                </div>
-                                <input type="hidden" name="id" value="<?= $usuario->id ?>">
-                                <input type="hidden" name="type" value="<?= $type ?>">
-                                <div>
-                                    <input type="submit" name="submit" class="btn btn-info btn-md border-0 btn-lg" style="background: #33a583;" value="Redefinir">
-                                </div>
-                                <div>
-                                    <input type="reset" name="reset" class="btn btn-info btn-md border-0 btn-lg" style="background-color:#222b32" value="Limpar">
-                                </div>
+                                Flash::showAll(); ?>
                             </div>
-                    </form>
+                            <main class="container">
+                                <div class=>
+                                    <div class="form-group">
+                                        <input type="password" name="senha" class="form-control" placeholder="Insira a nova Senha" required>
+                                        <i class="fas fa-key"></i>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" name="confirmeSenha" class="form-control" placeholder="Confirme sua nova Senha" required>
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <input type="hidden" name="id" value="<?= $usuario->id ?>">
+                                    <input type="hidden" name="type" value="<?= $type ?>">
+                                    <div>
+                                        <input type="submit" name="submit" class="btn btn-info btn-md border-0 btn-lg" style="background: #33a583;" value="Redefinir">
+                                    </div>
+                                    <div>
+                                        <input type="reset" name="reset" class="btn btn-info btn-md border-0 btn-lg" style="background-color:#222b32" value="Limpar">
+                                    </div>
+                                </div>
+                        </form>

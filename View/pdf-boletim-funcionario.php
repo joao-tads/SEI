@@ -31,18 +31,17 @@ function porcent($media)
 </head>
 
 <body>
-  <img src="../public/Design/img/logo.png" alt="logo" width="10%" height="10%" style="float: left;">
-
-  <p class="text-center text-uppercase"><b>Boletim Escolar</b></p>
+<img src="../public/Design/img/logo.png" alt="logo" width="10%" height="10%" style="float: left">
+  <h2 class="text-center text-uppercase"><b>Boletim Escolar</b></h2>
   <br>
   <br>
   <br>
   <table class="table">
     <tr>
       <th scope="col">Matrícula: </th>
-      <td><?= $usuario->id ?></td>
+      <td><?= $aluno->id ?></td>
       <th scope="col">Nome: </th>
-      <td><?= $usuario->nome ?></td>
+      <td><?= $aluno->nome ?></td>
       <th scope="col">Gerado: </th>
       <td>
         <?php
@@ -108,4 +107,10 @@ function porcent($media)
       ?>
     </tbody>
   </table>
+  <div style="text-align: center;">
+    <br>
+    <br>
+    <p>______________________________________________</p>
+    <p>Resposável</p>
+  </div>
 </body>

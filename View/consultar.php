@@ -34,7 +34,7 @@
                                         <i title="Visualizar" data-toggle="modal" data-target="#myModalAluno<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #25b0c6"><i class="far fa-eye"></i></i>
                                         </div>
                                         <i title="Atualizar" data-toggle="modal" data-target="#myModalA2<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #33a583"><i class="fas fa-sync-alt"></i></i>
-                                        <i title="Inativar" http-url="\adicionar-carrinho?id=<?= $user->id ?>" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-user-slash"></i></i>
+                                        <a title="Imprimir Boletim" href="/imprimir-boletim-funcionario?id=<?= $user->id ?>" target="_blanck" class="btn btn-primary border-0" style="background-color: #db2938"><i class="fas fa-print"></i></a>
                 </div>
                 </td>
                 </tr>
