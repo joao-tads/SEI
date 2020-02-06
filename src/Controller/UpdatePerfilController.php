@@ -27,6 +27,7 @@ class  UpdatePerfilController implements IController
         $aluno->usuario = $_POST['usuario'];
         $aluno->senha = $_POST['senha'];
         var_dump($aluno);
+        
         Transaction::open();
         $aluno->store();
         $usuario = Aluno::findByCondition("id='{$_POST['id']}'");
