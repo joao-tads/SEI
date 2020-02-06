@@ -4,6 +4,7 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
 use Ifnc\Tads\Helper\Transaction;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Flash;
 
 class PaginaInicialController implements IController
@@ -21,6 +22,7 @@ class PaginaInicialController implements IController
             ],
             [
                 "type" => $_SESSION["type"],
+                "t" => Turma::all(),
                 "usuario" => $_SESSION["usuario"],
                 "alerts" =>$this->useAll()
             ]

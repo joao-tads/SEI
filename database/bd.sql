@@ -74,11 +74,11 @@ CREATE TABLE `Solicitacao` (
     `resposta` TEXT(300),
     `idSecretario` INT,
     `idAluno` INT NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+);
 
 CREATE TABLE `DisciplinaTurma` (
 	`id` INT NOT NULL,
-    `idDisciplina` INT NOT NULL,
+    `idDisciplina` INT,
     `idAluno` INT NOT NULL,
     `idTurma` INT NOT NULL,
     `ano` VARCHAR(20) NOT NULL,
@@ -414,3 +414,5 @@ select * from Frequencia;
 select * from Aluno;
 SELECT DISTINCT nome, anoSerie, turno FROM turma;
 select distinct ano from DisciplinaTurma where idAluno = 4;
+select * from solicitacao;
+sELECT * from DisciplinaAluno;

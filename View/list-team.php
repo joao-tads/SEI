@@ -1,8 +1,16 @@
 <link rel="stylesheet" href="/Design/css/botoes.css">
+
 <body>
     <div style="margin-top: 10%;">
         <h3>Inserir notas</h3>
         <table class="table table-condensed table-hover table-sm">
+            <div style="text-align: center">
+                <?php
+
+                use Ifnc\Tads\Helper\Flash;
+
+                Flash::showAll(); ?>
+            </div>
     </div><br>
     <thead class="thead-">
         <tr>

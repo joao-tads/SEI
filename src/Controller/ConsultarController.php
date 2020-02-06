@@ -4,7 +4,9 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Funcionario;
 use Ifnc\Tads\Entity\Aluno;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
 class ConsultarController implements IController
@@ -23,6 +25,7 @@ class ConsultarController implements IController
             [
                 "usuario" => $_SESSION['usuario'],
                 "type" => $_SESSION['type'],
+                "t" => SelectPro::turmasAll(),
                 "funcionarios" => Funcionario::all(),
                 "alunos" => Aluno::all()            ]
         );

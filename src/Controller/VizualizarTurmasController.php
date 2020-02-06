@@ -22,6 +22,7 @@ class VizualizarTurmasController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "t" => SelectPro::turmasAll(),
                 "aluno" => Turma::findByCondition("nome='{$_POST['nome']}' AND anoSerie='{$_POST['anoSerie']}' AND turno='{$_POST['turno']}'"),
                 "alunos" => SelectPro::turmasAlunos($_POST['nome'], $_POST['turno']) 
             ]

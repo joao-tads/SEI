@@ -4,7 +4,9 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Disciplina;
 use Ifnc\Tads\Entity\Funcionario;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
 class DisciplinasProfessorController implements IController
@@ -22,6 +24,7 @@ class DisciplinasProfessorController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "t" => SelectPro::turmasAll(),
                 "funcionario" => Funcionario::all(),
                 "disciplina" => Disciplina::all()  
             ]

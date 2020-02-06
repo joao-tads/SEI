@@ -22,6 +22,7 @@ class TurmasProfessorController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "t" => SelectPro::turmasAll(),
                 "turmas" => SelectPro::turmasProfessor($_SESSION['usuario']->id)  
             ]
         );

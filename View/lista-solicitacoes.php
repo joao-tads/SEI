@@ -21,9 +21,9 @@
                     <?php foreach ($alunos as $a) {
                             if ($a->id == $soli->idAluno) {
                                 $retorno = $a->id;
-                                foreach ($turmas as $t) {
-                                    if ($t->idAluno == $retorno) {
-                                        $retorno2 = $t->id;
+                                foreach ($t as $turma) {
+                                    if ($turma->idAluno == $retorno) {
+                                        $retorno2 = $turma->id;
                                     }
                                 }
                                 ?>

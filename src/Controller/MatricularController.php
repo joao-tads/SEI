@@ -5,6 +5,7 @@ namespace Ifnc\Tads\Controller;
 
 
 use Ifnc\Tads\Entity\Aluno;
+use Ifnc\Tads\Entity\DisciplinaTurma;
 use Ifnc\Tads\Helper\Transaction;
 
 class  MatricularController implements IController
@@ -26,9 +27,23 @@ class  MatricularController implements IController
         $aluno->usuario = $_POST['usuario'];
         $aluno->senha = password_hash($_POST['cpf'], PASSWORD_ARGON2I);
         $aluno->nlogin = 0;
+
+        $dt = new DisciplinaTurma();
+
+
         var_dump($aluno);
         Transaction::open();
         $aluno->store();
+
+        foreach (Aluno::all() as $a) {
+            if ($a->cpf == $_POST['cpf']) {
+                $id = $a->id;
+            }
+        }
+        $dt->idAluno = $id;
+        $dt->idTurma = $_POST['idTurma'];
+        $dt->ano = date('Y');
+        
         Transaction::close();
 
         header('Location: /Pagina-inicial', true, 302);

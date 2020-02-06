@@ -3,9 +3,10 @@
 namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Entity\Solicitacao;
-use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Entity\Aluno;
+use Ifnc\Tads\Entity\Disciplina;
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Transaction;
 
 class SolicitacoesController implements IController
@@ -25,8 +26,10 @@ class SolicitacoesController implements IController
                 "usuario" => $_SESSION['usuario'],
                 "type" => $_SESSION['type'],
                 "solicitacao" => Solicitacao::all(),
-                "turmas" => Turma::all(),
-                "alunos" => Aluno::all()            ]
+                "t" => Turma::all(),
+                "dis" => Disciplina::all(),
+                "alunos" => Aluno::all()            
+            ]
         );
     }
 }

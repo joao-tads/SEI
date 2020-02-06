@@ -23,6 +23,7 @@ class DetalharTurmaController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "t" => SelectPro::turmasAll(),
                 "turma" => Turma::findByCondition($_GET["id"]),
                 "alunos" => SelectPro::InserirNotas($_SESSION["usuario"]->id, $_GET["id"])
             ]

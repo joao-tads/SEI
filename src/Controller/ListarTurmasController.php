@@ -3,6 +3,7 @@
 namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
@@ -22,6 +23,7 @@ class ListarTurmasController implements IController
             [
                 "type" => $_SESSION["type"],
                 "usuario" => $_SESSION["usuario"],
+                "t" => SelectPro::turmasAll(),
                 "turmas" => SelectPro::turmasProfessor($_SESSION['usuario']->id)  
             ]
         );

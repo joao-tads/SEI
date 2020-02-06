@@ -4,6 +4,7 @@ namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Entity\Turma;
 use Ifnc\Tads\Helper\Transaction;
 
 class InserirNotasFormController implements IController
@@ -21,6 +22,7 @@ class InserirNotasFormController implements IController
             ],
             [
                 "type" => $_SESSION["type"],
+                "t" => SelectPro::turmasAll(),
                 "usuario" => $_SESSION["usuario"],
                 "alunos" => SelectPro::InserirNotas($_SESSION["usuario"]->id, $_GET["id"])
             ]

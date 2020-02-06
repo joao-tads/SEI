@@ -3,6 +3,7 @@
 namespace Ifnc\Tads\Controller;
 
 use Ifnc\Tads\Helper\Render;
+use Ifnc\Tads\Helper\SelectPro;
 use Ifnc\Tads\Helper\Transaction;
 
 class PerfilFuncionarioController implements IController
@@ -19,6 +20,7 @@ class PerfilFuncionarioController implements IController
             ],
             [
                 "type" => $_SESSION["type"],
+                "t" => SelectPro::turmasAll(),
                 "usuario" => $_SESSION["usuario"]
             ]
         );

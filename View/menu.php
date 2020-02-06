@@ -162,6 +162,15 @@
                             <input type="text" onkeypress="Mascara(this);" maxlength="15" class="form-control" name="telefone" required>
                         </div>
                     </div>
+                    <div class="col-sm-4">
+                        <label class="control-label">Turma</label>
+                        <select class="form-control" id="sel2" name="idTurma">
+                            <?php foreach($t as $tu) { 
+                                echo "<option value='.$tu->id.'>".$tu->anoSerie." - ".$tu->nome."</option>";   
+                            } 
+                            ?>
+                        </select>
+                    </div>
                    
                     <div class="modal-footer">
                         <div class="form-group">
