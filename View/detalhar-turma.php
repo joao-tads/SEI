@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/Design/css/botoes.css">
 <div style="margin-top: 10%;">
   <div class="container">
-    <h3 style="float:left">Frequências</h3>
+    <h3 style="float:left"><?= $turma->anoSerie.' - "'.$turma->nome.'"  '.$turma->turno ?></h3>
     <table class="table table-striped table-condensed table-sm">
       <thead>
         <tr>

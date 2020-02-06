@@ -34,7 +34,7 @@
             <i class="far fa-id-card"></i>
         </div>
         <div class="form-group">
-            <input type="text" name="cpf" class="form-control" placeholder="Insira seu CPF" required>
+            <input type="text" name="cpf" class="form-control" placeholder="CPF" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" required>
             <i class="fas fa-user"></i>
         </div>
         

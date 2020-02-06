@@ -34,17 +34,6 @@ class RecuperarSenhaController implements IController
             exit();
         }
 
-        $dataNascimento = filter_input(
-            INPUT_POST,
-            'dataNascimento',
-            FILTER_DEFAULT
-        );
-
-        if (is_null($dataNascimento) || $dataNascimento === false) {
-            header('Location: /recuperar-senha');
-            exit();
-        }
-
         $senha = filter_input(
             INPUT_POST,
             'senha',
@@ -63,13 +52,12 @@ class RecuperarSenhaController implements IController
             var_dump($usuario);
             $user = new Aluno();
             $user->id = $id;
-            $user->dataNascimento = $dataNascimento;
             $user->cpf = $cpf;
             $user->senha = password_hash($senha, PASSWORD_ARGON2I);
 
             $user->store();
             Transaction::close();
-            header('Location: /login-form', true, 302);
+            header('Location: /login-form');
             exit();
         } else {
 
@@ -78,13 +66,12 @@ class RecuperarSenhaController implements IController
                 var_dump($usuario);
                 $user = new Funcionario();
                 $user->id = $id;
-                $user->dataNascimento = $dataNascimento;
                 $user->cpf = $cpf;
                 $user->senha = password_hash($senha, PASSWORD_ARGON2I);
 
                 $user->store();
                 Transaction::close();
-                header('Location: /login-form', true, 302);
+                header('Location: /login-form');
                 exit();
             }
             Transaction::close();
